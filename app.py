@@ -2,7 +2,6 @@ from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import text
 import pyodbc
-import json
 
 from modules import db
 from modules.administrators import Administrators
@@ -21,6 +20,7 @@ app.config.from_pyfile('.config')
 db.init_app(app)
 
 if __name__ == "__main__":
+    
     admins=Administrators()
     airlines=AirlineCompanies()
     countries=Countries()
@@ -30,18 +30,29 @@ if __name__ == "__main__":
     user_roles=UserRoles()
     users=Users()
     
-    admins_repo= Repository(Administrators)
-    airlines_repo= Repository(AirlineCompanies)
-    countries_repo= Repository(Countries)
-    customers_repo= Repository(Customers)
-    flights_repo= Repository(Flights)
-    tickets_repo= Repository(Tickets)
-    user_roles_repo= Repository(UserRoles)
-    users_repo= Repository(Users)
-    
-    repo_logger= Logger
+    logger=Logger()
     
     with app.app_context():
         db.create_all()
+
+        admins_repo= Repository(Administrators)
+        airlines_repo= Repository(AirlineCompanies)
+        countries_repo= Repository(Countries)
+        customers_repo= Repository(Customers)
+        flights_repo= Repository(Flights)
+        tickets_repo= Repository(Tickets)
+        user_roles_repo= Repository(UserRoles)
+        users_repo= Repository(Users)
+            
+        # Testing (and Crying)
+        result = user_roles_repo.get_all()  # Assuming get_all() is called on an instance of your class
+
+        if result:
+            for user_role in result:
+                print(f"ID: {user_role.RoleID}, Name: {user_role.RoleName}")
+        else:
+            print("No roles found.")
+            
+            
         
-    app.run(debug=app.config['DEBUG'])
+    app.run(debug=app.config['DEBUG'], use_reloader=False)

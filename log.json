@@ -1,0 +1,113 @@
+[],
+{
+  "id": 1,
+  "datetime": "2024-01-12 23:15:45.337904",
+  "class-name": "<class 'modules.user_roles.UserRoles'>",
+  "func_name": "get_all",
+  "func_input": "None",
+  "func_output": "[<UserRoles 1>, <UserRoles 2>, <UserRoles 4>, <UserRoles 3>]"
+},
+{
+  "id": 1,
+  "datetime": "2024-01-12 23:36:24.615407",
+  "class-name": "<class 'modules.user_roles.UserRoles'>",
+  "func_name": "get_all",
+  "func_input": "None",
+  "func_output": "[<UserRoles 1>, <UserRoles 2>, <UserRoles 4>, <UserRoles 3>]"
+},
+{
+  "id": 1,
+  "datetime": "2024-01-12 23:47:32.750482",
+  "class-name": "<class 'modules.user_roles.UserRoles'>",
+  "func_name": "get_by_id",
+  "func_input": "1",
+  "func_output": "<UserRoles 1>"
+},
+{
+  "id": 2,
+  "datetime": "2024-01-12 23:47:32.761163",
+  "class-name": "<class 'modules.user_roles.UserRoles'>",
+  "func_name": "add",
+  "func_input": "<UserRoles 18>",
+  "func_output": "Added"
+},
+{
+  "id": 3,
+  "datetime": "2024-01-12 23:47:32.770128",
+  "class-name": "<class 'modules.user_roles.UserRoles'>",
+  "func_name": "get_all",
+  "func_input": "None",
+  "func_output": "[<UserRoles 1>, <UserRoles 2>, <UserRoles 4>, <UserRoles 3>, <UserRoles 18>]"
+},
+{
+  "id": 1,
+  "datetime": "2024-01-12 23:49:06.690499",
+  "class-name": "<class 'modules.user_roles.UserRoles'>",
+  "func_name": "get_by_id",
+  "func_input": "18",
+  "func_output": "<UserRoles 18>"
+},
+{
+  "id": 2,
+  "datetime": "2024-01-12 23:49:06.706865",
+  "class-name": "<class 'modules.user_roles.UserRoles'>",
+  "func_name": "update",
+  "func_input": "(18, {'RoleName': 'AAA'})",
+  "func_output": "Updated"
+},
+{
+  "id": 3,
+  "datetime": "2024-01-12 23:49:06.710704",
+  "class-name": "<class 'modules.user_roles.UserRoles'>",
+  "func_name": "get_by_id",
+  "func_input": "18",
+  "func_output": "<UserRoles 18>"
+},
+{
+  "id": 4,
+  "datetime": "2024-01-12 23:49:06.710704",
+  "class-name": "<class 'modules.user_roles.UserRoles'>",
+  "func_name": "get_by_id",
+  "func_input": "18",
+  "func_output": "<UserRoles 18>"
+},
+{
+  "id": 5,
+  "datetime": "2024-01-12 23:49:06.720478",
+  "class-name": "<class 'modules.user_roles.UserRoles'>",
+  "func_name": "remove",
+  "func_input": "18",
+  "func_output": "Removed"
+},
+{
+  "id": 6,
+  "datetime": "2024-01-12 23:49:06.720478",
+  "class-name": "<class 'modules.user_roles.UserRoles'>",
+  "func_name": "get_all",
+  "func_input": "None",
+  "func_output": "[<UserRoles 1>, <UserRoles 2>, <UserRoles 4>, <UserRoles 3>]"
+},
+{
+  "id": 1,
+  "datetime": "2024-01-12 23:50:42.135252",
+  "class-name": "<class 'modules.user_roles.UserRoles'>",
+  "func_name": "get_all",
+  "func_input": "None",
+  "func_output": "[<UserRoles 1>, <UserRoles 2>, <UserRoles 4>, <UserRoles 3>]"
+},
+{
+  "id": 1,
+  "datetime": "2024-01-12 23:54:16.309345",
+  "class-name": "<class 'modules.user_roles.UserRoles'>",
+  "func_name": "get_all",
+  "func_input": "None",
+  "func_output": "[<UserRoles 1>, <UserRoles 2>, <UserRoles 4>, <UserRoles 3>]"
+},
+{
+  "id": 1,
+  "datetime": "2024-01-12 23:59:42.636952",
+  "class-name": "<class 'modules.user_roles.UserRoles'>",
+  "func_name": "get_all",
+  "func_input": "None",
+  "func_output": "[<UserRoles 1>, <UserRoles 2>, <UserRoles 4>, <UserRoles 3>]"
+}

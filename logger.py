@@ -1,6 +1,9 @@
 import json
+import os
 from datetime import datetime
 
+# 10.01.24
+# Mir Shukhman
 #Defining the class Logger to create a running log of every func run from "Repository" class
 class Logger(object):
     _instance = None
@@ -18,26 +21,28 @@ class Logger(object):
         if cls._instance is None:
             cls._instance= super(Logger,cls).__new__(cls)
             
-            # Creating the log file as part of the instance creation
-            with open(cls._log_file, 'w') as file:
-                file.write('[]')
+            # Creating the log file as part of the instance creation, if not alredy exists
+            if not os.path.exists(cls._log_file):
+                with open(cls._log_file, 'w') as file:
+                    file.write('[]')
             
         return cls._instance
     
     def __init__(self) -> None:
         pass
     
+    
     @property
-    def log(self):
+    def log_path(self):
         """
         11.01.24
         Mir Shukhman
-        Func getter returns the log file
+        Func getter returns path to the log file
         """
         return self._log_file
     
-    @log.setter
-    def log(self, func_name, func_input, func_output):
+    
+    def log(self, class_name, func_name, func_input, func_output):
         """
         11.01.24
         Mir Shukhman
@@ -47,19 +52,20 @@ class Logger(object):
         log_entry = {
             'id': self._log_entry_counter,
             'datetime': str(datetime.now()),
-            'func_name': func_name,
-            'func_input': func_input,
-            'func_output': func_output
+            'class-name': str(class_name),
+            'func_name': str(func_name),
+            'func_input': str(func_input),
+            'func_output': str(func_output)
         }
         
         try:
-            with open(self.log, 'a') as file:
+            with open(self._log_file, 'a') as file:
                 file.write(',\n')
                 json.dump(log_entry, file, indent=2)
                 self._log_entry_counter += 1
         
         except Exception as e:
-            raise e
+            return str(e)
         
 
     def read_log(self):
@@ -70,7 +76,7 @@ class Logger(object):
         Returns the file in read mode
         """
         try:
-            with open(self.log, 'r') as file:
+            with open(self._log_file, 'r') as file:
                 return json.load(file)
             
         except FileNotFoundError:
