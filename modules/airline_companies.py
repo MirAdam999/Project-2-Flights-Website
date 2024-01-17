@@ -10,5 +10,6 @@ class AirlineCompanies(db.Model):
     Name = db.Column(db.String(100), nullable=False, unique=True)
     Country_ID = db.Column(db.Integer, db.ForeignKey('Countries.CountryID'), nullable=False)
     UserID = db.Column(db.BigInteger, db.ForeignKey('Users.UserID'), nullable=False, unique=True)
+    CompanyLogo= db.Column(db.String(300))
 
     

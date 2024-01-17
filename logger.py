@@ -8,7 +8,6 @@ from datetime import datetime
 class Logger(object):
     _instance = None
     _log_file = 'log.json'
-    _log_entry_counter = 1
     
     def __new__(cls):
         """
@@ -20,7 +19,6 @@ class Logger(object):
         """
         if cls._instance is None:
             cls._instance= super(Logger,cls).__new__(cls)
-            
             # Creating the log file as part of the instance creation, if not alredy exists
             if not os.path.exists(cls._log_file):
                 with open(cls._log_file, 'w') as file:
@@ -28,10 +26,9 @@ class Logger(object):
             
         return cls._instance
     
-    def __init__(self) -> None:
+    def __init__(self)-> None:
         pass
-    
-    
+        
     @property
     def log_path(self):
         """
@@ -41,7 +38,7 @@ class Logger(object):
         """
         return self._log_file
     
-    
+   
     def log(self, class_name, func_name, func_input, func_output):
         """
         11.01.24
@@ -49,8 +46,9 @@ class Logger(object):
         Func setter to add log entry
         Input func name, func's input, func's output. Datetime + id set automaticly
         """
+        id = self.count_entries()+1
         log_entry = {
-            'id': self._log_entry_counter,
+            'id': id,
             'datetime': str(datetime.now()),
             'class-name': str(class_name),
             'func_name': str(func_name),
@@ -59,26 +57,32 @@ class Logger(object):
         }
         
         try:
-            with open(self._log_file, 'a') as file:
-                file.write(',\n')
-                json.dump(log_entry, file, indent=2)
-                self._log_entry_counter += 1
-        
+            with open(self._log_file, 'r') as file:
+                try:
+                    log_entries = json.load(file)
+                except json.JSONDecodeError:
+                    log_entries = []
+
+            log_entries.append(log_entry)
+
+            with open(self._log_file, 'w') as file:
+                json.dump(log_entries, file, indent=2)
+                
         except Exception as e:
             return str(e)
         
 
-    def read_log(self):
+    def count_entries(self):
         """
-        11.01.24
-        Mir Shukhman
-        Func to read the log file
-        Returns the file in read mode
+        Count the number of entries in the log file.
         """
         try:
             with open(self._log_file, 'r') as file:
-                return json.load(file)
-            
+                log_entries = json.load(file)
+                return len(log_entries)
+        except json.JSONDecodeError:
+            return 0
+        
         except FileNotFoundError:
-            return None 
+            return 0
 

@@ -3,8 +3,8 @@ use FlightsProject
 
 --	get_airline_by_username(_username text)
 GO
-CREATE PROCEDURE get_airline_by_username
-@username varchar
+ALTER PROCEDURE get_airline_by_username
+@username varchar(50)
 AS
 	select * from AirlineCompanies ac
 	inner join Users u 
@@ -13,8 +13,8 @@ AS
 	
 -- get_customer_by_username(_username text)
 GO
-CREATE PROCEDURE get_customer_by_username
-@username varchar
+ALTER PROCEDURE get_customer_by_username
+@username varchar(50)
 AS
 	select * from Customers c
 	inner join Users u 
@@ -23,8 +23,8 @@ AS
 
 --get_user_by_username(_username tex)
 GO
-CREATE PROCEDURE get_user_by_username
-@username varchar
+ALTER PROCEDURE get_user_by_username
+@username varchar(50)
 AS
 	select * from Users u
 	where u.Username = @username
@@ -78,3 +78,5 @@ CREATE PROCEDURE get_tickets_by_customer
 AS
 	select * from Tickets t
 	where t.CustomerID = @customerID
+
+--get_flights_by_origin_country_id(country_id)

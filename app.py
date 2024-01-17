@@ -44,15 +44,12 @@ if __name__ == "__main__":
         user_roles_repo= Repository(UserRoles)
         users_repo= Repository(Users)
             
-        # Testing (and Crying)
-        result = user_roles_repo.get_all()  # Assuming get_all() is called on an instance of your class
-
-        if result:
-            for user_role in result:
-                print(f"ID: {user_role.RoleID}, Name: {user_role.RoleName}")
-        else:
-            print("No roles found.")
-            
-            
+        # Testing (and Crying)# Function to generate random flights
+        parameters = {
+            "origin_country_id": 38,
+            "destination_country_id": 106,
+            "date": '2024-01-27'
+        }
+        print(flights_repo.get_stored_procedure('get_flights_by_parameters',parameters))
         
     app.run(debug=app.config['DEBUG'], use_reloader=False)
