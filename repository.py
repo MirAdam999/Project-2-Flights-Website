@@ -1,6 +1,5 @@
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import text
-import datetime
 
 from modules import db
 from logger import Logger

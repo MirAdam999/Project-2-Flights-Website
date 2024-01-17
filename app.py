@@ -12,8 +12,10 @@ from modules.flights import Flights
 from modules.tickets import Tickets
 from modules.user_roles import UserRoles
 from modules.users import Users
+
+from business_logic.facade_base import FacadeBase
+
 from repository import Repository
-from logger import Logger
 
 app = Flask(__name__)
 app.config.from_pyfile('.config')
@@ -30,11 +32,11 @@ if __name__ == "__main__":
     user_roles=UserRoles()
     users=Users()
     
-    logger=Logger()
+    facade_base=FacadeBase()
     
     with app.app_context():
         db.create_all()
-
+        """
         admins_repo= Repository(Administrators)
         airlines_repo= Repository(AirlineCompanies)
         countries_repo= Repository(Countries)
@@ -43,13 +45,18 @@ if __name__ == "__main__":
         tickets_repo= Repository(Tickets)
         user_roles_repo= Repository(UserRoles)
         users_repo= Repository(Users)
-            
-        # Testing (and Crying)# Function to generate random flights
+        """
+        
+        # Testing (and Crying)
+        """
         parameters = {
             "origin_country_id": 38,
             "destination_country_id": 106,
             "date": '2024-01-27'
         }
         print(flights_repo.get_stored_procedure('get_flights_by_parameters',parameters))
+        """
+        
+        print(facade_base.get_country_by_ID(3))
         
     app.run(debug=app.config['DEBUG'], use_reloader=False)

@@ -79,4 +79,56 @@ AS
 	select * from Tickets t
 	where t.CustomerID = @customerID
 
---get_flights_by_origin_country_id(country_id)
+--EXTRAS-insted of funcs
+
+--getFlightsByOriginCountryId(country_id)
+GO
+CREATE PROCEDURE get_flights_by_origin_country_ID
+@origin_countryID int
+AS
+	select * from Flights f
+	where f.OriginCountryID = @origin_countryID
+
+--getFlightsByDestinationCountryId(country_id)
+GO
+CREATE PROCEDURE get_flights_by_destination_country_ID
+@destination_countryID int
+AS
+	select * from Flights f
+	where f.DestinationCountryID = @destination_countryID
+
+--getFlightsByDepartureDate(date)
+GO
+ALTER PROCEDURE get_flights_by_departure_date
+@departure_date date
+AS
+	select * from Flights f
+	where convert (date, f.DepartureTime) = @departure_date
+
+--getFlightsByLandingDate(date)
+GO
+CREATE PROCEDURE get_flights_by_landing_date
+@landing_date date
+AS
+	select * from Flights f
+	where convert (date, f.LandingTime) = @landing_date
+
+--getFlightsByCustomer(customer)???
+
+--getAirlinesByCountry(country_id)
+GO
+CREATE PROCEDURE get_airlines_by_country
+@countryID int
+AS
+	select * from AirlineCompanies ac
+	where ac.Country_ID = @countryID
+
+-- EXTRAS- buisness logic 
+--FacadeBase
+GO
+CREATE PROCEDURE get_airline_by_userID
+@userID bigint
+AS
+	select * from AirlineCompanies ac
+	where ac.UserID = @userID
+
