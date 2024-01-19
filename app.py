@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import text
-import pyodbc
 
 from modules import db
 from modules.administrators import Administrators
@@ -14,8 +13,6 @@ from modules.user_roles import UserRoles
 from modules.users import Users
 
 from business_logic.facade_base import FacadeBase
-
-from repository import Repository
 
 app = Flask(__name__)
 app.config.from_pyfile('.config')
@@ -36,16 +33,6 @@ if __name__ == "__main__":
     
     with app.app_context():
         db.create_all()
-        """
-        admins_repo= Repository(Administrators)
-        airlines_repo= Repository(AirlineCompanies)
-        countries_repo= Repository(Countries)
-        customers_repo= Repository(Customers)
-        flights_repo= Repository(Flights)
-        tickets_repo= Repository(Tickets)
-        user_roles_repo= Repository(UserRoles)
-        users_repo= Repository(Users)
-        """
         
         # Testing (and Crying)
         """
@@ -57,6 +44,6 @@ if __name__ == "__main__":
         print(flights_repo.get_stored_procedure('get_flights_by_parameters',parameters))
         """
         
-        print(facade_base.get_country_by_ID(3))
+        print(facade_base.get_flights_by_parameters(origin_countryID=38, destination_countryID=106, date='2024-01-27'))
         
     app.run(debug=app.config['DEBUG'], use_reloader=False)

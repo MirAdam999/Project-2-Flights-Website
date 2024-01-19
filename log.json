@@ -118,5 +118,117 @@
     "func_name": "get_by_id",
     "func_input": "3",
     "func_output": "<Countries 3>"
+  },
+  {
+    "id": 16,
+    "datetime": "2024-01-19 01:28:30.903750",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_userID",
+    "func_input": "{'userID': 3}",
+    "func_output": "[(1, 'UFO Airlines', 13, 3, None)]"
+  },
+  {
+    "id": 17,
+    "datetime": "2024-01-19 01:29:05.685361",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_userID",
+    "func_input": "{'userID': 3}",
+    "func_output": "[(1, 'UFO Airlines', 13, 3, None)]"
+  },
+  {
+    "id": 18,
+    "datetime": "2024-01-19 01:29:16.301596",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_userID",
+    "func_input": "{'userID': 2}",
+    "func_output": "None Found"
+  },
+  {
+    "id": 19,
+    "datetime": "2024-01-19 01:29:39.430441",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airlines_by_country",
+    "func_input": "{'countryID': 2}",
+    "func_output": "None Found"
+  },
+  {
+    "id": 20,
+    "datetime": "2024-01-19 01:30:06.414954",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airlines_by_country",
+    "func_input": "{'countryID': 88}",
+    "func_output": "[(2, 'Quicker Then Fart Airlines', 88, 4, None)]"
+  },
+  {
+    "id": 21,
+    "datetime": "2024-01-19 01:34:16.062731",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_by_id",
+    "func_input": "88",
+    "func_output": "None found"
+  },
+  {
+    "id": 22,
+    "datetime": "2024-01-19 01:34:39.095718",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_by_id",
+    "func_input": "88",
+    "func_output": "None found"
+  },
+  {
+    "id": 23,
+    "datetime": "2024-01-19 01:34:51.172214",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_by_id",
+    "func_input": "2",
+    "func_output": "<AirlineCompanies 2>"
+  },
+  {
+    "id": 24,
+    "datetime": "2024-01-19 01:36:43.121940",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_all",
+    "func_input": "None",
+    "func_output": "[<AirlineCompanies 1>, <AirlineCompanies 2>, <AirlineCompanies 3>]"
+  },
+  {
+    "id": 25,
+    "datetime": "2024-01-19 01:41:40.549107",
+    "class-name": "<class 'modules.flights.Flights'>",
+    "func_name": "get_by_id",
+    "func_input": "3",
+    "func_output": "<Flights 3>"
+  },
+  {
+    "id": 26,
+    "datetime": "2024-01-19 01:43:54.663454",
+    "class-name": "<class 'modules.flights.Flights'>",
+    "func_name": "get_all",
+    "func_input": "None",
+    "func_output": "[<Flights 1>, <Flights 2>, <Flights 3>, <Flights 4>, <Flights 5>, <Flights 6>, <Flights 7>, <Flights 8>, <Flights 9>, <Flights 10>, <Flights 11>, <Flights 12>, <Flights 13>, <Flights 14>, <Flights 15>, <Flights 16>, <Flights 17>, <Flights 18>, <Flights 19>, <Flights 20>]"
+  },
+  {
+    "id": 27,
+    "datetime": "2024-01-19 03:06:13.683042",
+    "class-name": "<class 'modules.flights.Flights'>",
+    "func_name": "get_flights_by_parameters",
+    "func_input": "({'date': '2024-01-27'}, {'origin_country_id': 38}, {'destination_country_id': 106})",
+    "func_output": "'tuple' object has no attribute 'keys'"
+  },
+  {
+    "id": 28,
+    "datetime": "2024-01-19 03:07:17.321528",
+    "class-name": "<class 'modules.flights.Flights'>",
+    "func_name": "get_flights_by_parameters",
+    "func_input": "{'date': '2024-01-27', 'origin_country_id': 38, 'destination_country_id': 106}",
+    "func_output": "(pyodbc.ProgrammingError) ('42000', '[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Error converting data type nvarchar to int. (8114) (SQLExecDirectW)')\n[SQL: EXEC get_flights_by_parameters ?, ?, ?]\n[parameters: ('2024-01-27', 38, 106)]\n(Background on this error at: https://sqlalche.me/e/20/f405)"
+  },
+  {
+    "id": 29,
+    "datetime": "2024-01-19 03:10:18.885819",
+    "class-name": "<class 'modules.flights.Flights'>",
+    "func_name": "get_flights_by_parameters",
+    "func_input": "{'origin_country_id': 38, 'destination_country_id': 106, 'date': '2024-01-27'}",
+    "func_output": "[(4, 2, 38, 106, datetime.datetime(2024, 1, 27, 3, 17, 49, 690000), datetime.datetime(2024, 2, 24, 3, 17, 49, 690000), 62)]"
   }
 ]
