@@ -230,5 +230,341 @@
     "func_name": "get_flights_by_parameters",
     "func_input": "{'origin_country_id': 38, 'destination_country_id': 106, 'date': '2024-01-27'}",
     "func_output": "[(4, 2, 38, 106, datetime.datetime(2024, 1, 27, 3, 17, 49, 690000), datetime.datetime(2024, 2, 24, 3, 17, 49, 690000), 62)]"
+  },
+  {
+    "id": 30,
+    "datetime": "2024-01-21 18:17:49.217146",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "Working outside of application context.\n\nThis typically means that you attempted to use functionality that needed\nthe current application. To solve this, set up an application context\nwith app.app_context(). See the documentation for more information."
+  },
+  {
+    "id": 31,
+    "datetime": "2024-01-21 18:23:15.240069",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "Working outside of application context.\n\nThis typically means that you attempted to use functionality that needed\nthe current application. To solve this, set up an application context\nwith app.app_context(). See the documentation for more information."
+  },
+  {
+    "id": 32,
+    "datetime": "2024-01-21 18:26:31.227003",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "Working outside of application context.\n\nThis typically means that you attempted to use functionality that needed\nthe current application. To solve this, set up an application context\nwith app.app_context(). See the documentation for more information."
+  },
+  {
+    "id": 33,
+    "datetime": "2024-01-21 18:28:04.423582",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "Working outside of application context.\n\nThis typically means that you attempted to use functionality that needed\nthe current application. To solve this, set up an application context\nwith app.app_context(). See the documentation for more information."
+  },
+  {
+    "id": 34,
+    "datetime": "2024-01-21 18:31:29.869196",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "Working outside of application context.\n\nThis typically means that you attempted to use functionality that needed\nthe current application. To solve this, set up an application context\nwith app.app_context(). See the documentation for more information."
+  },
+  {
+    "id": 35,
+    "datetime": "2024-01-21 18:34:11.899737",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "Working outside of application context.\n\nThis typically means that you attempted to use functionality that needed\nthe current application. To solve this, set up an application context\nwith app.app_context(). See the documentation for more information."
+  },
+  {
+    "id": 36,
+    "datetime": "2024-01-21 18:34:37.618243",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 37,
+    "datetime": "2024-01-21 18:37:27.196896",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin', 'Adminny', 1, 1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 38,
+    "datetime": "2024-01-21 18:40:37.720688",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 39,
+    "datetime": "2024-01-21 18:41:43.458287",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 40,
+    "datetime": "2024-01-21 18:41:43.474061",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin', 'Adminny', 1, 1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 41,
+    "datetime": "2024-01-21 18:42:11.121571",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 42,
+    "datetime": "2024-01-21 18:42:11.137191",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin', 'Adminny', 1, 1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 43,
+    "datetime": "2024-01-21 18:43:27.828962",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 44,
+    "datetime": "2024-01-21 18:43:27.846119",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin', 'Adminny', 1, 1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 45,
+    "datetime": "2024-01-21 18:52:03.366286",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 46,
+    "datetime": "2024-01-21 18:52:03.381904",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin', 'Adminny', 1, 1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 47,
+    "datetime": "2024-01-21 18:53:37.063105",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 48,
+    "datetime": "2024-01-21 18:53:37.078729",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin', 'Adminny', 1, 1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 49,
+    "datetime": "2024-01-21 18:54:55.708835",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 50,
+    "datetime": "2024-01-21 18:54:55.725914",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin', 'Adminny', 1, 1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 51,
+    "datetime": "2024-01-21 18:55:41.831974",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 52,
+    "datetime": "2024-01-21 18:55:41.844983",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin', 'Adminny', 1, 1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 53,
+    "datetime": "2024-01-21 18:58:00.558605",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 54,
+    "datetime": "2024-01-21 18:58:00.558605",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin', 'Adminny', 1, 1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 55,
+    "datetime": "2024-01-22 09:26:18.585454",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 56,
+    "datetime": "2024-01-22 09:26:18.617151",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin', 'Adminny', 1, 1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 57,
+    "datetime": "2024-01-22 09:30:34.255598",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 58,
+    "datetime": "2024-01-22 09:30:34.271196",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin', 'Adminny', 1, 1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 59,
+    "datetime": "2024-01-22 09:31:21.542000",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 60,
+    "datetime": "2024-01-22 09:31:21.573255",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin', 'Adminny', 1, 1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 61,
+    "datetime": "2024-01-22 09:34:24.386692",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 62,
+    "datetime": "2024-01-22 09:34:24.403439",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin', 'Adminny', 1, 1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 63,
+    "datetime": "2024-01-22 10:01:45.418840",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "Working outside of application context.\n\nThis typically means that you attempted to use functionality that needed\nthe current application. To solve this, set up an application context\nwith app.app_context(). See the documentation for more information."
+  },
+  {
+    "id": 64,
+    "datetime": "2024-01-22 10:03:58.790823",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "Working outside of application context.\n\nThis typically means that you attempted to use functionality that needed\nthe current application. To solve this, set up an application context\nwith app.app_context(). See the documentation for more information."
+  },
+  {
+    "id": 65,
+    "datetime": "2024-01-22 14:11:53.119413",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 66,
+    "datetime": "2024-01-22 14:11:53.152557",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin', 'Adminny', 1, 1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 67,
+    "datetime": "2024-01-22 14:31:35.096216",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 68,
+    "datetime": "2024-01-22 14:31:35.127468",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin', 'Adminny', 1, 1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 69,
+    "datetime": "2024-01-22 17:36:09.558655",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "add",
+    "func_input": "<Users 11>",
+    "func_output": "Added"
+  },
+  {
+    "id": 70,
+    "datetime": "2024-01-22 17:36:09.590465",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'john_doe'}",
+    "func_output": "[(11, 'john_doe', 'password123', 'john@example.com', 3)]"
+  },
+  {
+    "id": 71,
+    "datetime": "2024-01-22 17:36:09.624073",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "add",
+    "func_input": "<Customers 6>",
+    "func_output": "Added"
   }
 ]

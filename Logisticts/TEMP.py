@@ -103,3 +103,6 @@ a_instance = A()
 t,d=a_instance.generate_token()
 b_instance = B(t,d)
 b_instance.f_print()
+
+
+

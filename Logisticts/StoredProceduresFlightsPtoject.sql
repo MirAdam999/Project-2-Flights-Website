@@ -132,3 +132,15 @@ AS
 	select * from AirlineCompanies ac
 	where ac.UserID = @userID
 
+
+
+
+--Extras
+GO
+CREATE PROCEDURE get_admin_by_username
+@username varchar(50)
+AS
+	select * from Administrators a
+	inner join Users u 
+	on u.UserID = a.UserID
+	where u.Username = @username

@@ -195,10 +195,8 @@ class Repository:
         ;logging of action
         """
         try:
-            # Construct the SQL query with named parameters
             query = text(f"EXEC {sp_name} " + ", ".join([f":{param}" for param in parameters.keys()]))
             
-            # Execute the query with provided parameters
             result = db.session.execute(query, parameters)
             result_set = result.fetchall()
             
