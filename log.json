@@ -566,5 +566,2629 @@
     "func_name": "add",
     "func_input": "<Customers 6>",
     "func_output": "Added"
+  },
+  {
+    "id": 72,
+    "datetime": "2024-01-24 06:53:13.773483",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 73,
+    "datetime": "2024-01-24 06:53:13.812482",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 Main St, Jerusalem, Israel', '+15551234564', '1234-5678-9012-4444', 10, 10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 74,
+    "datetime": "2024-01-24 06:53:13.842484",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_by_id",
+    "func_input": "10",
+    "func_output": "None found"
+  },
+  {
+    "id": 75,
+    "datetime": "2024-01-24 06:55:16.296736",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 76,
+    "datetime": "2024-01-24 06:55:16.466446",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 Main St, Jerusalem, Israel', '+15551234564', '1234-5678-9012-4444', 10, 10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 77,
+    "datetime": "2024-01-24 06:55:16.502295",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_by_id",
+    "func_input": "10",
+    "func_output": "None found"
+  },
+  {
+    "id": 78,
+    "datetime": "2024-01-24 06:56:03.439655",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 79,
+    "datetime": "2024-01-24 06:56:03.468685",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 Main St, Jerusalem, Israel', '+15551234564', '1234-5678-9012-4444', 10, 10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 80,
+    "datetime": "2024-01-24 06:56:03.496785",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_by_id",
+    "func_input": "10",
+    "func_output": "None found"
+  },
+  {
+    "id": 81,
+    "datetime": "2024-01-24 06:56:43.275871",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 82,
+    "datetime": "2024-01-24 06:56:43.299318",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 Main St, Jerusalem, Israel', '+15551234564', '1234-5678-9012-4444', 10, 10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 83,
+    "datetime": "2024-01-24 06:56:43.328537",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_by_id",
+    "func_input": "10",
+    "func_output": "None found"
+  },
+  {
+    "id": 84,
+    "datetime": "2024-01-24 07:03:18.432877",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 85,
+    "datetime": "2024-01-24 07:03:18.462051",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 Main St, Jerusalem, Israel', '+15551234564', '1234-5678-9012-4444', 10, 10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 86,
+    "datetime": "2024-01-24 07:03:18.490115",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_userID",
+    "func_input": "{'userID': 10}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 Main St, Jerusalem, Israel', '+15551234564', '1234-5678-9012-4444', 10)]"
+  },
+  {
+    "id": 87,
+    "datetime": "2024-01-24 07:03:18.535919",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_by_id",
+    "func_input": "[(5, 'Hermionie', 'Grain', '555 Main St, Jerusalem, Israel', '+15551234564', '1234-5678-9012-4444', 10)]",
+    "func_output": "(pyodbc.ProgrammingError) (\"A TVP's rows must be Sequence objects.\", 'HY000')\n[SQL: SELECT [Customers].[CustomerID] AS [Customers_CustomerID], [Customers].[FirstName] AS [Customers_FirstName], [Customers].[LastName] AS [Customers_LastName], [Customers].[Address] AS [Customers_Address], [Customers].[PhoneNum] AS [Customers_PhoneNum], [Customers].[CreditCardNum] AS [Customers_CreditCardNum], [Customers].[UserID] AS [Customers_UserID] \nFROM [Customers] \nWHERE [Customers].[CustomerID] = ?]\n[parameters: ((5, 'Hermionie', 'Grain', '555 Main St, Jerusalem, Israel', '+15551234564', '1234-5678-9012-4444', 10),)]\n(Background on this error at: https://sqlalche.me/e/20/f405)"
+  },
+  {
+    "id": 88,
+    "datetime": "2024-01-24 07:04:31.870686",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 89,
+    "datetime": "2024-01-24 07:04:31.900757",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 Main St, Jerusalem, Israel', '+15551234564', '1234-5678-9012-4444', 10, 10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 90,
+    "datetime": "2024-01-24 07:04:31.932059",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_userID",
+    "func_input": "{'userID': 10}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 Main St, Jerusalem, Israel', '+15551234564', '1234-5678-9012-4444', 10)]"
+  },
+  {
+    "id": 91,
+    "datetime": "2024-01-24 07:04:31.964101",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_by_id",
+    "func_input": "[(5, 'Hermionie', 'Grain', '555 Main St, Jerusalem, Israel', '+15551234564', '1234-5678-9012-4444', 10)]",
+    "func_output": "(pyodbc.ProgrammingError) (\"A TVP's rows must be Sequence objects.\", 'HY000')\n[SQL: SELECT [Customers].[CustomerID] AS [Customers_CustomerID], [Customers].[FirstName] AS [Customers_FirstName], [Customers].[LastName] AS [Customers_LastName], [Customers].[Address] AS [Customers_Address], [Customers].[PhoneNum] AS [Customers_PhoneNum], [Customers].[CreditCardNum] AS [Customers_CreditCardNum], [Customers].[UserID] AS [Customers_UserID] \nFROM [Customers] \nWHERE [Customers].[CustomerID] = ?]\n[parameters: ((5, 'Hermionie', 'Grain', '555 Main St, Jerusalem, Israel', '+15551234564', '1234-5678-9012-4444', 10),)]\n(Background on this error at: https://sqlalche.me/e/20/f405)"
+  },
+  {
+    "id": 92,
+    "datetime": "2024-01-24 07:13:10.760397",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 93,
+    "datetime": "2024-01-24 07:13:10.790637",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 Main St, Jerusalem, Israel', '+15551234564', '1234-5678-9012-4444', 10, 10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 94,
+    "datetime": "2024-01-24 07:13:10.820716",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_by_id",
+    "func_input": "5",
+    "func_output": "<Customers 5>"
+  },
+  {
+    "id": 95,
+    "datetime": "2024-01-24 07:14:30.696525",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 96,
+    "datetime": "2024-01-24 07:14:30.726526",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 Main St, Jerusalem, Israel', '+15551234564', '1234-5678-9012-4444', 10, 10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 97,
+    "datetime": "2024-01-24 07:14:30.758536",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_userID",
+    "func_input": "{'userID': 10}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 Main St, Jerusalem, Israel', '+15551234564', '1234-5678-9012-4444', 10)]"
+  },
+  {
+    "id": 98,
+    "datetime": "2024-01-24 07:14:30.799526",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_by_id",
+    "func_input": "[(5, 'Hermionie', 'Grain', '555 Main St, Jerusalem, Israel', '+15551234564', '1234-5678-9012-4444', 10)]",
+    "func_output": "(pyodbc.ProgrammingError) (\"A TVP's rows must be Sequence objects.\", 'HY000')\n[SQL: SELECT [Customers].[CustomerID] AS [Customers_CustomerID], [Customers].[FirstName] AS [Customers_FirstName], [Customers].[LastName] AS [Customers_LastName], [Customers].[Address] AS [Customers_Address], [Customers].[PhoneNum] AS [Customers_PhoneNum], [Customers].[CreditCardNum] AS [Customers_CreditCardNum], [Customers].[UserID] AS [Customers_UserID] \nFROM [Customers] \nWHERE [Customers].[CustomerID] = ?]\n[parameters: ((5, 'Hermionie', 'Grain', '555 Main St, Jerusalem, Israel', '+15551234564', '1234-5678-9012-4444', 10),)]\n(Background on this error at: https://sqlalche.me/e/20/f405)"
+  },
+  {
+    "id": 99,
+    "datetime": "2024-01-24 07:16:20.373986",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 100,
+    "datetime": "2024-01-24 07:16:20.402983",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 Main St, Jerusalem, Israel', '+15551234564', '1234-5678-9012-4444', 10, 10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 101,
+    "datetime": "2024-01-24 07:16:20.432137",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_userID",
+    "func_input": "{'userID': 10}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 Main St, Jerusalem, Israel', '+15551234564', '1234-5678-9012-4444', 10)]"
+  },
+  {
+    "id": 102,
+    "datetime": "2024-01-24 07:16:20.465163",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_by_id",
+    "func_input": "[(5, 'Hermionie', 'Grain', '555 Main St, Jerusalem, Israel', '+15551234564', '1234-5678-9012-4444', 10)]",
+    "func_output": "(pyodbc.ProgrammingError) (\"A TVP's rows must be Sequence objects.\", 'HY000')\n[SQL: SELECT [Customers].[CustomerID] AS [Customers_CustomerID], [Customers].[FirstName] AS [Customers_FirstName], [Customers].[LastName] AS [Customers_LastName], [Customers].[Address] AS [Customers_Address], [Customers].[PhoneNum] AS [Customers_PhoneNum], [Customers].[CreditCardNum] AS [Customers_CreditCardNum], [Customers].[UserID] AS [Customers_UserID] \nFROM [Customers] \nWHERE [Customers].[CustomerID] = ?]\n[parameters: ((5, 'Hermionie', 'Grain', '555 Main St, Jerusalem, Israel', '+15551234564', '1234-5678-9012-4444', 10),)]\n(Background on this error at: https://sqlalche.me/e/20/f405)"
+  },
+  {
+    "id": 103,
+    "datetime": "2024-01-24 07:17:37.277585",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 104,
+    "datetime": "2024-01-24 07:17:37.312278",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 Main St, Jerusalem, Israel', '+15551234564', '1234-5678-9012-4444', 10, 10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 105,
+    "datetime": "2024-01-24 07:17:37.351017",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_userID",
+    "func_input": "{'userID': 10}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 Main St, Jerusalem, Israel', '+15551234564', '1234-5678-9012-4444', 10)]"
+  },
+  {
+    "id": 106,
+    "datetime": "2024-01-24 07:17:37.390011",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_by_id",
+    "func_input": "[(5, 'Hermionie', 'Grain', '555 Main St, Jerusalem, Israel', '+15551234564', '1234-5678-9012-4444', 10)]",
+    "func_output": "(pyodbc.ProgrammingError) (\"A TVP's rows must be Sequence objects.\", 'HY000')\n[SQL: SELECT [Customers].[CustomerID] AS [Customers_CustomerID], [Customers].[FirstName] AS [Customers_FirstName], [Customers].[LastName] AS [Customers_LastName], [Customers].[Address] AS [Customers_Address], [Customers].[PhoneNum] AS [Customers_PhoneNum], [Customers].[CreditCardNum] AS [Customers_CreditCardNum], [Customers].[UserID] AS [Customers_UserID] \nFROM [Customers] \nWHERE [Customers].[CustomerID] = ?]\n[parameters: ((5, 'Hermionie', 'Grain', '555 Main St, Jerusalem, Israel', '+15551234564', '1234-5678-9012-4444', 10),)]\n(Background on this error at: https://sqlalche.me/e/20/f405)"
+  },
+  {
+    "id": 107,
+    "datetime": "2024-01-24 07:20:13.637710",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 108,
+    "datetime": "2024-01-24 07:20:13.680999",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 Main St, Jerusalem, Israel', '+15551234564', '1234-5678-9012-4444', 10, 10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 109,
+    "datetime": "2024-01-24 07:20:13.713032",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_userID",
+    "func_input": "{'userID': 10}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 Main St, Jerusalem, Israel', '+15551234564', '1234-5678-9012-4444', 10)]"
+  },
+  {
+    "id": 110,
+    "datetime": "2024-01-24 07:20:13.752363",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_by_id",
+    "func_input": "5",
+    "func_output": "<Customers 5>"
+  },
+  {
+    "id": 111,
+    "datetime": "2024-01-24 07:20:13.780658",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_by_id",
+    "func_input": "5",
+    "func_output": "<Customers 5>"
+  },
+  {
+    "id": 112,
+    "datetime": "2024-01-24 07:20:13.836845",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "update",
+    "func_input": "(5, {'Address': '555 New st'})",
+    "func_output": "Updated"
+  },
+  {
+    "id": 113,
+    "datetime": "2024-01-24 07:23:01.954202",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 114,
+    "datetime": "2024-01-24 07:23:01.988448",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 New st', '+15551234564', '1234-5678-9012-4444', 10, 10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 115,
+    "datetime": "2024-01-24 07:23:02.017736",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_userID",
+    "func_input": "{'userID': 10}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 New st', '+15551234564', '1234-5678-9012-4444', 10)]"
+  },
+  {
+    "id": 116,
+    "datetime": "2024-01-24 07:23:02.047948",
+    "class-name": "<class 'modules.tickets.Tickets'>",
+    "func_name": "check_if_customer_owns_ticket_for_flight",
+    "func_input": "{'flightID': 1, 'customerID': 5}",
+    "func_output": "None Found"
+  },
+  {
+    "id": 117,
+    "datetime": "2024-01-24 07:23:02.093029",
+    "class-name": "<class 'modules.tickets.Tickets'>",
+    "func_name": "add",
+    "func_input": "<Tickets 6>",
+    "func_output": "Added"
+  },
+  {
+    "id": 118,
+    "datetime": "2024-01-24 07:23:02.121898",
+    "class-name": "<class 'modules.tickets.Tickets'>",
+    "func_name": "check_if_customer_owns_ticket_for_flight",
+    "func_input": "{'flightID': 1, 'customerID': 5}",
+    "func_output": "[(6, 1, 5)]"
+  },
+  {
+    "id": 119,
+    "datetime": "2024-01-24 07:23:50.897190",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 120,
+    "datetime": "2024-01-24 07:23:50.930320",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 New st', '+15551234564', '1234-5678-9012-4444', 10, 10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 121,
+    "datetime": "2024-01-24 07:23:50.964921",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_userID",
+    "func_input": "{'userID': 10}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 New st', '+15551234564', '1234-5678-9012-4444', 10)]"
+  },
+  {
+    "id": 122,
+    "datetime": "2024-01-24 07:23:51.002047",
+    "class-name": "<class 'modules.tickets.Tickets'>",
+    "func_name": "check_if_customer_owns_ticket_for_flight",
+    "func_input": "{'flightID': 1, 'customerID': 5}",
+    "func_output": "[(6, 1, 5)]"
+  },
+  {
+    "id": 123,
+    "datetime": "2024-01-24 07:26:13.539646",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 124,
+    "datetime": "2024-01-24 07:26:13.571354",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 New st', '+15551234564', '1234-5678-9012-4444', 10, 10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 125,
+    "datetime": "2024-01-24 07:26:13.611178",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_userID",
+    "func_input": "{'userID': 10}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 New st', '+15551234564', '1234-5678-9012-4444', 10)]"
+  },
+  {
+    "id": 126,
+    "datetime": "2024-01-24 07:26:13.645842",
+    "class-name": "<class 'modules.tickets.Tickets'>",
+    "func_name": "get_by_id",
+    "func_input": "6",
+    "func_output": "<Tickets 6>"
+  },
+  {
+    "id": 127,
+    "datetime": "2024-01-24 07:26:13.675950",
+    "class-name": "<class 'modules.tickets.Tickets'>",
+    "func_name": "get_by_id",
+    "func_input": "6",
+    "func_output": "<Tickets 6>"
+  },
+  {
+    "id": 128,
+    "datetime": "2024-01-24 07:26:13.712963",
+    "class-name": "<class 'modules.tickets.Tickets'>",
+    "func_name": "remove",
+    "func_input": "6",
+    "func_output": "Removed"
+  },
+  {
+    "id": 129,
+    "datetime": "2024-01-24 07:26:25.745794",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 130,
+    "datetime": "2024-01-24 07:26:25.794381",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 New st', '+15551234564', '1234-5678-9012-4444', 10, 10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 131,
+    "datetime": "2024-01-24 07:26:25.827063",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_userID",
+    "func_input": "{'userID': 10}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 New st', '+15551234564', '1234-5678-9012-4444', 10)]"
+  },
+  {
+    "id": 132,
+    "datetime": "2024-01-24 07:26:25.860031",
+    "class-name": "<class 'modules.tickets.Tickets'>",
+    "func_name": "get_by_id",
+    "func_input": "6",
+    "func_output": "None found"
+  },
+  {
+    "id": 133,
+    "datetime": "2024-01-24 07:27:51.468567",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 134,
+    "datetime": "2024-01-24 07:27:51.509573",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 New st', '+15551234564', '1234-5678-9012-4444', 10, 10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 135,
+    "datetime": "2024-01-24 07:27:51.541737",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_userID",
+    "func_input": "{'userID': 10}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 New st', '+15551234564', '1234-5678-9012-4444', 10)]"
+  },
+  {
+    "id": 136,
+    "datetime": "2024-01-24 07:27:51.571723",
+    "class-name": "<class 'modules.tickets.Tickets'>",
+    "func_name": "get_tickets_by_customer",
+    "func_input": "{'customerID': 5}",
+    "func_output": "[(5, 6, 5)]"
+  },
+  {
+    "id": 137,
+    "datetime": "2024-01-24 07:29:18.617347",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 138,
+    "datetime": "2024-01-24 07:29:18.649862",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 New st', '+15551234564', '1234-5678-9012-4444', 10, 10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 139,
+    "datetime": "2024-01-24 07:29:18.679984",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_userID",
+    "func_input": "{'userID': 10}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 New st', '+15551234564', '1234-5678-9012-4444', 10)]"
+  },
+  {
+    "id": 140,
+    "datetime": "2024-01-24 07:29:18.707843",
+    "class-name": "<class 'modules.tickets.Tickets'>",
+    "func_name": "get_tickets_by_customer",
+    "func_input": "{'customerID': 5}",
+    "func_output": "[(5, 6, 5)]"
+  },
+  {
+    "id": 141,
+    "datetime": "2024-01-24 07:29:18.745103",
+    "class-name": "<class 'modules.flights.Flights'>",
+    "func_name": "get_by_id",
+    "func_input": "6",
+    "func_output": "<Flights 6>"
+  },
+  {
+    "id": 142,
+    "datetime": "2024-01-24 07:33:51.787861",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 143,
+    "datetime": "2024-01-24 07:33:51.825586",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 New st', '+15551234564', '1234-5678-9012-4444', 10, 10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 144,
+    "datetime": "2024-01-24 07:33:51.863149",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_userID",
+    "func_input": "{'userID': 10}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 New st', '+15551234564', '1234-5678-9012-4444', 10)]"
+  },
+  {
+    "id": 145,
+    "datetime": "2024-01-24 07:33:51.898424",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_by_id",
+    "func_input": "5",
+    "func_output": "<Customers 5>"
+  },
+  {
+    "id": 146,
+    "datetime": "2024-01-24 07:33:51.925130",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_by_id",
+    "func_input": "5",
+    "func_output": "<Customers 5>"
+  },
+  {
+    "id": 147,
+    "datetime": "2024-01-24 07:33:51.957594",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "update",
+    "func_input": "(5, {'Address': '555 Main St'})",
+    "func_output": "Updated"
+  },
+  {
+    "id": 148,
+    "datetime": "2024-01-24 08:24:08.791687",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 149,
+    "datetime": "2024-01-24 08:24:08.836676",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(1, 'UFO Airlines', 13, 3, None, 3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 150,
+    "datetime": "2024-01-24 08:24:08.868561",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_userID",
+    "func_input": "{'userID': 3}",
+    "func_output": "[(1, 'UFO Airlines', 13, 3, None)]"
+  },
+  {
+    "id": 151,
+    "datetime": "2024-01-24 08:24:08.897302",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_userID",
+    "func_input": "{'userID': 3}",
+    "func_output": "[(1, 'UFO Airlines', 13, 3, None)]"
+  },
+  {
+    "id": 152,
+    "datetime": "2024-01-24 08:35:52.161792",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 153,
+    "datetime": "2024-01-24 08:35:52.179733",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(1, 'UFO Airlines', 13, 3, None, 3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 154,
+    "datetime": "2024-01-24 08:35:52.197682",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_userID",
+    "func_input": "{'userID': 3}",
+    "func_output": "[(1, 'UFO Airlines', 13, 3, None)]"
+  },
+  {
+    "id": 155,
+    "datetime": "2024-01-24 08:35:52.216622",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_by_id",
+    "func_input": "1",
+    "func_output": "<AirlineCompanies 1>"
+  },
+  {
+    "id": 156,
+    "datetime": "2024-01-24 08:35:52.230637",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_by_id",
+    "func_input": "1",
+    "func_output": "<AirlineCompanies 1>"
+  },
+  {
+    "id": 157,
+    "datetime": "2024-01-24 08:35:52.254510",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "update",
+    "func_input": "(1, {'Country_ID': 33})",
+    "func_output": "Updated"
+  },
+  {
+    "id": 158,
+    "datetime": "2024-01-24 09:17:23.527764",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 159,
+    "datetime": "2024-01-24 09:17:23.546011",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None, 3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 160,
+    "datetime": "2024-01-24 09:17:23.562536",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_userID",
+    "func_input": "{'userID': 3}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None)]"
+  },
+  {
+    "id": 161,
+    "datetime": "2024-01-24 09:17:23.584776",
+    "class-name": "<class 'modules.flights.Flights'>",
+    "func_name": "get_flights_by_parameters",
+    "func_input": "{'origin_country_id': 14, 'destination_country_id': 219, 'date': '2024-01-29'}",
+    "func_output": "[(1, 3, 14, 219, datetime.datetime(2024, 1, 29, 3, 17, 49, 690000), datetime.datetime(2024, 2, 17, 3, 17, 49, 690000), 87)]"
+  },
+  {
+    "id": 162,
+    "datetime": "2024-01-24 09:18:09.624855",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 163,
+    "datetime": "2024-01-24 09:18:09.643861",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None, 3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 164,
+    "datetime": "2024-01-24 09:18:09.663856",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_userID",
+    "func_input": "{'userID': 3}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None)]"
+  },
+  {
+    "id": 165,
+    "datetime": "2024-01-24 09:18:09.683859",
+    "class-name": "<class 'modules.flights.Flights'>",
+    "func_name": "get_flights_by_parameters",
+    "func_input": "{'origin_country_id': 14, 'destination_country_id': 219, 'date': '2024-01-29 03:17'}",
+    "func_output": "[(1, 3, 14, 219, datetime.datetime(2024, 1, 29, 3, 17, 49, 690000), datetime.datetime(2024, 2, 17, 3, 17, 49, 690000), 87)]"
+  },
+  {
+    "id": 166,
+    "datetime": "2024-01-24 09:18:24.280756",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 167,
+    "datetime": "2024-01-24 09:18:24.297757",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None, 3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 168,
+    "datetime": "2024-01-24 09:18:24.314588",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_userID",
+    "func_input": "{'userID': 3}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None)]"
+  },
+  {
+    "id": 169,
+    "datetime": "2024-01-24 09:18:24.332590",
+    "class-name": "<class 'modules.flights.Flights'>",
+    "func_name": "get_flights_by_parameters",
+    "func_input": "{'origin_country_id': 14, 'destination_country_id': 219, 'date': '2024-01-29 03:00'}",
+    "func_output": "[(1, 3, 14, 219, datetime.datetime(2024, 1, 29, 3, 17, 49, 690000), datetime.datetime(2024, 2, 17, 3, 17, 49, 690000), 87)]"
+  },
+  {
+    "id": 170,
+    "datetime": "2024-01-24 09:19:02.477498",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 171,
+    "datetime": "2024-01-24 09:19:02.496494",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None, 3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 172,
+    "datetime": "2024-01-24 09:19:02.513494",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_userID",
+    "func_input": "{'userID': 3}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None)]"
+  },
+  {
+    "id": 173,
+    "datetime": "2024-01-24 09:19:02.534494",
+    "class-name": "<class 'modules.flights.Flights'>",
+    "func_name": "get_flights_by_parameters",
+    "func_input": "{'origin_country_id': 14, 'destination_country_id': 219, 'date': '2024-01-29 03:00'}",
+    "func_output": "None Found"
+  },
+  {
+    "id": 174,
+    "datetime": "2024-01-24 09:20:15.907813",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 175,
+    "datetime": "2024-01-24 09:20:15.926814",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None, 3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 176,
+    "datetime": "2024-01-24 09:20:15.945815",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_userID",
+    "func_input": "{'userID': 3}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None)]"
+  },
+  {
+    "id": 177,
+    "datetime": "2024-01-24 09:20:15.963813",
+    "class-name": "<class 'modules.flights.Flights'>",
+    "func_name": "get_flights_by_parameters",
+    "func_input": "{'origin_country_id': 14, 'destination_country_id': 219, 'date': '2024-01-29 03:00'}",
+    "func_output": "[(1, 3, 14, 219, datetime.datetime(2024, 1, 29, 3, 17, 49, 690000), datetime.datetime(2024, 2, 17, 3, 17, 49, 690000), 87)]"
+  },
+  {
+    "id": 178,
+    "datetime": "2024-01-24 09:54:14.545684",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 179,
+    "datetime": "2024-01-24 09:54:14.570683",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None, 3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 180,
+    "datetime": "2024-01-24 09:54:14.591680",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_userID",
+    "func_input": "{'userID': 3}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None)]"
+  },
+  {
+    "id": 181,
+    "datetime": "2024-01-24 09:54:39.756849",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 182,
+    "datetime": "2024-01-24 09:54:39.774849",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None, 3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 183,
+    "datetime": "2024-01-24 09:54:39.792857",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_userID",
+    "func_input": "{'userID': 3}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None)]"
+  },
+  {
+    "id": 184,
+    "datetime": "2024-01-24 09:54:39.812850",
+    "class-name": "<class 'modules.flights.Flights'>",
+    "func_name": "check_if_flight_exists",
+    "func_input": "{'origin_country_id': 33, 'destination_country_id': 100, 'datetime': '2024-02-03 01:50'}",
+    "func_output": "None Found"
+  },
+  {
+    "id": 185,
+    "datetime": "2024-01-24 09:54:39.843849",
+    "class-name": "<class 'modules.flights.Flights'>",
+    "func_name": "add",
+    "func_input": "<Flights 21>",
+    "func_output": "Added"
+  },
+  {
+    "id": 186,
+    "datetime": "2024-01-24 09:54:39.862849",
+    "class-name": "<class 'modules.flights.Flights'>",
+    "func_name": "check_if_flight_exists",
+    "func_input": "{'origin_country_id': 33, 'destination_country_id': 100, 'datetime': '2024-02-03 01:50'}",
+    "func_output": "[(21, 1, 33, 100, datetime.datetime(2024, 2, 3, 1, 50), datetime.datetime(2024, 2, 3, 4, 0), 100)]"
+  },
+  {
+    "id": 187,
+    "datetime": "2024-01-24 10:20:16.853550",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 188,
+    "datetime": "2024-01-24 10:20:16.873351",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None, 3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 189,
+    "datetime": "2024-01-24 10:20:16.889894",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_userID",
+    "func_input": "{'userID': 3}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None)]"
+  },
+  {
+    "id": 190,
+    "datetime": "2024-01-24 10:20:16.913658",
+    "class-name": "<class 'modules.flights.Flights'>",
+    "func_name": "check_if_flight_exists",
+    "func_input": "{'origin_country_id': 33, 'destination_country_id': 100, 'datetime': '2024-02-03 01:50'}",
+    "func_output": "[(21, 1, 33, 100, datetime.datetime(2024, 2, 3, 1, 50), datetime.datetime(2024, 2, 3, 4, 0), 100)]"
+  },
+  {
+    "id": 191,
+    "datetime": "2024-01-24 10:20:33.266882",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 192,
+    "datetime": "2024-01-24 10:20:33.282883",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None, 3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 193,
+    "datetime": "2024-01-24 10:20:33.297883",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_userID",
+    "func_input": "{'userID': 3}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None)]"
+  },
+  {
+    "id": 194,
+    "datetime": "2024-01-24 10:20:49.423077",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 195,
+    "datetime": "2024-01-24 10:20:49.438074",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None, 3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 196,
+    "datetime": "2024-01-24 10:20:49.463131",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_userID",
+    "func_input": "{'userID': 3}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None)]"
+  },
+  {
+    "id": 197,
+    "datetime": "2024-01-24 10:21:15.924179",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 198,
+    "datetime": "2024-01-24 10:21:15.943687",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None, 3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 199,
+    "datetime": "2024-01-24 10:21:15.961413",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_userID",
+    "func_input": "{'userID': 3}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None)]"
+  },
+  {
+    "id": 200,
+    "datetime": "2024-01-24 10:51:50.236408",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 201,
+    "datetime": "2024-01-24 10:51:50.279422",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None, 3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 202,
+    "datetime": "2024-01-24 10:51:50.316164",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_userID",
+    "func_input": "{'userID': 3}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None)]"
+  },
+  {
+    "id": 203,
+    "datetime": "2024-01-24 10:51:50.350206",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 204,
+    "datetime": "2024-01-24 10:51:50.388445",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 Main St', '+15551234564', '1234-5678-9012-4444', 10, 10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 205,
+    "datetime": "2024-01-24 10:51:50.423038",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_userID",
+    "func_input": "{'userID': 10}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 Main St', '+15551234564', '1234-5678-9012-4444', 10)]"
+  },
+  {
+    "id": 206,
+    "datetime": "2024-01-24 10:51:50.460218",
+    "class-name": "<class 'modules.tickets.Tickets'>",
+    "func_name": "check_if_customer_owns_ticket_for_flight",
+    "func_input": "{'flightID': 2, 'customerID': 5}",
+    "func_output": "None Found"
+  },
+  {
+    "id": 207,
+    "datetime": "2024-01-24 10:51:50.500114",
+    "class-name": "<class 'modules.flights.Flights'>",
+    "func_name": "get_by_id",
+    "func_input": "2",
+    "func_output": "<Flights 2>"
+  },
+  {
+    "id": 208,
+    "datetime": "2024-01-24 10:51:50.555478",
+    "class-name": "<class 'modules.tickets.Tickets'>",
+    "func_name": "add",
+    "func_input": "<Tickets 7>",
+    "func_output": "Added"
+  },
+  {
+    "id": 209,
+    "datetime": "2024-01-24 10:51:50.592578",
+    "class-name": "<class 'modules.flights.Flights'>",
+    "func_name": "buy_ticket",
+    "func_input": "{'flightID': 2}",
+    "func_output": "This result object does not return rows. It has been closed automatically."
+  },
+  {
+    "id": 210,
+    "datetime": "2024-01-24 10:51:50.625276",
+    "class-name": "<class 'modules.tickets.Tickets'>",
+    "func_name": "check_if_customer_owns_ticket_for_flight",
+    "func_input": "{'flightID': 2, 'customerID': 5}",
+    "func_output": "[(7, 2, 5)]"
+  },
+  {
+    "id": 211,
+    "datetime": "2024-01-24 10:52:21.537579",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 212,
+    "datetime": "2024-01-24 10:52:21.580784",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None, 3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 213,
+    "datetime": "2024-01-24 10:52:21.617850",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_userID",
+    "func_input": "{'userID': 3}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None)]"
+  },
+  {
+    "id": 214,
+    "datetime": "2024-01-24 10:52:21.652217",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 215,
+    "datetime": "2024-01-24 10:52:21.692826",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 Main St', '+15551234564', '1234-5678-9012-4444', 10, 10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 216,
+    "datetime": "2024-01-24 10:52:21.731885",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_userID",
+    "func_input": "{'userID': 10}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 Main St', '+15551234564', '1234-5678-9012-4444', 10)]"
+  },
+  {
+    "id": 217,
+    "datetime": "2024-01-24 10:52:21.770879",
+    "class-name": "<class 'modules.tickets.Tickets'>",
+    "func_name": "check_if_customer_owns_ticket_for_flight",
+    "func_input": "{'flightID': 1, 'customerID': 5}",
+    "func_output": "None Found"
+  },
+  {
+    "id": 218,
+    "datetime": "2024-01-24 10:52:21.809151",
+    "class-name": "<class 'modules.flights.Flights'>",
+    "func_name": "get_by_id",
+    "func_input": "1",
+    "func_output": "<Flights 1>"
+  },
+  {
+    "id": 219,
+    "datetime": "2024-01-24 10:52:21.849938",
+    "class-name": "<class 'modules.tickets.Tickets'>",
+    "func_name": "add",
+    "func_input": "<Tickets 8>",
+    "func_output": "Added"
+  },
+  {
+    "id": 220,
+    "datetime": "2024-01-24 10:52:21.888351",
+    "class-name": "<class 'modules.flights.Flights'>",
+    "func_name": "buy_ticket",
+    "func_input": "{'flightID': 1}",
+    "func_output": "This result object does not return rows. It has been closed automatically."
+  },
+  {
+    "id": 221,
+    "datetime": "2024-01-24 10:52:21.926189",
+    "class-name": "<class 'modules.tickets.Tickets'>",
+    "func_name": "check_if_customer_owns_ticket_for_flight",
+    "func_input": "{'flightID': 1, 'customerID': 5}",
+    "func_output": "[(8, 1, 5)]"
+  },
+  {
+    "id": 222,
+    "datetime": "2024-01-24 10:53:02.697135",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 223,
+    "datetime": "2024-01-24 10:53:02.751006",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None, 3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 224,
+    "datetime": "2024-01-24 10:53:02.798198",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_userID",
+    "func_input": "{'userID': 3}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None)]"
+  },
+  {
+    "id": 225,
+    "datetime": "2024-01-24 10:53:02.836406",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 226,
+    "datetime": "2024-01-24 10:53:02.880230",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 Main St', '+15551234564', '1234-5678-9012-4444', 10, 10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 227,
+    "datetime": "2024-01-24 10:53:02.929468",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_userID",
+    "func_input": "{'userID': 10}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 Main St', '+15551234564', '1234-5678-9012-4444', 10)]"
+  },
+  {
+    "id": 228,
+    "datetime": "2024-01-24 10:53:02.977872",
+    "class-name": "<class 'modules.tickets.Tickets'>",
+    "func_name": "check_if_customer_owns_ticket_for_flight",
+    "func_input": "{'flightID': 1, 'customerID': 5}",
+    "func_output": "[(8, 1, 5)]"
+  },
+  {
+    "id": 229,
+    "datetime": "2024-01-24 10:53:53.140180",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 230,
+    "datetime": "2024-01-24 10:53:53.180452",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 Main St', '+15551234564', '1234-5678-9012-4444', 10, 10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 231,
+    "datetime": "2024-01-24 10:53:53.230366",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_userID",
+    "func_input": "{'userID': 10}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 Main St', '+15551234564', '1234-5678-9012-4444', 10)]"
+  },
+  {
+    "id": 232,
+    "datetime": "2024-01-24 10:53:53.274057",
+    "class-name": "<class 'modules.tickets.Tickets'>",
+    "func_name": "check_if_customer_owns_ticket_for_flight",
+    "func_input": "{'flightID': 1, 'customerID': 5}",
+    "func_output": "[(8, 1, 5)]"
+  },
+  {
+    "id": 233,
+    "datetime": "2024-01-24 10:54:16.679811",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 234,
+    "datetime": "2024-01-24 10:54:16.727897",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 Main St', '+15551234564', '1234-5678-9012-4444', 10, 10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 235,
+    "datetime": "2024-01-24 10:54:16.770255",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_userID",
+    "func_input": "{'userID': 10}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 Main St', '+15551234564', '1234-5678-9012-4444', 10)]"
+  },
+  {
+    "id": 236,
+    "datetime": "2024-01-24 10:54:16.807093",
+    "class-name": "<class 'modules.tickets.Tickets'>",
+    "func_name": "check_if_customer_owns_ticket_for_flight",
+    "func_input": "{'flightID': 1, 'customerID': 5}",
+    "func_output": "[(8, 1, 5)]"
+  },
+  {
+    "id": 237,
+    "datetime": "2024-01-24 10:55:28.902931",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 238,
+    "datetime": "2024-01-24 10:55:28.945928",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 Main St', '+15551234564', '1234-5678-9012-4444', 10, 10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 239,
+    "datetime": "2024-01-24 10:55:28.988934",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_userID",
+    "func_input": "{'userID': 10}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 Main St', '+15551234564', '1234-5678-9012-4444', 10)]"
+  },
+  {
+    "id": 240,
+    "datetime": "2024-01-24 10:55:29.028929",
+    "class-name": "<class 'modules.tickets.Tickets'>",
+    "func_name": "check_if_customer_owns_ticket_for_flight",
+    "func_input": "{'flightID': 1, 'customerID': 5}",
+    "func_output": "[(8, 1, 5)]"
+  },
+  {
+    "id": 241,
+    "datetime": "2024-01-24 10:55:55.383252",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 242,
+    "datetime": "2024-01-24 10:55:55.468559",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 Main St', '+15551234564', '1234-5678-9012-4444', 10, 10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 243,
+    "datetime": "2024-01-24 10:55:55.510907",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_userID",
+    "func_input": "{'userID': 10}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 Main St', '+15551234564', '1234-5678-9012-4444', 10)]"
+  },
+  {
+    "id": 244,
+    "datetime": "2024-01-24 10:55:55.552478",
+    "class-name": "<class 'modules.tickets.Tickets'>",
+    "func_name": "check_if_customer_owns_ticket_for_flight",
+    "func_input": "{'flightID': 1, 'customerID': 5}",
+    "func_output": "[(8, 1, 5)]"
+  },
+  {
+    "id": 245,
+    "datetime": "2024-01-24 10:56:27.624538",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 246,
+    "datetime": "2024-01-24 10:56:27.753464",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 Main St', '+15551234564', '1234-5678-9012-4444', 10, 10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 247,
+    "datetime": "2024-01-24 10:56:27.873570",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_userID",
+    "func_input": "{'userID': 10}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 Main St', '+15551234564', '1234-5678-9012-4444', 10)]"
+  },
+  {
+    "id": 248,
+    "datetime": "2024-01-24 10:56:31.683631",
+    "class-name": "<class 'modules.tickets.Tickets'>",
+    "func_name": "check_if_customer_owns_ticket_for_flight",
+    "func_input": "{'flightID': 1, 'customerID': 5}",
+    "func_output": "[(8, 1, 5)]"
+  },
+  {
+    "id": 249,
+    "datetime": "2024-01-24 10:58:15.170883",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 250,
+    "datetime": "2024-01-24 10:58:15.209023",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 Main St', '+15551234564', '1234-5678-9012-4444', 10, 10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 251,
+    "datetime": "2024-01-24 10:58:15.254448",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_userID",
+    "func_input": "{'userID': 10}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 Main St', '+15551234564', '1234-5678-9012-4444', 10)]"
+  },
+  {
+    "id": 252,
+    "datetime": "2024-01-24 10:58:15.290509",
+    "class-name": "<class 'modules.tickets.Tickets'>",
+    "func_name": "check_if_customer_owns_ticket_for_flight",
+    "func_input": "{'flightID': 8, 'customerID': 5}",
+    "func_output": "None Found"
+  },
+  {
+    "id": 253,
+    "datetime": "2024-01-24 10:58:15.328570",
+    "class-name": "<class 'modules.flights.Flights'>",
+    "func_name": "get_by_id",
+    "func_input": "8",
+    "func_output": "<Flights 8>"
+  },
+  {
+    "id": 254,
+    "datetime": "2024-01-24 10:58:15.370578",
+    "class-name": "<class 'modules.tickets.Tickets'>",
+    "func_name": "add",
+    "func_input": "<Tickets 9>",
+    "func_output": "Added"
+  },
+  {
+    "id": 255,
+    "datetime": "2024-01-24 10:58:15.495615",
+    "class-name": "<class 'modules.flights.Flights'>",
+    "func_name": "buy_ticket",
+    "func_input": "{'flightID': 8}",
+    "func_output": "This result object does not return rows. It has been closed automatically."
+  },
+  {
+    "id": 256,
+    "datetime": "2024-01-24 10:58:15.530632",
+    "class-name": "<class 'modules.tickets.Tickets'>",
+    "func_name": "check_if_customer_owns_ticket_for_flight",
+    "func_input": "{'flightID': 8, 'customerID': 5}",
+    "func_output": "[(9, 8, 5)]"
+  },
+  {
+    "id": 257,
+    "datetime": "2024-01-24 10:59:34.427790",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 258,
+    "datetime": "2024-01-24 10:59:34.472617",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_username",
+    "func_input": "{'username': 'HermioneGrain'}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 Main St', '+15551234564', '1234-5678-9012-4444', 10, 10, 'HermioneGrain', 'PiIs314', 'hermionegrain@gmail.com', 3)]"
+  },
+  {
+    "id": 259,
+    "datetime": "2024-01-24 10:59:34.514775",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_userID",
+    "func_input": "{'userID': 10}",
+    "func_output": "[(5, 'Hermionie', 'Grain', '555 Main St', '+15551234564', '1234-5678-9012-4444', 10)]"
+  },
+  {
+    "id": 260,
+    "datetime": "2024-01-24 10:59:34.557860",
+    "class-name": "<class 'modules.tickets.Tickets'>",
+    "func_name": "get_by_id",
+    "func_input": "9",
+    "func_output": "<Tickets 9>"
+  },
+  {
+    "id": 261,
+    "datetime": "2024-01-24 10:59:34.599209",
+    "class-name": "<class 'modules.flights.Flights'>",
+    "func_name": "return_ticket",
+    "func_input": "{'flightID': 8}",
+    "func_output": "This result object does not return rows. It has been closed automatically."
+  },
+  {
+    "id": 262,
+    "datetime": "2024-01-24 10:59:34.632629",
+    "class-name": "<class 'modules.tickets.Tickets'>",
+    "func_name": "get_by_id",
+    "func_input": "9",
+    "func_output": "<Tickets 9>"
+  },
+  {
+    "id": 263,
+    "datetime": "2024-01-24 10:59:34.677138",
+    "class-name": "<class 'modules.tickets.Tickets'>",
+    "func_name": "remove",
+    "func_input": "9",
+    "func_output": "Removed"
+  },
+  {
+    "id": 264,
+    "datetime": "2024-01-24 11:48:00.464612",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 265,
+    "datetime": "2024-01-24 11:48:00.507592",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None, 3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 266,
+    "datetime": "2024-01-24 11:48:00.544738",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_userID",
+    "func_input": "{'userID': 3}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None)]"
+  },
+  {
+    "id": 267,
+    "datetime": "2024-01-24 11:48:00.598750",
+    "class-name": "<class 'modules.flights.Flights'>",
+    "func_name": "get_by_id",
+    "func_input": "6",
+    "func_output": "<Flights 6>"
+  },
+  {
+    "id": 268,
+    "datetime": "2024-01-24 11:48:00.637745",
+    "class-name": "<class 'modules.flights.Flights'>",
+    "func_name": "get_by_id",
+    "func_input": "6",
+    "func_output": "<Flights 6>"
+  },
+  {
+    "id": 269,
+    "datetime": "2024-01-24 11:48:00.669743",
+    "class-name": "<class 'modules.flights.Flights'>",
+    "func_name": "update",
+    "func_input": "(6, {'OriginCountry': 10})",
+    "func_output": "Updated"
+  },
+  {
+    "id": 270,
+    "datetime": "2024-01-24 11:49:06.348401",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 271,
+    "datetime": "2024-01-24 11:49:06.392406",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None, 3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 272,
+    "datetime": "2024-01-24 11:49:06.428415",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_userID",
+    "func_input": "{'userID': 3}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None)]"
+  },
+  {
+    "id": 273,
+    "datetime": "2024-01-24 11:49:06.471403",
+    "class-name": "<class 'modules.flights.Flights'>",
+    "func_name": "get_by_id",
+    "func_input": "6",
+    "func_output": "<Flights 6>"
+  },
+  {
+    "id": 274,
+    "datetime": "2024-01-24 11:49:06.511404",
+    "class-name": "<class 'modules.flights.Flights'>",
+    "func_name": "get_by_id",
+    "func_input": "6",
+    "func_output": "<Flights 6>"
+  },
+  {
+    "id": 275,
+    "datetime": "2024-01-24 11:49:06.548403",
+    "class-name": "<class 'modules.flights.Flights'>",
+    "func_name": "update",
+    "func_input": "(6, {'OriginCountry': 10})",
+    "func_output": "Updated"
+  },
+  {
+    "id": 276,
+    "datetime": "2024-01-24 11:50:02.242744",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 277,
+    "datetime": "2024-01-24 11:50:02.282240",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None, 3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 278,
+    "datetime": "2024-01-24 11:50:02.317291",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_userID",
+    "func_input": "{'userID': 3}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None)]"
+  },
+  {
+    "id": 279,
+    "datetime": "2024-01-24 11:50:02.367503",
+    "class-name": "<class 'modules.flights.Flights'>",
+    "func_name": "get_by_id",
+    "func_input": "6",
+    "func_output": "<Flights 6>"
+  },
+  {
+    "id": 280,
+    "datetime": "2024-01-24 11:50:02.400168",
+    "class-name": "<class 'modules.flights.Flights'>",
+    "func_name": "get_by_id",
+    "func_input": "6",
+    "func_output": "<Flights 6>"
+  },
+  {
+    "id": 281,
+    "datetime": "2024-01-24 11:50:02.450735",
+    "class-name": "<class 'modules.flights.Flights'>",
+    "func_name": "update",
+    "func_input": "(6, {'OriginCountryID': 10})",
+    "func_output": "Updated"
+  },
+  {
+    "id": 282,
+    "datetime": "2024-01-24 11:57:57.119789",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 283,
+    "datetime": "2024-01-24 11:57:57.166807",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None, 3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 284,
+    "datetime": "2024-01-24 11:57:57.207014",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_userID",
+    "func_input": "{'userID': 3}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None)]"
+  },
+  {
+    "id": 285,
+    "datetime": "2024-01-24 11:57:57.253820",
+    "class-name": "<class 'modules.flights.Flights'>",
+    "func_name": "get_by_id",
+    "func_input": "6",
+    "func_output": "<Flights 6>"
+  },
+  {
+    "id": 286,
+    "datetime": "2024-01-24 11:57:57.288844",
+    "class-name": "<class 'modules.flights.Flights'>",
+    "func_name": "get_by_id",
+    "func_input": "6",
+    "func_output": "<Flights 6>"
+  },
+  {
+    "id": 287,
+    "datetime": "2024-01-24 11:57:57.340710",
+    "class-name": "<class 'modules.flights.Flights'>",
+    "func_name": "remove",
+    "func_input": "6",
+    "func_output": "(pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The DELETE statement conflicted with the REFERENCE constraint \"FK__Tickets__FlightI__37703C52\". The conflict occurred in database \"FlightsProject\", table \"dbo.Tickets\", column \\'FlightID\\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')\n[SQL: DELETE FROM [Flights] WHERE [Flights].[FlightID] = ?]\n[parameters: (6,)]\n(Background on this error at: https://sqlalche.me/e/20/gkpj)"
+  },
+  {
+    "id": 288,
+    "datetime": "2024-01-24 12:22:59.599443",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 289,
+    "datetime": "2024-01-24 12:22:59.641517",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None, 3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 290,
+    "datetime": "2024-01-24 12:22:59.679985",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_userID",
+    "func_input": "{'userID': 3}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None)]"
+  },
+  {
+    "id": 291,
+    "datetime": "2024-01-24 12:22:59.734091",
+    "class-name": "<class 'modules.flights.Flights'>",
+    "func_name": "get_by_id",
+    "func_input": "6",
+    "func_output": "<Flights 6>"
+  },
+  {
+    "id": 292,
+    "datetime": "2024-01-24 12:22:59.772622",
+    "class-name": "<class 'modules.tickets.Tickets'>",
+    "func_name": "get_tickets_by_flightID",
+    "func_input": "{'flightID': 6}",
+    "func_output": "[(5, 6, 5)]"
+  },
+  {
+    "id": 293,
+    "datetime": "2024-01-24 12:22:59.813148",
+    "class-name": "<class 'modules.tickets.Tickets'>",
+    "func_name": "get_by_id",
+    "func_input": "5",
+    "func_output": "<Tickets 5>"
+  },
+  {
+    "id": 294,
+    "datetime": "2024-01-24 12:22:59.853327",
+    "class-name": "<class 'modules.tickets.Tickets'>",
+    "func_name": "remove",
+    "func_input": "5",
+    "func_output": "Removed"
+  },
+  {
+    "id": 295,
+    "datetime": "2024-01-24 12:22:59.891369",
+    "class-name": "<class 'modules.flights.Flights'>",
+    "func_name": "get_by_id",
+    "func_input": "6",
+    "func_output": "<Flights 6>"
+  },
+  {
+    "id": 296,
+    "datetime": "2024-01-24 12:22:59.932015",
+    "class-name": "<class 'modules.flights.Flights'>",
+    "func_name": "remove",
+    "func_input": "6",
+    "func_output": "Removed"
+  },
+  {
+    "id": 297,
+    "datetime": "2024-01-24 12:32:04.670651",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 298,
+    "datetime": "2024-01-24 12:32:04.724266",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None, 3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 299,
+    "datetime": "2024-01-24 12:32:04.777723",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_userID",
+    "func_input": "{'userID': 3}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None)]"
+  },
+  {
+    "id": 300,
+    "datetime": "2024-01-24 12:33:10.179844",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 301,
+    "datetime": "2024-01-24 12:33:10.229421",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None, 3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 302,
+    "datetime": "2024-01-24 12:33:10.283209",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_userID",
+    "func_input": "{'userID': 3}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None)]"
+  },
+  {
+    "id": 303,
+    "datetime": "2024-01-24 12:33:45.730666",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 304,
+    "datetime": "2024-01-24 12:33:45.770683",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None, 3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 305,
+    "datetime": "2024-01-24 12:33:45.810664",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_userID",
+    "func_input": "{'userID': 3}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None)]"
+  },
+  {
+    "id": 306,
+    "datetime": "2024-01-24 12:36:11.495983",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 307,
+    "datetime": "2024-01-24 12:36:11.540903",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None, 3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 308,
+    "datetime": "2024-01-24 12:36:11.586834",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_userID",
+    "func_input": "{'userID': 3}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None)]"
+  },
+  {
+    "id": 309,
+    "datetime": "2024-01-24 12:36:49.725565",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 310,
+    "datetime": "2024-01-24 12:36:49.766841",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None, 3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 311,
+    "datetime": "2024-01-24 12:36:49.802664",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_userID",
+    "func_input": "{'userID': 3}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None)]"
+  },
+  {
+    "id": 312,
+    "datetime": "2024-01-24 12:48:20.606841",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 313,
+    "datetime": "2024-01-24 12:48:20.647730",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None, 3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2)]"
+  },
+  {
+    "id": 314,
+    "datetime": "2024-01-24 12:48:20.687867",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_userID",
+    "func_input": "{'userID': 3}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, None)]"
+  },
+  {
+    "id": 315,
+    "datetime": "2024-01-24 12:48:20.727945",
+    "class-name": "<class 'modules.flights.Flights'>",
+    "func_name": "get_flights_by_airline_ID",
+    "func_input": "{'airlineID': 1}",
+    "func_output": "[(11, 1, 198, 57, datetime.datetime(2024, 1, 30, 3, 17), datetime.datetime(2024, 3, 13, 3, 17), 134), (13, 1, 120, 10, datetime.datetime(2024, 1, 21, 3, 17), datetime.datetime(2024, 3, 5, 3, 17), 175), (16, 1, 199, 196, datetime.datetime(2024, 2, 16, 3, 17), datetime.datetime(2024, 3, 5, 3, 17), 156), (17, 1, 138, 221, datetime.datetime(2024, 1, 22, 3, 17), datetime.datetime(2024, 3, 1, 3, 17), 52), (21, 1, 33, 100, datetime.datetime(2024, 2, 3, 1, 50), datetime.datetime(2024, 2, 3, 4, 0), 100)]"
+  },
+  {
+    "id": 316,
+    "datetime": "2024-01-24 15:53:40.409744",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 317,
+    "datetime": "2024-01-24 15:53:40.456373",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin', 'Adminny', 1, 1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 318,
+    "datetime": "2024-01-24 15:53:40.505300",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_userID",
+    "func_input": "{'userID': 1}",
+    "func_output": "(pyodbc.ProgrammingError) ('42000', \"[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'get_admin_by_userID'. (2812) (SQLExecDirectW)\")\n[SQL: EXEC get_admin_by_userID ?]\n[parameters: (1,)]\n(Background on this error at: https://sqlalche.me/e/20/f405)"
+  },
+  {
+    "id": 319,
+    "datetime": "2024-01-24 15:53:40.551819",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_all",
+    "func_input": "None",
+    "func_output": "[<Customers 1>, <Customers 2>, <Customers 3>, <Customers 4>, <Customers 5>, <Customers 6>]"
+  },
+  {
+    "id": 320,
+    "datetime": "2024-01-24 15:53:55.976258",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 321,
+    "datetime": "2024-01-24 15:53:56.017447",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin', 'Adminny', 1, 1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 322,
+    "datetime": "2024-01-24 15:53:56.056196",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_userID",
+    "func_input": "{'userID': 1}",
+    "func_output": "(pyodbc.ProgrammingError) ('42000', \"[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'get_admin_by_userID'. (2812) (SQLExecDirectW)\")\n[SQL: EXEC get_admin_by_userID ?]\n[parameters: (1,)]\n(Background on this error at: https://sqlalche.me/e/20/f405)"
+  },
+  {
+    "id": 323,
+    "datetime": "2024-01-24 15:53:56.104199",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_all",
+    "func_input": "None",
+    "func_output": "[<AirlineCompanies 1>, <AirlineCompanies 2>, <AirlineCompanies 3>]"
+  },
+  {
+    "id": 324,
+    "datetime": "2024-01-24 15:54:16.187414",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 325,
+    "datetime": "2024-01-24 15:54:16.234404",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin', 'Adminny', 1, 1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 326,
+    "datetime": "2024-01-24 15:54:16.270675",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_userID",
+    "func_input": "{'userID': 1}",
+    "func_output": "(pyodbc.ProgrammingError) ('42000', \"[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'get_admin_by_userID'. (2812) (SQLExecDirectW)\")\n[SQL: EXEC get_admin_by_userID ?]\n[parameters: (1,)]\n(Background on this error at: https://sqlalche.me/e/20/f405)"
+  },
+  {
+    "id": 327,
+    "datetime": "2024-01-24 15:55:10.219216",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 328,
+    "datetime": "2024-01-24 15:55:10.268975",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin', 'Adminny', 1, 1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 329,
+    "datetime": "2024-01-24 15:55:10.314524",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_userID",
+    "func_input": "{'userID': 1}",
+    "func_output": "(pyodbc.ProgrammingError) ('42000', \"[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'get_admin_by_userID'. (2812) (SQLExecDirectW)\")\n[SQL: EXEC get_admin_by_userID ?]\n[parameters: (1,)]\n(Background on this error at: https://sqlalche.me/e/20/f405)"
+  },
+  {
+    "id": 330,
+    "datetime": "2024-01-24 15:55:10.377415",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_all",
+    "func_input": "None",
+    "func_output": "[<Administrators 1>, <Administrators 2>]"
+  },
+  {
+    "id": 331,
+    "datetime": "2024-01-24 15:57:43.926800",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 332,
+    "datetime": "2024-01-24 15:57:43.983435",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin', 'Adminny', 1, 1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 333,
+    "datetime": "2024-01-24 15:57:44.029370",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_userID",
+    "func_input": "{'userID': 1}",
+    "func_output": "(pyodbc.ProgrammingError) ('42000', \"[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'get_admin_by_userID'. (2812) (SQLExecDirectW)\")\n[SQL: EXEC get_admin_by_userID ?]\n[parameters: (1,)]\n(Background on this error at: https://sqlalche.me/e/20/f405)"
+  },
+  {
+    "id": 334,
+    "datetime": "2024-01-24 15:57:44.096661",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "add",
+    "func_input": "<Users 12>",
+    "func_output": "Added"
+  },
+  {
+    "id": 335,
+    "datetime": "2024-01-24 15:57:44.150965",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'ANC666'}",
+    "func_output": "[(12, 'ANC666', 'WeKnowHowToFly123', 'anc@airlines.com', 2)]"
+  },
+  {
+    "id": 336,
+    "datetime": "2024-01-24 15:57:44.225277",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "add",
+    "func_input": "<AirlineCompanies 4>",
+    "func_output": "Added"
+  },
+  {
+    "id": 337,
+    "datetime": "2024-01-24 16:01:21.042894",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 338,
+    "datetime": "2024-01-24 16:01:21.090895",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin', 'Adminny', 1, 1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 339,
+    "datetime": "2024-01-24 16:01:21.130998",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_userID",
+    "func_input": "{'userID': 1}",
+    "func_output": "(pyodbc.ProgrammingError) ('42000', \"[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'get_admin_by_userID'. (2812) (SQLExecDirectW)\")\n[SQL: EXEC get_admin_by_userID ?]\n[parameters: (1,)]\n(Background on this error at: https://sqlalche.me/e/20/f405)"
+  },
+  {
+    "id": 340,
+    "datetime": "2024-01-24 16:01:21.184988",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "add",
+    "func_input": "<Users 13>",
+    "func_output": "Added"
+  },
+  {
+    "id": 341,
+    "datetime": "2024-01-24 16:01:21.225992",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'Vlad456'}",
+    "func_output": "[(13, 'Vlad456', 'VladyDear456', 'vlad@yahoo.com', 3)]"
+  },
+  {
+    "id": 342,
+    "datetime": "2024-01-24 16:01:21.274567",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "add",
+    "func_input": "<Customers 7>",
+    "func_output": "Added"
+  },
+  {
+    "id": 343,
+    "datetime": "2024-01-24 16:18:34.331658",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 344,
+    "datetime": "2024-01-24 16:18:34.387405",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin', 'Adminny', 1, 1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 345,
+    "datetime": "2024-01-24 16:18:34.434404",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_userID",
+    "func_input": "{'userID': 1}",
+    "func_output": "(pyodbc.ProgrammingError) ('42000', \"[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'get_admin_by_userID'. (2812) (SQLExecDirectW)\")\n[SQL: EXEC get_admin_by_userID ?]\n[parameters: (1,)]\n(Background on this error at: https://sqlalche.me/e/20/f405)"
+  },
+  {
+    "id": 346,
+    "datetime": "2024-01-24 16:18:34.492403",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "add",
+    "func_input": "<Users 14>",
+    "func_output": "Added"
+  },
+  {
+    "id": 347,
+    "datetime": "2024-01-24 16:18:34.550411",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'Important000'}",
+    "func_output": "[(14, 'Important000', 'Guy1990', 'admin3@journey.com', 1)]"
+  },
+  {
+    "id": 348,
+    "datetime": "2024-01-24 16:18:34.600510",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "add",
+    "func_input": "<Administrators 3>",
+    "func_output": "Added"
+  },
+  {
+    "id": 349,
+    "datetime": "2024-01-24 16:46:57.597720",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 350,
+    "datetime": "2024-01-24 16:46:57.622719",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin', 'Adminny', 1, 1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 351,
+    "datetime": "2024-01-24 16:46:57.643729",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_userID",
+    "func_input": "{'userID': 1}",
+    "func_output": "(pyodbc.ProgrammingError) ('42000', \"[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'get_admin_by_userID'. (2812) (SQLExecDirectW)\")\n[SQL: EXEC get_admin_by_userID ?]\n[parameters: (1,)]\n(Background on this error at: https://sqlalche.me/e/20/f405)"
+  },
+  {
+    "id": 352,
+    "datetime": "2024-01-24 16:46:57.667777",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_by_id",
+    "func_input": "2",
+    "func_output": "<AirlineCompanies 2>"
+  },
+  {
+    "id": 353,
+    "datetime": "2024-01-24 16:46:57.691721",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_by_id",
+    "func_input": "7",
+    "func_output": "<Customers 7>"
+  },
+  {
+    "id": 354,
+    "datetime": "2024-01-24 16:47:40.330362",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 355,
+    "datetime": "2024-01-24 16:47:40.357457",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin', 'Adminny', 1, 1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 356,
+    "datetime": "2024-01-24 16:47:40.379143",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_userID",
+    "func_input": "{'userID': 1}",
+    "func_output": "(pyodbc.ProgrammingError) ('42000', \"[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'get_admin_by_userID'. (2812) (SQLExecDirectW)\")\n[SQL: EXEC get_admin_by_userID ?]\n[parameters: (1,)]\n(Background on this error at: https://sqlalche.me/e/20/f405)"
+  },
+  {
+    "id": 357,
+    "datetime": "2024-01-24 16:47:40.405814",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_by_id",
+    "func_input": "2",
+    "func_output": "<Administrators 2>"
+  },
+  {
+    "id": 358,
+    "datetime": "2024-01-24 16:47:40.430853",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_by_id",
+    "func_input": "2",
+    "func_output": "<AirlineCompanies 2>"
+  },
+  {
+    "id": 359,
+    "datetime": "2024-01-24 16:47:40.454874",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_by_id",
+    "func_input": "7",
+    "func_output": "<Customers 7>"
+  },
+  {
+    "id": 360,
+    "datetime": "2024-01-24 16:49:15.993921",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 361,
+    "datetime": "2024-01-24 16:49:16.016435",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin', 'Adminny', 1, 1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 362,
+    "datetime": "2024-01-24 16:49:16.037435",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_userID",
+    "func_input": "{'userID': 1}",
+    "func_output": "(pyodbc.ProgrammingError) ('42000', \"[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'get_admin_by_userID'. (2812) (SQLExecDirectW)\")\n[SQL: EXEC get_admin_by_userID ?]\n[parameters: (1,)]\n(Background on this error at: https://sqlalche.me/e/20/f405)"
+  },
+  {
+    "id": 363,
+    "datetime": "2024-01-24 16:49:16.060596",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_by_id",
+    "func_input": "2",
+    "func_output": "<Administrators 2>"
+  },
+  {
+    "id": 364,
+    "datetime": "2024-01-24 16:49:16.085324",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_by_id",
+    "func_input": "2",
+    "func_output": "<Users 2>"
+  },
+  {
+    "id": 365,
+    "datetime": "2024-01-24 16:49:16.130830",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "remove",
+    "func_input": "2",
+    "func_output": "(pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The DELETE statement conflicted with the REFERENCE constraint \"FK__Administr__UserI__22751F6C\". The conflict occurred in database \"FlightsProject\", table \"dbo.Administrators\", column \\'UserID\\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')\n[SQL: DELETE FROM [Users] WHERE [Users].[UserID] = ?]\n[parameters: (2,)]\n(Background on this error at: https://sqlalche.me/e/20/gkpj)"
+  },
+  {
+    "id": 366,
+    "datetime": "2024-01-24 16:49:16.155812",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_by_id",
+    "func_input": "2",
+    "func_output": "<AirlineCompanies 2>"
+  },
+  {
+    "id": 367,
+    "datetime": "2024-01-24 16:49:16.179127",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_by_id",
+    "func_input": "4",
+    "func_output": "<Users 4>"
+  },
+  {
+    "id": 368,
+    "datetime": "2024-01-24 16:49:16.202168",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "remove",
+    "func_input": "4",
+    "func_output": "(pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The DELETE statement conflicted with the REFERENCE constraint \"FK__AirlineCo__UserI__282DF8C2\". The conflict occurred in database \"FlightsProject\", table \"dbo.AirlineCompanies\", column \\'UserID\\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')\n[SQL: DELETE FROM [Users] WHERE [Users].[UserID] = ?]\n[parameters: (4,)]\n(Background on this error at: https://sqlalche.me/e/20/gkpj)"
+  },
+  {
+    "id": 369,
+    "datetime": "2024-01-24 16:49:16.225202",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_by_id",
+    "func_input": "7",
+    "func_output": "<Customers 7>"
+  },
+  {
+    "id": 370,
+    "datetime": "2024-01-24 16:49:16.249389",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_by_id",
+    "func_input": "13",
+    "func_output": "<Users 13>"
+  },
+  {
+    "id": 371,
+    "datetime": "2024-01-24 16:49:16.272099",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "remove",
+    "func_input": "13",
+    "func_output": "(pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The DELETE statement conflicted with the REFERENCE constraint \"FK__Customers__UserI__2DE6D218\". The conflict occurred in database \"FlightsProject\", table \"dbo.Customers\", column \\'UserID\\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')\n[SQL: DELETE FROM [Users] WHERE [Users].[UserID] = ?]\n[parameters: (13,)]\n(Background on this error at: https://sqlalche.me/e/20/gkpj)"
+  },
+  {
+    "id": 372,
+    "datetime": "2024-01-24 16:51:17.489542",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 373,
+    "datetime": "2024-01-24 16:51:17.514549",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin', 'Adminny', 1, 1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 374,
+    "datetime": "2024-01-24 16:51:17.536066",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_userID",
+    "func_input": "{'userID': 1}",
+    "func_output": "(pyodbc.ProgrammingError) ('42000', \"[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'get_admin_by_userID'. (2812) (SQLExecDirectW)\")\n[SQL: EXEC get_admin_by_userID ?]\n[parameters: (1,)]\n(Background on this error at: https://sqlalche.me/e/20/f405)"
+  },
+  {
+    "id": 375,
+    "datetime": "2024-01-24 16:51:17.562225",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_by_id",
+    "func_input": "2",
+    "func_output": "<Administrators 2>"
+  },
+  {
+    "id": 376,
+    "datetime": "2024-01-24 16:51:17.586988",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_by_id",
+    "func_input": "2",
+    "func_output": "<Users 2>"
+  },
+  {
+    "id": 377,
+    "datetime": "2024-01-24 16:51:17.615915",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "remove",
+    "func_input": "2",
+    "func_output": "(pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The DELETE statement conflicted with the REFERENCE constraint \"FK__Administr__UserI__22751F6C\". The conflict occurred in database \"FlightsProject\", table \"dbo.Administrators\", column \\'UserID\\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')\n[SQL: DELETE FROM [Users] WHERE [Users].[UserID] = ?]\n[parameters: (2,)]\n(Background on this error at: https://sqlalche.me/e/20/gkpj)"
+  },
+  {
+    "id": 378,
+    "datetime": "2024-01-24 16:53:54.298924",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 379,
+    "datetime": "2024-01-24 16:53:54.321933",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin', 'Adminny', 1, 1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 380,
+    "datetime": "2024-01-24 16:53:54.341933",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_userID",
+    "func_input": "{'userID': 1}",
+    "func_output": "(pyodbc.ProgrammingError) ('42000', \"[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'get_admin_by_userID'. (2812) (SQLExecDirectW)\")\n[SQL: EXEC get_admin_by_userID ?]\n[parameters: (1,)]\n(Background on this error at: https://sqlalche.me/e/20/f405)"
+  },
+  {
+    "id": 381,
+    "datetime": "2024-01-24 16:53:54.364941",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_by_id",
+    "func_input": "2",
+    "func_output": "<Administrators 2>"
+  },
+  {
+    "id": 382,
+    "datetime": "2024-01-24 16:53:54.383925",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_by_id",
+    "func_input": "2",
+    "func_output": "<Administrators 2>"
+  },
+  {
+    "id": 383,
+    "datetime": "2024-01-24 16:53:54.411928",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "remove",
+    "func_input": "2",
+    "func_output": "Removed"
+  },
+  {
+    "id": 384,
+    "datetime": "2024-01-24 16:53:54.434926",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_by_id",
+    "func_input": "2",
+    "func_output": "<Users 2>"
+  },
+  {
+    "id": 385,
+    "datetime": "2024-01-24 16:53:54.460933",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "remove",
+    "func_input": "2",
+    "func_output": "Removed"
+  },
+  {
+    "id": 386,
+    "datetime": "2024-01-24 16:56:05.066100",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 387,
+    "datetime": "2024-01-24 16:56:05.089348",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_username",
+    "func_input": "{'username': 'Admin1'}",
+    "func_output": "[(1, 'Admin', 'Adminny', 1, 1, 'Admin1', 'VerySecurePassword123', 'admin1@journey.com', 1)]"
+  },
+  {
+    "id": 388,
+    "datetime": "2024-01-24 16:56:05.109502",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_userID",
+    "func_input": "{'userID': 1}",
+    "func_output": "(pyodbc.ProgrammingError) ('42000', \"[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'get_admin_by_userID'. (2812) (SQLExecDirectW)\")\n[SQL: EXEC get_admin_by_userID ?]\n[parameters: (1,)]\n(Background on this error at: https://sqlalche.me/e/20/f405)"
+  },
+  {
+    "id": 389,
+    "datetime": "2024-01-24 16:56:05.133070",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_by_id",
+    "func_input": "2",
+    "func_output": "None found"
+  },
+  {
+    "id": 390,
+    "datetime": "2024-01-24 16:56:05.157813",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_by_id",
+    "func_input": "2",
+    "func_output": "<AirlineCompanies 2>"
+  },
+  {
+    "id": 391,
+    "datetime": "2024-01-24 16:56:05.180808",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_by_id",
+    "func_input": "2",
+    "func_output": "<AirlineCompanies 2>"
+  },
+  {
+    "id": 392,
+    "datetime": "2024-01-24 16:56:05.209029",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "remove",
+    "func_input": "2",
+    "func_output": "(pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The DELETE statement conflicted with the REFERENCE constraint \"FK__Flights__Airline__31B762FC\". The conflict occurred in database \"FlightsProject\", table \"dbo.Flights\", column \\'AirlineID\\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')\n[SQL: DELETE FROM [AirlineCompanies] WHERE [AirlineCompanies].[AirlineID] = ?]\n[parameters: (2,)]\n(Background on this error at: https://sqlalche.me/e/20/gkpj)"
+  },
+  {
+    "id": 393,
+    "datetime": "2024-01-24 16:56:05.232020",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_by_id",
+    "func_input": "4",
+    "func_output": "<Users 4>"
+  },
+  {
+    "id": 394,
+    "datetime": "2024-01-24 16:56:05.258027",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "remove",
+    "func_input": "4",
+    "func_output": "(pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The DELETE statement conflicted with the REFERENCE constraint \"FK__AirlineCo__UserI__282DF8C2\". The conflict occurred in database \"FlightsProject\", table \"dbo.AirlineCompanies\", column \\'UserID\\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')\n[SQL: DELETE FROM [Users] WHERE [Users].[UserID] = ?]\n[parameters: (4,)]\n(Background on this error at: https://sqlalche.me/e/20/gkpj)"
+  },
+  {
+    "id": 395,
+    "datetime": "2024-01-24 16:56:05.282590",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_by_id",
+    "func_input": "7",
+    "func_output": "<Customers 7>"
+  },
+  {
+    "id": 396,
+    "datetime": "2024-01-24 16:56:05.303984",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_by_id",
+    "func_input": "7",
+    "func_output": "<Customers 7>"
+  },
+  {
+    "id": 397,
+    "datetime": "2024-01-24 16:56:05.331049",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "remove",
+    "func_input": "7",
+    "func_output": "Removed"
+  },
+  {
+    "id": 398,
+    "datetime": "2024-01-24 16:56:05.352528",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_by_id",
+    "func_input": "13",
+    "func_output": "<Users 13>"
+  },
+  {
+    "id": 399,
+    "datetime": "2024-01-24 16:56:05.375885",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "remove",
+    "func_input": "13",
+    "func_output": "Removed"
   }
 ]

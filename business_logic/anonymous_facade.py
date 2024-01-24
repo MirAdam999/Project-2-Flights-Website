@@ -10,11 +10,13 @@ from modules.customers import Customers
 
 # 19.01.24
 # Mir Shukhman
-# Defining class AnonymousBase wich inherits from FacadeBase
+# Defining class AnonymouFacade wich inherits from FacadeBase
 #                   and will hold login & add_customer funcs
 
 class AnonymousFacade(FacadeBase):
     def __init__(self):
+        # Inherts FacadeBase init, 
+        # LoginToken class instanse to acsess getter setter funcs from the class
         super().__init__()
         self.lt_instance=LoginToken()
         
@@ -31,10 +33,10 @@ class AnonymousFacade(FacadeBase):
             repo (Repository class) to acess 'get_admin_by_username'/'get_airline_by_username'/
             'get_customer_by_username'stored procedure in the db)
         generates login token for the user with user ID, name and role (calls for login_token setter
-        from LoginToken class)
-        gets the generated login token (calls for login_token getter from LoginToken class)
-        returns relevant class facade (as decided by user role from db)
-        Input: username (str), password (str, private)
+        from LoginToken class),
+        gets the generated login token (calls for login_token getter from LoginToken class),
+        returns relevant class facade (as decided by user role from db).
+        Input: username (str), password (str, private) [all input by parameter name]
         Output: class AdministratorFacade/AirlineFacade/CustomerFacade with login token in init;
                 None if username not found, password incorrect or user role not 1,2,3;
                 Err str if err
@@ -100,35 +102,46 @@ class AnonymousFacade(FacadeBase):
         """
         22.01.24
         Mir Shukhman
-        Add customer func, calls for _create_new_user func from FacdeBase class
+        Add customer func, ensures password length, calls for _create_new_user 
+        func from FacdeBase class,
         calls for get_stored_procedure from users_repo (Repository class)to acess 
-        'get_user_by_username' stored procedure in the db to get the created user ID
-        calls for add func from customers_repo to add the new customer to Customers db
-        Input:
-        Output: True if sucsess; False in not; Err str if err
+        'get_user_by_username' stored procedure in the db to get the created user ID,
+        calls for add func from customers_repo to add the new customer to Customers db.
+        Input: username (str), password (str, private), email (str),first_name (str),
+               last_name(str), address (str), phone_num (str), credit_num (str, private)
+               [all input by parameter name]
+        Output: True if sucsess; False if customer or user creation err; Err str if err
         """
         try:
-            new_user=self._create_new_user(Users(Username=username, 
-                                        Password=_password, 
-                                        Email=email, 
-                                        UserRole=3))
-            if new_user:
-                created_user=self.users_repo.get_stored_procedure(
-                    'get_user_by_username',{'username':username})
-                new_user_ID= created_user[0][0]
-                new_cust=self.customers_repo.add(Customers(FirstName=first_name, 
-                                                LastName=last_name, 
-                                                Address=address,
-                                                PhoneNum=phone_num, 
-                                                CreditCardNum=_credit_num, 
-                                                UserID=new_user_ID))
-                if new_cust:
-                    return True
+            # ensuring password length
+            if len(_password) >= 6:
+                # create new user using the func from facade base class
+                new_user=self._create_new_user(Users(Username=username, 
+                                            Password=_password, 
+                                            Email=email, 
+                                            UserRole=3))
+                if new_user:
+                    # get newly created user ID from db- find by username
+                    created_user=self.users_repo.get_stored_procedure(
+                        'get_user_by_username',{'username':username})
+                    new_user_ID= created_user[0][0]
+                    # create new customer 
+                    new_cust=self.customers_repo.add(Customers(FirstName=first_name, 
+                                                    LastName=last_name, 
+                                                    Address=address,
+                                                    PhoneNum=phone_num, 
+                                                    CreditCardNum=_credit_num, 
+                                                    UserID=new_user_ID))
+                    if new_cust:    # creation user+customer sucsess
+                        return True 
+                    
+                    else:   # customer creation err
+                        return False 
                 
-                else:
-                    return False
-            else:
-                return False
+                else:   # user creation err
+                    return False 
             
+            else:   #password too short
+                return False
         except Exception as e:
             return str(e)

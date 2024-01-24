@@ -43,7 +43,7 @@ class FacadeBase:
                return True
            
            else:
-               return False, self.users_repo.add(_user)
+               return False
            
        except Exception as e:
            return str(e)

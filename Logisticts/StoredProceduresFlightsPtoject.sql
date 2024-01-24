@@ -31,7 +31,7 @@ AS
 
 --get_flights_by_parameters(_origin_country_id int, _destination_country_id int,_date date)
 GO
-CREATE PROCEDURE get_flights_by_parameters
+ALTER PROCEDURE get_flights_by_parameters
 @origin_country_id int,
 @destination_country_id int,
 @date date
@@ -133,8 +133,6 @@ AS
 	where ac.UserID = @userID
 
 
-
-
 --Extras
 GO
 CREATE PROCEDURE get_admin_by_username
@@ -144,3 +142,65 @@ AS
 	inner join Users u 
 	on u.UserID = a.UserID
 	where u.Username = @username
+
+GO
+CREATE PROCEDURE check_if_customer_owns_ticket_for_flight
+@flightID bigint,
+@customerID bigint
+AS
+	select * from Tickets t
+	where t.CustomerID = @customerID
+	and t.FlightID = @flightID
+
+GO
+CREATE PROCEDURE get_customer_by_userID
+@userID bigint
+AS
+	select * from Customers c
+	where c.UserID = @userID
+
+GO
+ALTER PROCEDURE check_if_flight_exists
+@origin_country_id int,
+@destination_country_id int,
+@datetime datetime
+AS
+	select * from Flights f
+	where f.OriginCountryID=@origin_country_id 
+	AND f.DestinationCountryID=@destination_country_id 
+	AND f.DepartureTime=@datetime
+
+GO
+CREATE PROCEDURE buy_ticket
+@flightID int
+AS
+	DECLARE @CurrentTickets INT;
+
+    SELECT @CurrentTickets = f.RemainingTickets
+    FROM Flights f
+    WHERE f.FlightID = @FlightID;
+
+    UPDATE Flights 
+	SET RemainingTickets = @CurrentTickets - 1
+    WHERE  Flights.FlightID= @FlightID;
+
+GO
+CREATE PROCEDURE return_ticket
+@flightID int
+AS
+	DECLARE @CurrentTickets INT;
+
+    SELECT @CurrentTickets = f.RemainingTickets
+    FROM Flights f
+    WHERE f.FlightID = @FlightID;
+
+    UPDATE Flights 
+	SET RemainingTickets = @CurrentTickets + 1
+    WHERE  Flights.FlightID= @FlightID;
+
+GO
+CREATE PROCEDURE get_tickets_by_flightID
+@flightID bigint
+AS
+	select * from Tickets t
+	where t.FlightID = @flightID
