@@ -9,10 +9,10 @@
       <img src="https://t3.ftcdn.net/jpg/01/68/95/54/360_F_168955418_i16UXMUE4U6qq2YnRkLGUpDnhr1VY6a6.jpg" alt="Pegasus_logo"  width='80' height='50'/>
       
       {% if not logged_in %}
-      <a href="{{ url_for('redirect_to_signup') }}" > Sign Up </a>
-      <a href="{{ url_for('redirect_to_login') }}" > Log In </a>
+      <a href="{{ url_for('anon_blueprint.redirect_to_signup') }}" > Sign Up </a>
+      <a href="{{ url_for('anon_blueprint.redirect_to_login') }}" > Log In </a>
       {% else %}
-      <a href="{{ url_for('logout') }}">Log Out</a>
+      <a href="{{ url_for('anon_blueprint.index',login='None') }}">Log Out</a>
       {% endif %}
     </div>
 

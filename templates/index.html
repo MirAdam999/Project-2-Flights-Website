@@ -1,26 +1,28 @@
 {% extends 'base.html' %}
 {% block page_content %}
 
+{% if logged_in %}
+<a href="{{ url_for('admin_blueprint.admin_dashboard') }}" > Admin Dash </a>
+{% endif %}
+
 <div id='search_form'>
 
     <form action="/searchforflight" method="post">
         <div>
             <label for="origin">From</label>
-            <input list="origin" name="origin" placeholder='From where?' required>
-                <datalist id="origin">
-                    {% for country in countries %}
-                        <option value="{{country[0]}}">{{country[1]}}</option>
-                    {% endfor %}
-                </datalist>
+            <select id="origin" name="origin" placeholder='From where?' required>
+                {% for country in countries %}
+                    <option value="{{country[0]}}">{{country[1]}}</option>
+                {% endfor %}
+            </select>
         </div>
         <div> 
             <label for="destination">To</label>
-            <input list="destination" name="destination" placeholder='Where are we going?' required>
-                <datalist id="destination">
-                    {% for country in countries %}
-                        <option value="{{country[0]}}">{{country[1]}}</option>
-                    {% endfor %}
-            </datalist>
+            <select id="destination" name="destination" placeholder='Where are we going?' required>
+                {% for country in countries %}
+                    <option value="{{country[0]}}">{{country[1]}}</option>
+                {% endfor %}
+            </select>
         <div>
         </div>
             <label for="date">Date</label>
