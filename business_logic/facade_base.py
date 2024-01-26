@@ -189,7 +189,7 @@ class FacadeBase:
                 destination_countryID (int),
                 date (str)- YYYY-MM-DD,
                 [all input by parameter name]
-       Output: get_stored_procedure func output (list of db.model obj/none/str err); Err str if err
+       Output: get_stored_procedure func output (list of tupples/none/str err); Err str if err
        """
         try:
             flights=self.flights_repo.get_stored_procedure('get_flights_by_parameters',
@@ -200,3 +200,15 @@ class FacadeBase:
 
         except Exception as e:
            return str(e)
+       
+       
+    def split_date_time(self,date_time_obj):
+        
+        date_part = date_time_obj.date()
+        time_part = date_time_obj.time()
+
+        date = date_part.strftime('%Y-%m-%d')
+        time = time_part.strftime('%H:%M')
+
+        return date, time
+

@@ -18,36 +18,12 @@ class AdministratorFacade(FacadeBase):
         super().__init__()
         # Inherts FacadeBase init, login token from AnonymousFacade
         # Devides the login token into ID, name and role
-        # Calls _get_admin_ID to get adminID using userId from the token
         self.token= token
         self.token_userID= self.token[0]
         self.token_admin_name= self.token[1]
         self.token_role= self.token[2]
-        self.adminID = self._get_admin_ID()
     
-    def _get_admin_ID(self):
-        """
-        24.01.24
-        Mir Shukhman
-        Func to retrive admin's ID using userID from the login token,
-        Calls for get_stored_procedure from admin_repo (Repository class)
-        to acess 'get_admin_by_userID' stored procedure in the db.
-        Input: None
-        Output: adminID (int); None if not found; Err str if err
-        ***Internal use only! Does not check facade or name with token***
-        """
-        try:
-            admin=self.admins_repo.get_stored_procedure('get_admin_by_userID',{'userID': self.token_userID})
-            if admin:
-                adminID = admin[0][0]
-                return adminID
-            
-            else:
-                return None
-        
-        except Exception as e:
-            return str(e)
-             
+
     def _remove_user(self,_userID):
        """
        24.01.24

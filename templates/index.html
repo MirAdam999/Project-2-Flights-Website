@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block page_content %}
+
+<div id='search_form'>
+
+    <form action="/searchforflight" method="post">
+        <div>
+            <label for="origin">From</label>
+            <input list="origin" name="origin" placeholder='From where?' required>
+                <datalist id="origin">
+                    {% for country in countries %}
+                        <option value="{{country[0]}}">{{country[1]}}</option>
+                    {% endfor %}
+                </datalist>
+        </div>
+        <div> 
+            <label for="destination">To</label>
+            <input list="destination" name="destination" placeholder='Where are we going?' required>
+                <datalist id="destination">
+                    {% for country in countries %}
+                        <option value="{{country[0]}}">{{country[1]}}</option>
+                    {% endfor %}
+            </datalist>
+        <div>
+        </div>
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" value= 'When?' required>
+        </div>
+
+        <input type="submit" value="Search">
+    </form>      
+
+</div>
+<div>
+    Search by Flight number
+    Closest Arrivals
+    Closest Departures
+</div>
+
+{% endblock %}

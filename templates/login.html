@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block page_content %}
+
+<div id='login'> 
+
+    <div>
+        <h4>New to Pegasus?</h4>
+        <form action="/redirect_to_signup">
+            <button type="submit" value="Sign Up!">Sign Up!</button>
+        </form>
+    </div>
+    <div>
+        <h4>Log In</h4>
+        <form action="/login" method="post">
+            <div> 
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" value= 'Username' required>
+            <div>
+            </div>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" value= 'Password' required>
+            </div>
+            <button type="submit" value="Log In">Log In</button>
+        </form>
+    </div>
+
+</div>
+
+{% endblock %}

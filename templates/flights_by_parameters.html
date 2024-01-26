@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block page_content %}
+
+<div id='show_flights_by_parameters'>
+
+    <div id='search_form'>
+
+        <form action="/searchforflight" method="post">
+            <div>
+                <label for="origin">From</label>
+                <input list="origin" name="origin" placeholder='From where?' required>
+                    <datalist id="origin">
+                        {% for country in countries %}
+                            <option data-value="{{country[0]}}">{{country[1]}}</option>
+                        {% endfor %}
+                    </datalist>
+            </div>
+            <div> 
+                <label for="destination">To</label>
+                <input list="destination" name="destination" placeholder='Where are we going?' required>
+                    <datalist id="destination">
+                        {% for country in countries %}
+                            <option data-value="{{country[0]}}">{{country[1]}}</option>
+                        {% endfor %}
+                </datalist>
+            <div>
+            </div>
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" placeholder= 'When?' required>
+            </div>
+    
+            <input type="submit" value="Search">
+        </form>      
+    
+    </div>
+
+    <div id='flights'>
+        {% if flights %}
+            {% for flight in flights%}
+
+            <div id='airline_company_logo'>
+                <label for="airline_company_logo">{{flight[1]}}</label>
+                <img src="{{flight[0]}}" alt="airline_company_logo" class="airline-logo-image" name="airline_company_logo"/>
+            </div>
+
+            <div id='departure'>
+                <h2>{{flight[2]}}</h2>
+                <h3>{{flight[3]}}</h3>
+                <h4>{{flight[4]}}</h4>
+            </div>
+            <div id='arrival'>
+                <h2>{{flight[5]}}</h2>
+                <h3>{{flight[6]}}</h3>
+                <h4>{{flight[7]}}</h4>
+            </div>
+
+            <div id='buy_ticket'>
+            <form action=None>
+                <button type="submit" value="Puchase">Puchase</button>
+            </form>
+            </div>
+
+            {% endfor %}
+        {% else %}
+
+        <h2>No Flights Matching Search Found</h2>
+
+        {% endif %}
+    </div>
+
+</div>
+
+{% endblock %}
