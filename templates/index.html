@@ -1,10 +1,6 @@
 {% extends 'base.html' %}
 {% block page_content %}
 
-{% if logged_in %}
-<a href="{{ url_for('admin_blueprint.admin_dashboard') }}" > Admin Dash </a>
-{% endif %}
-
 <div id='search_form'>
 
     <form action="/searchforflight" method="post">
@@ -23,8 +19,8 @@
                     <option value="{{country[0]}}">{{country[1]}}</option>
                 {% endfor %}
             </select>
-        <div>
         </div>
+        <div>
             <label for="date">Date</label>
             <input type="date" id="date" name="date" value= 'When?' required>
         </div>
@@ -34,9 +30,9 @@
 
 </div>
 <div>
-    Search by Flight number
-    Closest Arrivals
-    Closest Departures
+    <a href="{{ url_for('anon_blueprint.index') }}">Search by Flight number</a>
+    <a href="{{ url_for('anon_blueprint.index') }}">Closest Arrivals</a>
+    <a href="{{ url_for('anon_blueprint.index') }}">Closest Departures</a>
 </div>
 
 {% endblock %}

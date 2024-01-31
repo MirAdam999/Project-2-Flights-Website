@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block page_content %}
+
+<div id='all_flights'>
+
+    <div id='search_for_flight_by_id'>
+        <form action="/searchforflightbyid" method="post">
+            <div>
+                <label for="flight_id">Search by Flight ID:</label>
+                <input type="text" id="flight_id" name="flight_id" >
+            </div>
+            <input type="submit" value="Search">
+        </form> 
+    </div>
+
+    <div id='flights'>
+        {% if flights %}
+            {% for flight in flights%}
+
+            <div id='airline_company_logo'>
+                <label for="airline_company_logo">{{flight[1]}}</label>
+                <img src="{{flight[0]}}" alt="airline_company_logo" class="airline-logo-image" name="airline_company_logo"/>
+            </div>
+
+            <div id='departure'>
+                <h2>{{flight[2]}}</h2>
+                <h3>{{flight[3]}}</h3>
+                <h4>{{flight[4]}}</h4>
+            </div>
+            <div id='arrival'>
+                <h2>{{flight[5]}}</h2>
+                <h3>{{flight[6]}}</h3>
+                <h4>{{flight[7]}}</h4>
+            </div>
+
+            
+            <div id='flight_status'>
+                <h3>{{flight[8]}}</h3>
+            </div>
+
+            {% endfor %}
+
+        {% else %}
+
+        <h2>No Flights Matching Search Found</h2>
+
+        {% endif %}
+    </div>
+
+</div>
+
+{% endblock %}

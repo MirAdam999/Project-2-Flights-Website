@@ -1,0 +1,17 @@
+#header,
+#search_form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo,
+#admin,
+#airline,
+#customer,
+#welcome_back,
+#logged_in {
+    flex: 1;
+    text-align: left;
+    /* Adjust the text alignment as needed */
+}

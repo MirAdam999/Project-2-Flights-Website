@@ -4,16 +4,76 @@
   <head>
     <meta charset="UTF-8" />
     <title>Pegasus</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 
     <div id='header'>
-      <img src="https://t3.ftcdn.net/jpg/01/68/95/54/360_F_168955418_i16UXMUE4U6qq2YnRkLGUpDnhr1VY6a6.jpg" alt="Pegasus_logo"  width='80' height='50'/>
-      
-      {% if not logged_in %}
-      <a href="{{ url_for('anon_blueprint.redirect_to_signup') }}" > Sign Up </a>
-      <a href="{{ url_for('anon_blueprint.redirect_to_login') }}" > Log In </a>
-      {% else %}
-      <a href="{{ url_for('anon_blueprint.index',login='None') }}">Log Out</a>
+
+      <div id='logo'>
+        <a href="{{ url_for('anon_blueprint.index') }}">
+          <img src="https://t3.ftcdn.net/jpg/01/68/95/54/360_F_168955418_i16UXMUE4U6qq2YnRkLGUpDnhr1VY6a6.jpg" alt="Pegasus_logo"  width='80' height='50'/>
+        </a>
+      </div>
+
+      {% if role == "Administrator" %}
+      <div id='admin'>
+        <form method="post" action="{{ url_for('admin_blueprint.index') }} "  style="display: inline-block;">
+          <button type="submit">Manage Admins</button>
+        </form>
+        <form method="post" action="{{ url_for('admin_blueprint.index') }}"  style="display: inline-block;">
+          <button type="submit">Manage Airline Companies</button>
+        </form>
+        <form method="post" action="{{ url_for('admin_blueprint.manage_customers') }}"  style="display: inline-block;">
+          <button type="submit">Manage Customers</button>
+        </form>
+        <form method="post" action="{{ url_for('admin_blueprint.closest_flights') }}"  style="display: inline-block;">
+          <button type="submit">Closest Flights</button>
+        </form>
+        <form method="post" action="{{ url_for('admin_blueprint.all_flights') }}"  style="display: inline-block;">
+          <button type="submit">All Flights</button>
+        </form>
+      </div>
       {% endif %}
+
+      {% if role == "Airline Company" %}
+      <div id='airline'>
+        <form method="post" action="{{ url_for('anon_blueprint.index') }} "  style="display: inline-block;">
+          <button type="submit">Add Flight + </button>
+        </form>
+        <form method="post" action="{{ url_for('anon_blueprint.index') }}"  style="display: inline-block;">
+          <button type="submit">Manage Flights</button>
+        </form>
+        <form method="post" action="{{ url_for('anon_blueprint.index') }}"  style="display: inline-block;">
+          <button type="submit">My Closest Flights</button>
+        </form>
+        <form method="post" action="{{ url_for('anon_blueprint.index') }}"  style="display: inline-block;">
+          <button type="submit">My Profile</button>
+      </div>
+      {% endif %}
+
+      {% if role == "Customer" %}
+      <div id='customer'>
+        <form method="post" action="{{ url_for('anon_blueprint.index') }}"  style="display: inline-block;">
+          <button type="submit">My Tickets</button>
+        <form method="post" action="{{ url_for('anon_blueprint.index') }}"  style="display: inline-block;">
+          <button type="submit">My Profile</button>
+      </div>
+      {% endif %}
+
+      <div id='welcome_back'>
+        {% if name and role %}
+          <h3>Welcome Back {{name}}</h3>
+        {% endif %}
+      </div>
+
+      <div id='looged_in'>
+        {% if name and role %}
+          <a href="{{ url_for('anon_blueprint.index') }}">Log Out</a>
+        {% else %}
+          <a href="{{ url_for('anon_blueprint.redirect_to_signup') }}" > Sign Up </a>
+          <a href="{{ url_for('anon_blueprint.redirect_to_login') }}" > Log In </a>
+        {% endif %}
+      </div>
+
     </div>
 
   </head>

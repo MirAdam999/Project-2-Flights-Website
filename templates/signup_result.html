@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block page_content %}
+
+    {% if fullname %}
+
+    <div id="signup_sucsess">
+        <h2>Dear {{fullname}}, Thank You for joining Pegasus.</h2>
+        <h3>Please proceed to Login: </h3>
+        <form action="/redirect_to_login">
+            <button type="submit" value="Login">Login</button>
+        </form>
+    </div>
+
+    {% else %}
+
+    <div id="signup_failed">
+        <h2> Signup Failed.</h2>
+        <h3> Please try again later.</h3>
+    </div>
+
+    {% endif %}
+
+{% endblock %}

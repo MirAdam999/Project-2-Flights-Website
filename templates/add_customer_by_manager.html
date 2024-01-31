@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% block page_content %}
 
-<div id='signup_form'>
+<div id='add_customer_by_manager'>
 
-    <form action="/signup" method="post">
+    <form action="/add_customer" method="post">
         <div id='name'>
             <label for="fname">First Name:</label>
             <label for="lname">Last Name:</label><br>
@@ -72,12 +72,20 @@
             <label for="password_reinput">Input Password Again:</label><br>
             <input type="password" id="password_reinput" name="password_reinput" pattern="[a-zA-Z0-9]+{6,50}" 
                 minlength="6" maxlength="50" placeholder='Repeat Password' required><br>
+
         </div>
 
-        <button type="submit" value="Log In">Sign Up!</button>
+        <button type="submit" value="Log In">Add Customer</button>
 
+                    
         {% if error_message %}
             <p style="color: red;">{{ error_message }}</p>
+        {% endif %}
+
+        {% if adding_sucsess==True %}
+            <p style="color: green;">Customer Added Sucsessfuly</p>
+        {% elif adding_sucsess==False %}
+            <p style="color: red;">Error: was not able to add customer. Try again later.</p>
         {% endif %}
 
     </form>  

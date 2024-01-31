@@ -49,8 +49,9 @@ class AnonymousFacade(FacadeBase):
                 db_pass= user[0][2] 
                 db_role= user[0][4]
                 user_ID = user[0][0]
+                is_active = user[0][5]
                 # check password correct
-                if db_pass == _password:
+                if db_pass == _password and is_active==True:
                     if db_role == 1:
                         role='Administrator'    # getting admin's name from Admins in db (SP)
                         admin= self.admins_repo.get_stored_procedure( 
@@ -84,7 +85,7 @@ class AnonymousFacade(FacadeBase):
                     else:   # user role not 1,2,3
                         return None
                 
-                else:   # password incorrect
+                else:   # password incorrect/inactive user
                     return None
                 
             else:   #username not found
@@ -143,5 +144,6 @@ class AnonymousFacade(FacadeBase):
             
             else:   #password too short
                 return False
+            
         except Exception as e:
             return str(e)

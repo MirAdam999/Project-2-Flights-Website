@@ -10,7 +10,7 @@ from modules.administrators import Administrators
 # Mir Shukhman
 # Defining class AdministratorFacade wich inherits from FacadeBase,
 #   recives the login token through the init from login func in AnonymousFacade,
-#   and will hold get all, add and remove (admins, airlines, customers) funcs.
+#   and will hold get all, add, activate and de-activate (admins, airlines, customers) funcs.
 
 
 class AdministratorFacade(FacadeBase):
@@ -294,7 +294,7 @@ class AdministratorFacade(FacadeBase):
             return str(e)
     
     
-    def remove_airline(self,airlineID):
+    def deactivate_airline(self,airlineID):
         """ 
         24.01.24
         Mir Shukhman
@@ -311,12 +311,11 @@ class AdministratorFacade(FacadeBase):
                 airline = self.airlines_repo.get_by_id(airlineID)
                 #finding airline
                 if airline:
-                    userID = airline.UserID     # getting userID to remove user
-                    remove = self.airlines_repo.remove(airlineID)   # removing from airlines
+                    userID = airline.UserID     # getting userID to deactivate user
+                    remove = self.airlines_repo.update(userID,{'IsActive':False})   # deactivating
+                    
                     if remove:
-                        #removing from users
-                        remove_user=self._remove_user(userID)
-                        return remove_user
+                        return True
             else:   
                 return False
             
@@ -324,7 +323,7 @@ class AdministratorFacade(FacadeBase):
             return str(e)
         
         
-    def remove_customer(self, customerID):
+    def deactivate_customer(self, customerID):
         """ 
         24.01.24
         Mir Shukhman
@@ -341,12 +340,11 @@ class AdministratorFacade(FacadeBase):
                 customer = self.customers_repo.get_by_id(customerID)
                 #finding customer
                 if customer:
-                    userID = customer.UserID     # getting userID to remove user
-                    remove = self.customers_repo.remove(customerID) # removing from customers
+                    userID = customer.UserID     # getting userID to deactivate user
+                    remove = self.customers_repo.update(userID,{'IsActive':False})   # deactivating
+                    
                     if remove:
-                        #removing from users                
-                        remove_user=self._remove_user(userID)
-                        return remove_user
+                        return True
             else:   
                 return False
             
@@ -354,7 +352,7 @@ class AdministratorFacade(FacadeBase):
             return str(e)    
         
         
-    def remove_administrator(self, adminID):
+    def deactivate_administrator(self, adminID):
         """ 
         24.01.24
         Mir Shukhman
@@ -371,12 +369,98 @@ class AdministratorFacade(FacadeBase):
                 admin = self.admins_repo.get_by_id(adminID)
                 #finding admin
                 if admin:
-                    userID = admin.UserID    # getting userID to remove user
-                    remove = self.admins_repo.remove(adminID)   # removing from admins
-                    if remove: 
-                        #removing from users
-                        remove_user=self._remove_user(userID)
-                        return remove_user 
+                    userID = admin.UserID    # getting userID to deactivate  user
+                    remove = self.admins_repo.update(userID,{'IsActive':False})   # deactivating
+                    
+                    if remove:
+                        return True
+            else:  
+                return False
+            
+        except Exception as e:
+            return str(e)
+        
+        
+    def activate_airline(self,airlineID):
+        """ 
+        24.01.24
+        Mir Shukhman
+        Remove airline func, ensures facade matches token role,
+        calls remove func from airlines_repo.
+        Input: airlinetID (int)
+        Output: airline_repo.remove func output (True/None/str err);
+                False if facade dosen't match token role/no airline by ID found/
+                user or airline removal err; Err str if err
+        """
+        try:
+            # ensuring facade matches token role
+            if self.token_role=='Administrator':
+                airline = self.airlines_repo.get_by_id(airlineID)
+                #finding airline
+                if airline:
+                    userID = airline.UserID     # getting userID to activate user
+                    activate = self.airlines_repo.update(userID,{'IsActive':True})   # activating
+                    
+                    if activate:
+                        return True
+            else:   
+                return False
+            
+        except Exception as e:
+            return str(e)
+        
+        
+    def activate_customer(self, customerID):
+        """ 
+        24.01.24
+        Mir Shukhman
+        Remove customer func, ensures facade matches token role,
+        calls remove func from customers_repo.
+        Input: customerID (int)
+        Output: customers_repo.remove func output (True/None/str err);
+                False if facade dosen't match token role/no customer by ID found/
+                user or customer removal err; Err str if err
+        """
+        try:
+            # ensuring facade matches token role
+            if self.token_role=='Administrator':
+                customer = self.customers_repo.get_by_id(customerID)
+                #finding customer
+                if customer:
+                    userID = customer.UserID     # getting userID to activate user
+                    activate = self.customers_repo.update(userID,{'IsActive':True})   # activating
+                    
+                    if activate:
+                        return True
+            else:   
+                return False
+            
+        except Exception as e:
+            return str(e)    
+        
+        
+    def activate_administrator(self, adminID):
+        """ 
+        24.01.24
+        Mir Shukhman
+        Remove admin func, ensures facade matches token role,
+        calls remove func from admins_repo.
+        Input: adminID (int)
+        Output: admins_repo.remove func output (True/None/str err);
+                False if facade dosen't match token role/no admin by ID found/
+                user or admin removal err; Err str if err
+        """
+        try:
+            # ensuring facade matches token role
+            if self.token_role=='Administrator':
+                admin = self.admins_repo.get_by_id(adminID)
+                #finding admin
+                if admin:
+                    userID = admin.UserID    # getting userID to activate  user
+                    activate = self.admins_repo.update(userID,{'IsActive':True})   # activating
+                    
+                    if activate:
+                        return True
             else:  
                 return False
             

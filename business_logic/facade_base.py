@@ -49,6 +49,24 @@ class FacadeBase:
            return str(e)
     
     
+    def get_user_by_ID(self, userID:int):
+        try:
+            user=self.users_repo.get_by_id(userID)
+            return user
+        
+        except Exception as e:
+           return str(e)
+       
+    
+    def get_customer_by_ID(self, custID:int):
+        try:
+            cust=self.customers_repo.get_by_id(custID)
+            return cust
+        
+        except Exception as e:
+           return str(e)
+    
+    
     def get_country_by_ID(self, countryID:int):
         """
        17.01.24
@@ -149,12 +167,12 @@ class FacadeBase:
        
     def	get_flights_by_ID(self, flightID:int):
         """
-       19.01.24
-       Mir Shukhman
-       The func calls for get_by_id func from flights_repo (Repository class)
-       Input: flightID (int)
-       Output: get_by_id func output (db.model obj/none/str err); Err str if err
-       """
+        19.01.24
+        Mir Shukhman
+        The func calls for get_by_id func from flights_repo (Repository class)
+        Input: flightID (int)
+        Output: get_by_id func output (db.model obj/none/str err); Err str if err
+        """
         try:
             flight=self.flights_repo.get_by_id(flightID)
             return flight
@@ -202,6 +220,26 @@ class FacadeBase:
            return str(e)
        
        
+    def get_arrival_flights_12hours(self,countryID:int):
+            try:
+                flights=self.flights_repo.get_stored_procedure('get_arrival_flights_12hours',
+                                                            {'countryID': countryID,})
+                return flights
+
+            except Exception as e:
+                return str(e)
+            
+            
+    def get_departure_flights_12hours(self,countryID:int):
+            try:
+                flights=self.flights_repo.get_stored_procedure('get_departure_flights_12hours',
+                                                            {'countryID': countryID,})
+                return flights
+
+            except Exception as e:
+                return str(e)
+       
+       
     def split_date_time(self,date_time_obj):
         
         date_part = date_time_obj.date()
@@ -212,3 +250,19 @@ class FacadeBase:
 
         return date, time
 
+
+    def check_if_customer_exists(self, *, username:str, email:str, phone_num:str, credit_card_num:str):
+        try:
+            existing_customer= self.customers_repo.get_stored_procedure('check_if_customer_exists',
+                                                                        {'username' : username,
+                                                                         'email' : email,
+                                                                         'phone_num' : phone_num,
+                                                                         'credit_card' : credit_card_num})
+            if existing_customer:
+                return existing_customer
+            
+            else:
+                return None
+            
+        except Exception as e:
+            return str(e)

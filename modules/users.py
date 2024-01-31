@@ -11,4 +11,5 @@ class Users(db.Model):
     Password = db.Column(db.String(50), nullable=False)
     Email = db.Column(db.String(50), nullable=False, unique=True)
     UserRole =  db.Column(db.Integer, db.ForeignKey('UserRoles.RoleID'), nullable=False)
+    IsActive = db.Column(db.Boolean, default=True)
     
