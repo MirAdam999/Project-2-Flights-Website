@@ -6,6 +6,12 @@
 
 class LoginToken:
     def __init__(self, ID=None, name=None, role=None):
+        """
+        21.01.24
+        Mir Shukhman
+        Holds Login Token as tupple of ID, name, role
+        Preset to None
+        """
         self._token = (ID, name, role)
 
     @property
@@ -13,6 +19,7 @@ class LoginToken:
         """
         21.01.24
         Mir Shukhman
+        Login Token getter
         """
         return self._token
 
@@ -21,5 +28,6 @@ class LoginToken:
         """
         21.01.24
         Mir Shukhman
+        Login Token setter
         """
         self._token = values

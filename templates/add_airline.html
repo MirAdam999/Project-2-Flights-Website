@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block page_content %}
+
+<div id='add_airline'>
+
+    <form action="/add_airline" method="post">
+        <div id='name'>
+            <label for="name">Company Name:</label>
+            <input type="text" id="name" name="name" maxlength="50" 
+                value="{{ request.form['name'] | default('') }}" required>
+        </div>
+
+        <div id='country'>
+            <label for="country">Country:</label>
+            <select id="country" name="country" required>
+                {% set selected_country_code = request.form.get('country', '') %}
+                {% for country in countries %}
+                    <option value="{{ country[0] }}" {% if country[0] == selected_country_code %}selected{% endif %}>
+                        {{ country[1] }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div id='logo'>
+            <label for="logo">Company Logo:</label><br>
+            <input type="text" id="logo" name="logo" placeholder="image link"
+                value="{{ request.form['logo'] | default('') }}" >
+        </div>
+
+        <div id='email'>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" 
+                pattern="[a-zA-Z0-9.]{1,30}[@]+[a-zA-Z0-9]{1,10}[.]+[a-zA-Z0-9.]{1,10}" maxlength="50" 
+                value="{{ request.form['email'] | default('') }}" required><br>
+        </div> 
+
+        <div id='username'>
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" pattern="[a-zA-Z0-9]{6,50}" minlength="6" 
+                maxlength="50" value="{{ request.form['username'] | default('') }}" required><br>
+            <span class="sub-label">Can include letters and numbers only, At least 6 characters.</span><br><br>
+        </div>
+
+        <div id='password'>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" pattern="[a-zA-Z0-9]+{6,50}" 
+                minlength="6" maxlength="50" required><br>
+            <span class="sub-label">Must include a Capital and a lowercase letters, as well a number. At least 6 characters.</span><br><br>
+            <label for="password_reinput">Input Password Again:</label><br>
+            <input type="password" id="password_reinput" name="password_reinput" pattern="[a-zA-Z0-9]+{6,50}" 
+                minlength="6" maxlength="50" placeholder='Repeat Password' required><br>
+
+        </div>
+
+        <button type="submit" value="Log In">Add Airline</button>
+
+                    
+        {% if error_message %}
+            <p style="color: red;">{{ error_message }}</p>
+        {% endif %}
+
+        {% if adding_sucsess==True %}
+            <p style="color: green;">Airline Added Sucsessfuly, UserID: {{new_airline_data[0]}}, AirlineID: {{new_airline_data[1]}}</p>
+        {% elif adding_sucsess==False %}
+            <p style="color: red;">Error: was not able to add airline. Try again later.</p>
+        {% endif %}
+
+    </form>  
+
+</div>
+
+{% endblock %}

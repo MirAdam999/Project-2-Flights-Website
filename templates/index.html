@@ -1,38 +1,48 @@
 {% extends 'base.html' %}
 {% block page_content %}
 
-<div id='search_form'>
+<div class='search'>
+    <div id="search_header">
+        <h1> Looking for Your Next Adventure? </h1>
+    </div>
 
-    <form action="/searchforflight" method="post">
+    <div id='search_container'>
+
         <div>
-            <label for="origin">From</label>
-            <select id="origin" name="origin" placeholder='From where?' required>
-                {% for country in countries %}
-                    <option value="{{country[0]}}">{{country[1]}}</option>
-                {% endfor %}
-            </select>
-        </div>
-        <div> 
-            <label for="destination">To</label>
-            <select id="destination" name="destination" placeholder='Where are we going?' required>
-                {% for country in countries %}
-                    <option value="{{country[0]}}">{{country[1]}}</option>
-                {% endfor %}
-            </select>
-        </div>
-        <div>
-            <label for="date">Date</label>
-            <input type="date" id="date" name="date" value= 'When?' required>
+
+            <form action="/searchforflight" method="post" id='search_form'>
+                <div class='country_selector'>
+                    <label for="origin">From:</label>
+                    <select id="origin" name="origin" placeholder='From where?' required>
+                        {% for country in countries %}
+                            <option value="{{country[0]}}">{{country[1]}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class='country_selector'> 
+                    <label for="destination">To:</label>
+                    <select id="destination" name="destination" placeholder='Where are we going?' required>
+                        {% for country in countries %}
+                            <option value="{{country[0]}}">{{country[1]}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class='date_selector'>
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" value= 'When?' required>
+                </div>
+
+                <input type="submit" value="Search Flight" id='search_button'>
+            </form>      
+
         </div>
 
-        <input type="submit" value="Search">
-    </form>      
+        <div id="search_links">
+            <a href="{{ url_for('routes.redirect_to_searchforflightbyid') }}" id='search_link' >Search by Flight number</a>
+            <a href="{{ url_for('routes.closest_flights') }}" id= 'search_link' >Closest Arrivals and Departures</a>
+        </div>
+
+    </div>
 
 </div>
-<div>
-    <a href="{{ url_for('anon_blueprint.index') }}">Search by Flight number</a>
-    <a href="{{ url_for('anon_blueprint.index') }}">Closest Arrivals</a>
-    <a href="{{ url_for('anon_blueprint.index') }}">Closest Departures</a>
-</div>
-
 {% endblock %}

@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% block page_content %}
+
+<div id='airline_managment'>
+
+    <form action="/update_airline" method="post">
+
+        <label for="airlineid">Your Airline ID:</label>
+        <input type="text" id="airlineid" name="airlineid" maxlength="50" 
+                value="{{ request.form['airlineid']  or airline[0] }}" readonly >
+
+        <div id='name'>
+            <label for="name">Company Name:</label>
+            <input type="text" id="name" name="name" maxlength="50" 
+                value="{{ request.form['name']  or airline[1] }}" required>
+        </div>
+
+        <div id='country'>
+            <label for="country">Country:</label><br>
+            <select id="country" name="country" required>
+                {% set selected_country_code = request.form['country'] or airline[2] %}
+                {% for country in countries %}
+                    <option value="{{ country[0] }}" {% if country[0] == selected_country_code %}selected{% endif %}>
+                        {{ country[1] }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div id='logo'>
+            <label for="logo">Company Logo:</label><br>
+             <input type="text" id="logo" name="logo"  
+                value="{{ request.form['logo']  or airline[3] }}" ><br>
+        </div>
+
+        <div id='email'>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" 
+                pattern="[a-zA-Z0-9.]{1,30}[@]+[a-zA-Z0-9]{1,10}[.]+[a-zA-Z0-9.]{1,10}" maxlength="50" 
+                value="{{ request.form['email']  or airline[5] }}" required><br>
+        </div> 
+
+        <div id='username'>
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" pattern="[a-zA-Z0-9]{6,50}" minlength="6" 
+                maxlength="50" value="{{ request.form['username']  or airline[4] }}" required><br>
+            <span class="sub-label">Can include letters and numbers only, At least 6 characters.</span><br>
+        </div>
+
+        <div id='password'>
+            <label for="password">To save changes, enter Password:</label><br>
+            <input type="password" id="password" name="password" pattern="[a-zA-Z0-9]+{6,50}" 
+                minlength="6" maxlength="50" required><br>
+
+        </div>
+
+        <button type="submit" value="Update Customer">Update Info</button><br><br>
+
+        <div id='redirect_to_change_password_form'>
+            <form action="/change_password_form" method="post">
+                <button type="submit" value="Go To Change Password">Go To Change Password</button>
+            </form> 
+        </div>
+                    
+        {% if error_message %}
+            <p style="color: red;">{{ error_message }}</p>
+        {% endif %}
+
+        {% if update_sucsess==True %}
+            <p style="color: green;">Info Updated Sucsessfuly</p>
+        {% elif update_sucsess==False %}
+            <p style="color: red;">Error: was not able to update airline. Try again later.</p>
+        {% endif %}
+
+    </form>  
+
+</div>
+
+{% endblock %}

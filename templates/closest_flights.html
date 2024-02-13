@@ -3,9 +3,10 @@
 
 <div id='closest_flights'>
 
-    <div id='serch_for_closest_flights_by_country'>
-        <form action="/serch_for_closest_flights_by_country" method="post">
+    <div id='search_for_closest_flights_by_country'>
+        <form action="/search_for_closest_flights_by_country" method="post">
             <div>
+                <h2>Arriving and Departing in next 12 Hours</h2>
                 <label for="country">Choose Country:</label>
                 <select id="country" name="country"  required>
                     {% for country in countries %}
@@ -34,7 +35,11 @@
                             <label for="airline_company_logo">{{flight[1]}}</label>
                             <img src="{{flight[0]}}" alt="airline_company_logo" class="airline-logo-image" name="airline_company_logo"/>
                         </div>
-
+            
+                        <div id='flight_num'>
+                            <h2> Flight Number: {{flight[10]}}</h2>
+                        </div>
+            
                         <div id='departure'>
                             <h2>{{flight[2]}}</h2>
                             <h3>{{flight[3]}}</h3>
@@ -45,12 +50,16 @@
                             <h3>{{flight[6]}}</h3>
                             <h4>{{flight[7]}}</h4>
                         </div>
-
+            
                         
-                        <div id='flight_status'>
-                            <h3>{{flight[8]}}</h3>
+                        <div id='tickets'>
+                            <h3>Remaning Tickets: {{flight[8]}}</h3>
                         </div>
-
+            
+                        <div id='flight_status'>
+                            <h3>{{flight[9]}}</h3>
+                        </div>
+            
                         {% endfor %}
 
                     {% else %}
@@ -69,7 +78,11 @@
                             <label for="airline_company_logo">{{flight[1]}}</label>
                             <img src="{{flight[0]}}" alt="airline_company_logo" class="airline-logo-image" name="airline_company_logo"/>
                         </div>
-
+            
+                        <div id='flight_num'>
+                            <h2> Flight Number: {{flight[10]}}</h2>
+                        </div>
+            
                         <div id='departure'>
                             <h2>{{flight[2]}}</h2>
                             <h3>{{flight[3]}}</h3>
@@ -80,12 +93,16 @@
                             <h3>{{flight[6]}}</h3>
                             <h4>{{flight[7]}}</h4>
                         </div>
-
+            
                         
-                        <div id='flight_status'>
-                            <h3>{{flight[8]}}</h3>
+                        <div id='tickets'>
+                            <h3>Remaning Tickets: {{flight[8]}}</h3>
                         </div>
-
+            
+                        <div id='flight_status'>
+                            <h3>{{flight[9]}}</h3>
+                        </div>
+            
                         {% endfor %}
 
                     {% else %}

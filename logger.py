@@ -43,8 +43,9 @@ class Logger(object):
         """
         11.01.24
         Mir Shukhman
-        Func setter to add log entry
-        Input func name, func's input, func's output. Datetime + id set automaticly
+        Func to add log entry
+        Input: func name, func's input, func's output. Datetime + id set automaticly
+        Ouput: None/err(str)
         """
         id = self.count_entries()+1
         log_entry = {
@@ -74,7 +75,11 @@ class Logger(object):
 
     def count_entries(self):
         """
+        11.01.24
+        Mir Shukhman
         Count the number of entries in the log file.
+        Input: None
+        Output: lenoffile (int)/0 if err
         """
         try:
             with open(self._log_file, 'r') as file:

@@ -5,89 +5,95 @@
     <meta charset="UTF-8" />
     <title>Pegasus</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  </head>
 
-    <div id='header'>
+  <body>
+    <div class='header'>
 
       <div id='logo'>
-        <a href="{{ url_for('anon_blueprint.index') }}">
-          <img src="https://t3.ftcdn.net/jpg/01/68/95/54/360_F_168955418_i16UXMUE4U6qq2YnRkLGUpDnhr1VY6a6.jpg" alt="Pegasus_logo"  width='80' height='50'/>
+        <a href="{{ url_for('routes.index') }}">
+          <img src='https://i.postimg.cc/3xWsXK7C/PEGASUS-3.jpg'
+          alt="Pegasus_logo"/>
         </a>
       </div>
 
-      {% if role == "Administrator" %}
-      <div id='admin'>
-        <form method="post" action="{{ url_for('admin_blueprint.index') }} "  style="display: inline-block;">
-          <button type="submit">Manage Admins</button>
-        </form>
-        <form method="post" action="{{ url_for('admin_blueprint.index') }}"  style="display: inline-block;">
-          <button type="submit">Manage Airline Companies</button>
-        </form>
-        <form method="post" action="{{ url_for('admin_blueprint.manage_customers') }}"  style="display: inline-block;">
-          <button type="submit">Manage Customers</button>
-        </form>
-        <form method="post" action="{{ url_for('admin_blueprint.closest_flights') }}"  style="display: inline-block;">
-          <button type="submit">Closest Flights</button>
-        </form>
-        <form method="post" action="{{ url_for('admin_blueprint.all_flights') }}"  style="display: inline-block;">
-          <button type="submit">All Flights</button>
-        </form>
-      </div>
-      {% endif %}
-
-      {% if role == "Airline Company" %}
-      <div id='airline'>
-        <form method="post" action="{{ url_for('anon_blueprint.index') }} "  style="display: inline-block;">
-          <button type="submit">Add Flight + </button>
-        </form>
-        <form method="post" action="{{ url_for('anon_blueprint.index') }}"  style="display: inline-block;">
-          <button type="submit">Manage Flights</button>
-        </form>
-        <form method="post" action="{{ url_for('anon_blueprint.index') }}"  style="display: inline-block;">
-          <button type="submit">My Closest Flights</button>
-        </form>
-        <form method="post" action="{{ url_for('anon_blueprint.index') }}"  style="display: inline-block;">
-          <button type="submit">My Profile</button>
-      </div>
-      {% endif %}
-
-      {% if role == "Customer" %}
-      <div id='customer'>
-        <form method="post" action="{{ url_for('anon_blueprint.index') }}"  style="display: inline-block;">
-          <button type="submit">My Tickets</button>
-        <form method="post" action="{{ url_for('anon_blueprint.index') }}"  style="display: inline-block;">
-          <button type="submit">My Profile</button>
-      </div>
-      {% endif %}
-
-      <div id='welcome_back'>
-        {% if name and role %}
-          <h3>Welcome Back {{name}}</h3>
+      <div class='role_buttons'>
+        {% if role == "Administrator" %}
+        <div id='admin'>
+          <form method="post" action="{{ url_for('routes.manage_admins') }} "  style="display: inline-block;">
+            <button type="submit" id='head_button'>Manage Admins</button>
+          </form>
+          <form method="post" action="{{ url_for('routes.manage_airlines') }}"  style="display: inline-block;">
+            <button type="submit" id='head_button'>Manage Airline Companies</button>
+          </form>
+          <form method="post" action="{{ url_for('routes.manage_customers') }}"  style="display: inline-block;">
+            <button type="submit" id='head_button'>Manage Customers</button>
+          </form>
+          <form action="{{ url_for('routes.closest_flights') }}"  style="display: inline-block;">
+            <button type="submit" id='head_button'>Closest Flights</button>
+          </form>
+          <form method="post" action="{{ url_for('routes.all_flights') }}"  style="display: inline-block;">
+            <button type="submit" id='head_button'>All Flights</button>
+          </form>
+          <form method="post" action="{{ url_for('routes.admin_info') }}"  style="display: inline-block;">
+            <button type="submit" id='head_button'>My Profile</button>
+          </form>
+        </div>
         {% endif %}
+
+        {% if role == "AirlineCompany" %}
+        <div id='airline'>
+          <form method="post" action="{{ url_for('routes.add_flight_form') }} "  style="display: inline-block;">
+            <button type="submit" id='head_button'>Add Flight + </button>
+          </form>
+          <form method="post" action="{{ url_for('routes.manage_flights') }}"  style="display: inline-block;">
+            <button type="submit" id='head_button'>Manage Flights</button>
+          </form>
+          <form method="post" action="{{ url_for('routes.airline_info') }}"  style="display: inline-block;">
+            <button type="submit" id='head_button'>My Profile</button>
+          </form>
+        </div>
+        {% endif %}
+
+        {% if role == "Customer" %}
+        <div id='customer'>
+          <form method="post" action="{{ url_for('routes.my_tickets') }}"  style="display: inline-block;">
+            <button type="submit" id='head_button'>My Tickets</button>
+          </form>
+          <form method="post" action="{{ url_for('routes.customer_info') }}"  style="display: inline-block;">
+            <button type="submit" id='head_button'>My Profile</button>
+          </form>
+        </div>
+        {% endif %}
+
+        <div id='welcome_back'>
+          {% if name and role %}
+            <h3>Welcome Back, {{name}}</h3>
+          {% endif %}
+        </div>
+        
       </div>
 
-      <div id='looged_in'>
+      <div class='logged_in'>
         {% if name and role %}
-          <a href="{{ url_for('anon_blueprint.index') }}">Log Out</a>
+          <a href="{{ url_for('routes.logout') }}" id='log_in_out'>Log Out</a>
         {% else %}
-          <a href="{{ url_for('anon_blueprint.redirect_to_signup') }}" > Sign Up </a>
-          <a href="{{ url_for('anon_blueprint.redirect_to_login') }}" > Log In </a>
+          <a href="{{ url_for('routes.redirect_to_signup') }}" id='log_in_out'> Sign Up </a>
+          <a href="{{ url_for('routes.redirect_to_login') }}" id='log_in_out'> Log In </a>
         {% endif %}
       </div>
 
     </div>
 
-  </head>
-
-  <body>
 
     <div id="page_content">
       {% block page_content %}{% endblock %}
     </div>
 
-    <div id="footer">
-      <p>&copy;2024 Pegasus all rights reserved</p>
-    </div>
-
   </body>
+
+  <footer id="footer">
+      <p>&copy;2024 Pegasus all rights reserved</p>
+  </footer>
 
 </html>

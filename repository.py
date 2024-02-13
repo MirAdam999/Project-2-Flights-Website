@@ -101,9 +101,9 @@ class Repository:
         Updating an existing entity to certain table in db (class db.model)
         First calls get_by_id func from the class to find the entity,
             then if entity found updates.
-        Input: entity_id (int)
+        Input: entity_id (int),
             new_info - Dictionary of parameter names and values as in {'Username': 'new_username'}
-        Output: updated entity; None if entity not found; Err str if err
+        Output: True is sucsess; None if entity not found; Err str if err
         ;logging of action
         """
         try:
@@ -114,7 +114,7 @@ class Repository:
                     setattr(entity, key, value)  
                 db.session.commit()
                 logger.log(self.class_name,'update', (entity_id, new_info), 'Updated')
-                return entity  # Return the updated entity
+                return True  # Return sucsess of action
                 
             else:
                 logger.log(self.class_name,'update', (entity_id, new_info), 'None Found')
@@ -149,7 +149,7 @@ class Repository:
         except Exception as e:
             db.session.rollback()
             logger.log(self.class_name,'add_all', entities, str(e))
-            raise e
+            return str(e)
         
 
     def remove(self, entity_id):

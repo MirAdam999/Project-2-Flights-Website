@@ -83,7 +83,7 @@
         {% endif %}
 
         {% if adding_sucsess==True %}
-            <p style="color: green;">Customer Added Sucsessfuly</p>
+            <p style="color: green;">Customer Added Sucsessfuly, UserID: {{new_cust_data[0]}}, CustomerID: {{new_cust_data[1]}}</p>
         {% elif adding_sucsess==False %}
             <p style="color: red;">Error: was not able to add customer. Try again later.</p>
         {% endif %}

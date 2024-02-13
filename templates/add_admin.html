@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block page_content %}
+
+<div id='add_admin'>
+
+    <form action="/add_admin" method="post">
+        <div id='fname'>
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" maxlength="50" 
+                value="{{ request.form['fname'] | default('') }}" required>
+        </div>
+
+        <div id='lname'>
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" maxlength="50" 
+                value="{{ request.form['lname'] | default('') }}" required>
+        </div>
+
+
+        <div id='email'>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" 
+                pattern="[a-zA-Z0-9.]{1,30}[@]+[a-zA-Z0-9]{1,10}[.]+[a-zA-Z0-9.]{1,10}" maxlength="50" 
+                value="{{ request.form['email'] | default('') }}" required><br>
+        </div> 
+
+        <div id='username'>
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" pattern="[a-zA-Z0-9]{6,50}" minlength="6" 
+                maxlength="50" value="{{ request.form['username'] | default('') }}" required><br>
+            <span class="sub-label">Can include letters and numbers only, At least 6 characters.</span><br><br>
+        </div>
+
+        <div id='password'>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" pattern="[a-zA-Z0-9]+{6,50}" 
+                minlength="6" maxlength="50" required><br>
+            <span class="sub-label">Must include a Capital and a lowercase letters, as well a number. At least 6 characters.</span><br><br>
+            <label for="password_reinput">Input Password Again:</label><br>
+            <input type="password" id="password_reinput" name="password_reinput" pattern="[a-zA-Z0-9]+{6,50}" 
+                minlength="6" maxlength="50" placeholder='Repeat Password' required><br>
+
+        </div>
+
+        <button type="submit" value="Log In">Add Administrator</button>
+
+                    
+        {% if error_message %}
+            <p style="color: red;">{{ error_message }}</p>
+        {% endif %}
+
+        {% if adding_sucsess==True %}
+            <p style="color: green;">Administrator Added Sucsessfuly, UserID: {{new_admin_data[0]}}, AdminID: {{new_admin_data[1]}}</p>
+        {% elif adding_sucsess==False %}
+            <p style="color: red;">Error: was not able to add admin. Try again later.</p>
+        {% endif %}
+
+    </form>  
+
+</div>
+
+{% endblock %}

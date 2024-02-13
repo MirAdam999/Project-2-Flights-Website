@@ -27,7 +27,7 @@ class FacadeBase:
         self.user_roles_repo= Repository(UserRoles)
         self.users_repo= Repository(Users)
       
-      
+    # In use
     def _create_new_user(self,_user):
        """
        17.01.24
@@ -50,6 +50,13 @@ class FacadeBase:
     
     
     def get_user_by_ID(self, userID:int):
+        """
+       20.01.24
+       Mir Shukhman
+       The func calls for get_by_id func from users_repo (Repository class)
+       Input: user ID (int)
+       Output: get_by_id func output (db.model obj/none/str err); Err str if err
+       """
         try:
             user=self.users_repo.get_by_id(userID)
             return user
@@ -57,8 +64,31 @@ class FacadeBase:
         except Exception as e:
            return str(e)
        
-    
+       
+    def get_admin_by_adminID(self, adminID:int):
+        """
+       20.01.24
+       Mir Shukhman
+       The func calls for get_by_id func from admins_repo (Repository class)
+       Input: admin ID (int)
+       Output: get_by_id func output (db.model obj/none/str err); Err str if err
+       """
+        try:
+            admin=self.admins_repo.get_by_id(adminID)
+            return admin
+        
+        except Exception as e:
+           return str(e)
+       
+       
     def get_customer_by_ID(self, custID:int):
+        """
+       20.01.24
+       Mir Shukhman
+       The func calls for get_by_id func from customers_repo (Repository class)
+       Input: customer ID (int)
+       Output: get_by_id func output (db.model obj/none/str err); Err str if err
+       """
         try:
             cust=self.customers_repo.get_by_id(custID)
             return cust
@@ -130,41 +160,7 @@ class FacadeBase:
         except Exception as e:
            return str(e)
     
-       
-    def get_airline_by_user_ID(self, userID:int):
-        """
-       17.01.24
-       Mir Shukhman
-       The func calls for get_stored_procedure from airlines_repo (Repository class)
-            to acess 'get_airline_by_userID' stored procedure in the db
-       Input: userID (int)
-       Output: get_stored_procedure func output (db.model obj/none/str err); Err str if err
-       """
-        try:
-            airline=self.airlines_repo.get_stored_procedure('get_airline_by_userID',{'userID': userID})
-            return airline
-
-        except Exception as e:
-           return str(e)
-      
-       
-    def get_airlines_by_country_ID(self, countryID:int):
-        """
-       18.01.24
-       Mir Shukhman
-       The func calls for get_stored_procedure from airlines_repo (Repository class)
-            to acess 'get_airlines_by_country' stored procedure in the db
-       Input: countryID (int)
-       Output: get_stored_procedure func output (list of db.model obj/none/str err); Err str if err
-       """
-        try:
-            airlines=self.airlines_repo.get_stored_procedure('get_airlines_by_country',{'countryID': countryID})
-            return airlines
-
-        except Exception as e:
-           return str(e)
-       
-       
+    
     def	get_flights_by_ID(self, flightID:int):
         """
         19.01.24
@@ -221,37 +217,54 @@ class FacadeBase:
        
        
     def get_arrival_flights_12hours(self,countryID:int):
-            try:
-                flights=self.flights_repo.get_stored_procedure('get_arrival_flights_12hours',
-                                                            {'countryID': countryID,})
-                return flights
+        """
+       01.02.24
+       Mir Shukhman
+       The func calls for get_stored_procedure from flights_repo (Repository class)
+            to acess 'get_arrival_flights_12hours' stored procedure in the db
+       Input: countryID (int)
+       Output: get_stored_procedure func output (list of tupples/none/str err); Err str if err
+       """
+        try:
+            flights=self.flights_repo.get_stored_procedure('get_arrival_flights_12hours',
+                                                        {'countryID': countryID,})
+            return flights
 
-            except Exception as e:
-                return str(e)
+        except Exception as e:
+            return str(e)
             
             
     def get_departure_flights_12hours(self,countryID:int):
-            try:
-                flights=self.flights_repo.get_stored_procedure('get_departure_flights_12hours',
-                                                            {'countryID': countryID,})
-                return flights
+        """
+       01.02.24
+       Mir Shukhman
+       The func calls for get_stored_procedure from flights_repo (Repository class)
+            to acess 'get_departure_flights_12hours' stored procedure in the db
+       Input: countryID (int)
+       Output: get_stored_procedure func output (list of tupples/none/str err); Err str if err
+       """            
+        try:
+            flights=self.flights_repo.get_stored_procedure('get_departure_flights_12hours',
+                                                        {'countryID': countryID,})
+            return flights
 
-            except Exception as e:
-                return str(e)
-       
-       
-    def split_date_time(self,date_time_obj):
-        
-        date_part = date_time_obj.date()
-        time_part = date_time_obj.time()
-
-        date = date_part.strftime('%Y-%m-%d')
-        time = time_part.strftime('%H:%M')
-
-        return date, time
+        except Exception as e:
+            return str(e)
 
 
     def check_if_customer_exists(self, *, username:str, email:str, phone_num:str, credit_card_num:str):
+        """
+       01.02.24
+       Mir Shukhman
+       The func calls for get_stored_procedure from customers_repo (Repository class)
+            to acess 'check_if_customer_exists' stored procedure in the db
+       Input: username (str),
+            email (str),
+            phone_num (str),
+            credit_card_num (str),
+            [all input by parameter name]       
+        Output: get_stored_procedure func output (list of tupples/none/str err); Err str if err
+       """
         try:
             existing_customer= self.customers_repo.get_stored_procedure('check_if_customer_exists',
                                                                         {'username' : username,
@@ -266,3 +279,86 @@ class FacadeBase:
             
         except Exception as e:
             return str(e)
+        
+        
+    def check_if_airline_or_admin_exists(self, *, username:str, email:str):
+        """
+       01.02.24
+       Mir Shukhman
+       The func calls for get_stored_procedure from users_repo (Repository class)
+            to acess 'check_if_airline_or_admin_exists' stored procedure in the db
+       Input: username (str),
+            email (str)
+            [all input by parameter name]       
+        Output: get_stored_procedure func output (list of tupples/none/str err); Err str if err
+       """        
+        try:
+            existing_user= self.users_repo.get_stored_procedure('check_if_airline_or_admin_exists',
+                                                                        {'username' : username,
+                                                                         'email' : email,})
+            if existing_user:
+                return existing_user
+            
+            else:
+                return None
+            
+        except Exception as e:
+            return str(e)
+    
+    
+    # Currently not in use
+       
+    def get_airline_by_user_ID(self, userID:int):
+        """
+       17.01.24
+       Mir Shukhman
+       The func calls for get_stored_procedure from airlines_repo (Repository class)
+            to acess 'get_airline_by_userID' stored procedure in the db
+       Input: userID (int)
+       Output: get_stored_procedure func output (db.model obj/none/str err); Err str if err
+       """
+        try:
+            airline=self.airlines_repo.get_stored_procedure('get_airline_by_userID',{'userID': userID})
+            return airline
+
+        except Exception as e:
+           return str(e)
+      
+       
+    def get_airlines_by_country_ID(self, countryID:int):
+        """
+       18.01.24
+       Mir Shukhman
+       The func calls for get_stored_procedure from airlines_repo (Repository class)
+            to acess 'get_airlines_by_country' stored procedure in the db
+       Input: countryID (int)
+       Output: get_stored_procedure func output (list of db.model obj/none/str err); Err str if err
+       """
+        try:
+            airlines=self.airlines_repo.get_stored_procedure('get_airlines_by_country',{'countryID': countryID})
+            return airlines
+
+        except Exception as e:
+           return str(e)
+       
+       
+    # For display
+    
+    def split_date_time(self,date_time_obj):
+        """
+       06.02.24
+       Mir Shukhman
+       The func formats datetime obj that comes from the database into 
+        desirable strings of date and time for display.
+       Input: date_time_obj (2024-01-29 03:17:00.000)     
+        Output: tupple of str date ('%Y-%m-%d') and str time ('%H:%M')
+       """       
+        date_part = date_time_obj.date()
+        time_part = date_time_obj.time()
+
+        date = date_part.strftime('%Y-%m-%d')
+        time = time_part.strftime('%H:%M')
+
+        return date, time
+    
+    

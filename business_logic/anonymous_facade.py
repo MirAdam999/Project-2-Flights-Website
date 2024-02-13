@@ -51,45 +51,46 @@ class AnonymousFacade(FacadeBase):
                 user_ID = user[0][0]
                 is_active = user[0][5]
                 # check password correct
-                if db_pass == _password and is_active==True:
-                    if db_role == 1:
-                        role='Administrator'    # getting admin's name from Admins in db (SP)
-                        admin= self.admins_repo.get_stored_procedure( 
-                                    'get_admin_by_username',{'username':username})
-                        name= f"{admin[0][1]} {admin[0][2]}" 
-                        self.lt_instance.login_token= (user_ID,name,role) # using setter
-                        current_login_token=self.lt_instance.login_token  # getting token obj from getter
-                        facade=AdministratorFacade(current_login_token) 
-                        return facade       # returning correct facade with the token in init
-                                            
-                    elif db_role == 2:
-                        role='AirlineCompany'   # getting company's name from AirlineCompanies in db (SP)
-                        airline= self.airlines_repo.get_stored_procedure(
-                                    'get_airline_by_username',{'username':username})
-                        name= f"{airline[0][1]}"
-                        self.lt_instance.login_token= (user_ID,name,role) # using setter
-                        current_login_token=self.lt_instance.login_token # getting token obj from getter
-                        facade=AirlineFacade(current_login_token)
-                        return facade       # returning correct facade with the token in init
+                if db_pass == _password:
+                    if is_active==True:
+                        if db_role == 1:
+                            role='Administrator'    # getting admin's name from Admins in db (SP)
+                            admin= self.admins_repo.get_stored_procedure( 
+                                        'get_admin_by_username',{'username':username})
+                            name= f"{admin[0][1]} {admin[0][2]}" 
+                            self.lt_instance.login_token= (user_ID,name,role) # using setter
+                            current_login_token=self.lt_instance.login_token  # getting token obj from getter
+                            facade=AdministratorFacade(current_login_token) 
+                            return (facade, None)        # returning correct facade with the token in init
+                                                
+                        elif db_role == 2:
+                            role='AirlineCompany'   # getting company's name from AirlineCompanies in db (SP)
+                            airline= self.airlines_repo.get_stored_procedure(
+                                        'get_airline_by_username',{'username':username})
+                            name= f"{airline[0][1]}"
+                            self.lt_instance.login_token= (user_ID,name,role) # using setter
+                            current_login_token=self.lt_instance.login_token # getting token obj from getter
+                            facade=AirlineFacade(current_login_token)
+                            return (facade, None)      # returning correct facade with the token in init
+                            
+                        elif db_role == 3:
+                            role='Customer'     # getting cust's name from Customres in db (SP)
+                            customer= self.customers_repo.get_stored_procedure(
+                                        'get_customer_by_username',{'username':username})
+                            name=  f"{customer[0][1]} {customer[0][2]}"
+                            self.lt_instance.login_token= (user_ID,name,role) # using setter
+                            current_login_token=self.lt_instance.login_token # getting token obj from getter
+                            facade=CustomerFacade(current_login_token)
+                            return (facade, None)      # returning correct facade with the token in init
+                            
+                        else:   # user role not 1,2,3
+                            return (None, 'Wrong Username/Password')
                         
-                    elif db_role == 3:
-                        role='Customer'     # getting cust's name from Customres in db (SP)
-                        customer= self.customers_repo.get_stored_procedure(
-                                    'get_customer_by_username',{'username':username})
-                        name=  f"{customer[0][1]} {customer[0][2]}"
-                        self.lt_instance.login_token= (user_ID,name,role) # using setter
-                        current_login_token=self.lt_instance.login_token # getting token obj from getter
-                        facade=CustomerFacade(current_login_token)
-                        return facade       # returning correct facade with the token in init
-                        
-                    else:   # user role not 1,2,3
-                        return None
-                
-                else:   # password incorrect/inactive user
-                    return None
+                    else:   # inactive user
+                            return (None, 'Disactivated')
                 
             else:   #username not found
-                return None
+                return (None, 'Wrong Username/Password')
         
         except Exception as e:
             return str(e)
@@ -111,7 +112,8 @@ class AnonymousFacade(FacadeBase):
         Input: username (str), password (str, private), email (str),first_name (str),
                last_name(str), address (str), phone_num (str), credit_num (str, private)
                [all input by parameter name]
-        Output: True if sucsess; False if customer or user creation err; Err str if err
+        Output: True if sucsess; False if password too short/
+                customer or user creation err; Err str if err
         """
         try:
             # ensuring password length
@@ -136,13 +138,7 @@ class AnonymousFacade(FacadeBase):
                     if new_cust:    # creation user+customer sucsess
                         return True 
                     
-                    else:   # customer creation err
-                        return False 
-                
-                else:   # user creation err
-                    return False 
-            
-            else:   #password too short
+            else:   #password too short/user creation err/customer creation err
                 return False
             
         except Exception as e:

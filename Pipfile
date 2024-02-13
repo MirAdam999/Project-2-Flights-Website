@@ -8,6 +8,7 @@ flask = "*"
 flask-sqlalchemy = "*"
 pyodbc = "*"
 sqlalchemy = "*"
+pytest = "*"
 
 [dev-packages]
 

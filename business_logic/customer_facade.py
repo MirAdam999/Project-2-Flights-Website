@@ -45,17 +45,43 @@ class CustomerFacade(FacadeBase):
         except Exception as e:
             return str(e)
     
+     
+    def get_customer_data(self):
+        """ 
+        04.02.24
+        Mir Shukhman
+        Get customer data func, ensures facade matches token role,
+        calls get_by_id func from customers_repo.
+        Input: None
+        Output: customers_repo.get_by_id func output (db model obj/none/str err);
+                False if facade dosen't match token role/no cust in db by given custId;
+                Err str if err
+        """        
+        try:
+            # ensuring facade matches token role
+            if self.token_role=='Customer':
+                db_customer= self.customers_repo.get_by_id(self.customerID)
+                # customer with token_ID found
+                if db_customer:
+                    return db_customer
+                
+            else:   # facade dosen't match token role/no cust in db by given custId
+                return False
+            
+        except Exception as e:
+            return str(e)
         
-    def update_customer(self,new_data):
+        
+    def update_customer(self,new_user_data,new_cust_data):
         """ 
         23.01.24
         Mir Shukhman
         Update customer func, ensures facade matches token role,
-        calls get_by_id func from customers_repo to get cust's name from db,
-        ensures cust's name from db matches token cust name,
+        calls get_by_id func from customers_repo,
         calls update func from customers_repo (Repository class).
-        Input: new_data - as dict, example {'PhoneNum': '+15551234560','Address': '555 Main St'}
-        Output: customers_repo.update func output (updated cust's data/none/str err);
+        Input: new_user_data - as dict, example {'PhoneNum': '+15551234560','Address': '555 Main St'}
+                new_cust_data- as dict
+        Output: True if sucsess;
                 False if facade dosen't match token role/no cust in db by given custId
                 /cust's full name from db dosen't token cust name;
                 Err str if err
@@ -66,22 +92,13 @@ class CustomerFacade(FacadeBase):
                 db_customer= self.customers_repo.get_by_id(self.customerID)
                 # customer with token_ID found
                 if db_customer:
-                    first_name = str(db_customer.FirstName)
-                    last_name = str(db_customer.LastName)
-                    full_name= f"{first_name} {last_name}"  # getting cust's full name from db
+                    updated_user=self.users_repo.update(self.token_userID,new_user_data)
+                    updated_customer=self.customers_repo.update(self.customerID,new_cust_data)
                     
-                    # ensuring cust's full name from db matches token cust name
-                    if full_name == self.token_cust_name:
-                        updated_customer=self.customers_repo.update(self.customerID,new_data)
-                        return updated_customer # returns updated cust's data/none/str err
+                    if updated_customer and updated_user:
+                        return True 
                     
-                    else:   # cust's full name from db dosen't token cust name
-                        return False
-                    
-                else:   # no cust in db by given custId
-                    return False
-                
-            else:   # facade dosen't match token role
+            else:   # facade dosen't match token role/no cust in db by given custId/cust's full name from db dosen't token cust name
                 return False
             
         except Exception as e:
@@ -116,7 +133,7 @@ class CustomerFacade(FacadeBase):
                 if self.tickets_repo.get_stored_procedure('check_if_customer_owns_ticket_for_flight',
                                                           {'flightID':flightID,
                                                            'customerID':self.customerID}):
-                    return False # cust already owns ticket
+                    return (False,'Owns Ticket') # cust already owns ticket
                 
                 else: # look for flight with flightID
                     flight_data= self.flights_repo.get_by_id(flightID)
@@ -132,13 +149,13 @@ class CustomerFacade(FacadeBase):
                                                                 {'flightID':flightID,
                                                                 'customerID':self.customerID})
                             new_ticketID = new_ticket[0][0] # getting new ticket's ID
-                            return new_ticketID
+                            return (new_ticketID,None)
                         
                         else:
-                            return add_ticket # returns str err
+                            return (False, add_ticket) # returns str err
                         
                     else:   # no tickets left for flight/no flight with flightID
-                        return False
+                        return (False, 'No Tickets')
                     
             else: # facade dosen't match token role
                 return False
@@ -177,15 +194,10 @@ class CustomerFacade(FacadeBase):
                         # calling sp to update flights table remaning tickets +1
                         self.flights_repo.get_stored_procedure('return_ticket',{'flightID':flightID})
                         remove = self.tickets_repo.remove(ticketID)
+                        
                         return remove # returns True/None/ str err
                     
-                    else:   # cust ID thats in the ticket from db dosen't token custID
-                        return False
-                    
-                else:   # no ticket in db by given ticketID
-                    return False
-                
-            else:   # facade dosen't match token role
+            else:   # facade dosen't match token role/no ticket in db by given ticketID/cust ID thats in the ticket from db dosen't token custID
                 return False
             
         except Exception as e:
@@ -222,8 +234,12 @@ class CustomerFacade(FacadeBase):
                         flight_id = ticket[1]
                         # getting flight info for each ticket
                         flight_info= self.flights_repo.get_by_id(flight_id)
+                        org_country=self.get_country_by_ID(flight_info.OriginCountryID)
+                        org_country_name=f'{org_country.CountryName}, {org_country.Alpha3Code}'
+                        dest_country=self.get_country_by_ID(flight_info.DestinationCountryID)
+                        dest_country_name=f'{dest_country.CountryName}, {dest_country.Alpha3Code}'
                         # creating a dict for each ticket and adding to list of tickets
-                        my_tickets_info.append({ticket_id:flight_info})
+                        my_tickets_info.append((ticket_id,flight_info,org_country_name,dest_country_name))
                     
                     return my_tickets_info # returning the list of tickets
                     

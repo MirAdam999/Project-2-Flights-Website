@@ -45,19 +45,44 @@ class AirlineFacade(FacadeBase):
         except Exception as e:
             return str(e)
        
+     
+    def get_airline_data(self):
+        """ 
+        04.02.24
+        Mir Shukhman
+        Get airline data func, ensures facade matches token role,
+        calls get_by_id func from airlines_repo.
+        Input: None
+        Output: airlines_repo.get_by_id func output (db model obj/none/str err);
+                False if facade dosen't match token role/no airline in db by given airlineID;
+                Err str if err
+        """          
+        try:
+            # ensuring facade matches token role
+            if self.token_role=='AirlineCompany':
+                db_airline= self.airlines_repo.get_by_id(self.airlineID)
+                # airline with token_ID found
+                if db_airline:
+                    return db_airline
+            
+            else:   # facade dosen't match token role/ no airline in db by given airlineID
+                return False
+            
+        except Exception as e:
+            return str(e)
         
-    def update_airline(self,new_data):
+           
+    def update_airline(self,new_user_data,new_airline_data):
         """     
         24.01.24
         Mir Shukhman
         Update airline func, ensures facade matches token role,
-        calls get_by_id func from airlines_repo to get airline's name from db,
-        ensures airline's name from db matches token airline name,
+        calls get_by_id func from airlines_repo,
         calls update func from airline_repo (Repository class).
-        Input: new_data - as dict, example {'Country_ID': 33}
-        Output: airlines_repo.update func output (updated airline's data/none/str err);
-                False if facade dosen't match token role/no airline in db by given airlineId
-                /airline's name from db dosen't token airline name;
+        Input: new_user_data - as dict, example {'PhoneNum': '+15551234560','Address': '555 Main St'}
+                new_airline_data- as dict        
+        Output: True if sucsess;
+                False if facade dosen't match token role/no airline in db by given airlineId;
                 Err str if err
         """
         try:
@@ -66,20 +91,13 @@ class AirlineFacade(FacadeBase):
                 db_airline= self.airlines_repo.get_by_id(self.airlineID)
                 # airline with token_ID found
                 if db_airline:
-                    name = str(db_airline.Name) # getting airline's name from db
+                    updated_user=self.users_repo.update(self.token_userID,new_user_data)
+                    updated_airline=self.airlines_repo.update(self.airlineID,new_airline_data)
                     
-                    # ensuring airline's name from db matches token airline name
-                    if name == self.token_airline_name:
-                        updated_airline=self.airlines_repo.update(self.airlineID,new_data)
-                        return updated_airline # returns updated airline's data/none/str err
-                    
-                    else:   # airline's name from db dosen't match token airline name
-                        return False
-                    
-                else:   # no airline in db by given airlineId
-                    return False
-                
-            else:   # facade dosen't match token role
+                    if updated_airline and updated_user:
+                        return True 
+                     
+            else:   # facade dosen't match token role/no airline in db by given airlineId
                 return False   
               
         except Exception as e:
@@ -106,7 +124,7 @@ class AirlineFacade(FacadeBase):
         Output: New flight ID;
                 flight_repo.add func output - str err , if adding not sucsessful;
                 False if facade dosen't match token role/landing time is after departure time/
-                negative num of tickets/destcountryId = origincountryID/such flight alredy exists;
+                negative num of tickets/destcountryId = origincountryID;
                 Err str if err
         """
         try:
@@ -118,43 +136,26 @@ class AirlineFacade(FacadeBase):
                     if tickets >= 0:
                         # check origin country is not destination country
                         if org_countryID != dest_countryID:
-                            # check if such flight alredy exists
-                            if self.flights_repo.get_stored_procedure(
+                            add_flight = self.flights_repo.add(Flights( AirlineID=self.airlineID,
+                                                                        OriginCountryID=org_countryID,
+                                                                        DestinationCountryID=dest_countryID,
+                                                                        DepartureTime=depart_time,
+                                                                        LandingTime=land_time,
+                                                                        RemainingTickets=tickets,
+                                                                        FlightStatus='On Time'))
+                            if add_flight == True:  # adding flight sucsess
+                                new_flight = self.flights_repo.get_stored_procedure(
                                                             'check_if_flight_exists',
                                                             {'origin_country_id':org_countryID,
-                                                             'destination_country_id':dest_countryID,
-                                                            'datetime':depart_time}):
-                                return False # such flight alredy exists
-                            
-                            else:
-                                add_flight = self.flights_repo.add(Flights( AirlineID=self.airlineID,
-                                                                            OriginCountryID=org_countryID,
-                                                                            DestinationCountryID=dest_countryID,
-                                                                            DepartureTime=depart_time,
-                                                                            LandingTime=land_time,
-                                                                            RemainingTickets=tickets))
-                                if add_flight == True:  # adding flight sucsess
-                                    new_flight = self.flights_repo.get_stored_procedure(
-                                                                'check_if_flight_exists',
-                                                                {'origin_country_id':org_countryID,
-                                                                'destination_country_id':dest_countryID,
-                                                                'datetime':depart_time})
-                                    new_flightID = new_flight[0][0] # getting new flight's ID
-                                    return new_flightID
-                        
-                                else:
-                                    return add_flight # returns str err
-                            
-                        else:   # destcountryId = origincountryID
-                            return False
-                        
-                    else:   # negative num of tickets
-                        return False
+                                                            'destination_country_id':dest_countryID,
+                                                            'datetime':depart_time})
+                                new_flightID = new_flight[0][0] # getting new flight's ID
+                                return new_flightID
                     
-                else:    # landing time is after departure time
-                    return False   
-                
-            else:   # facade dosen't match token role
+                            else:
+                                return add_flight # returns str err
+                         
+            else:   # facade dosen't match token role/landing time is after departure time/negative num of tickets/destcountryId = origincountryID
                 return False
             
         except Exception as e:
@@ -171,7 +172,7 @@ class AirlineFacade(FacadeBase):
         calls update func from flights_repo (Repository class).
         Input:  flightID (int)
                 new_data - as dict, example {'Country_ID': 33}
-        Output: flights_repo.update func output (updated flight's data/none/str err);
+        Output: flights_repo.update func output (true/none/str err);
                 False if facade dosen't match token role/no flight in db by given flightId
                 /airline's id from db dosen't token airline id;
                 Err str if err
@@ -189,13 +190,7 @@ class AirlineFacade(FacadeBase):
                         
                         return updated_flight # returns updated flight data/none/str err
                     
-                    else:   # airline's id from db for the flight dosen't  match token airline id
-                        return False
-                    
-                else:   # no flight in db by given flightId
-                    return False
-                
-            else:   # facade dosen't match token role
+            else:   # facade dosen't match token role/no flight in db by given flightId/airline's id from db for the flight dosen't  match token airline id
                 return False  
                             
         except Exception as e:

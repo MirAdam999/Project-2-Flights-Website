@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block page_content %}
+
+<div id='my_tickets'>
+    {% if canceled_ticket %}
+    <h2 style="color: green;">Ticked Canceled Sucsessfuly, TicketID: {{canceled_ticket}}</h2>
+    {% endif %}
+    <div id='tickets'>
+        {% if tickets %}
+            {% for ticket in tickets%}
+            <form method="post" action="/cancel_ticket"  style="display: inline-block;">
+            <div id='airline_company_logo'>
+                <label for="airline_company_logo">{{ticket[2]}}</label>
+                <img src="{{ticket[1]}}" alt="airline_company_logo" class="airline-logo-image" name="airline_company_logo"/>
+            </div>
+
+            <div id='flight_num'>
+                <h2> Flight Number: {{ticket[10]}}</h2>
+            </div>
+
+            <div id='ticket_id'>
+                <h2> Ticket ID: {{ticket[0]}}</h2>
+            </div>
+
+            <div id='departure'>
+                <h2>{{ticket[3]}}</h2>
+                <h3>{{ticket[4]}}</h3>
+                <h4>{{ticket[5]}}</h4>
+            </div>
+            <div id='arrival'>
+                <h2>{{ticket[6]}}</h2>
+                <h3>{{ticket[7]}}</h3>
+                <h4>{{ticket[8]}}</h4>
+            </div>
+
+            <div id='flight_status'>
+                <h3>{{ticket[9]}}</h3>
+            </div>
+            <div id='cancel_ticket'>
+                <button type="submit" name="ticket_id" value="{{ticket[0]}}">Cancel Ticket</button>
+            </div>
+            </form>
+
+            {% endfor %}
+
+        {% else %}
+
+        <h2>No Tickets Found</h2>
+
+        {% endif %}
+    </div>
+
+</div>
+
+{% endblock %}

@@ -37,33 +37,42 @@
     <div id='flights'>
         {% if flights %}
             {% for flight in flights%}
+            {% if role=='Customer' %} 
+            <form method="post" action="/buy_ticket"  style="display: inline-block;">
+            {% else %}
+            <form action="/redirect_to_login"  style="display: inline-block;">
+            {% endif %}
+                <div id='airline_company_logo'>
+                    <label for="airline_company_logo">{{flight[1]}}</label>
+                    <img src="{{flight[0]}}" alt="airline_company_logo" class="airline-logo-image" name="airline_company_logo"/>
+                </div>
 
-            <div id='airline_company_logo'>
-                <label for="airline_company_logo">{{flight[1]}}</label>
-                <img src="{{flight[0]}}" alt="airline_company_logo" class="airline-logo-image" name="airline_company_logo"/>
-            </div>
+                <div id='flight_num'>
+                    <h2> Flight Number: {{flight[9]}}</h2>
+                </div>
 
-            <div id='departure'>
-                <h2>{{flight[2]}}</h2>
-                <h3>{{flight[3]}}</h3>
-                <h4>{{flight[4]}}</h4>
-            </div>
-            <div id='arrival'>
-                <h2>{{flight[5]}}</h2>
-                <h3>{{flight[6]}}</h3>
-                <h4>{{flight[7]}}</h4>
-            </div>
+                <div id='departure'>
+                    <h2>{{flight[2]}}</h2>
+                    <h3>{{flight[3]}}</h3>
+                    <h4>{{flight[4]}}</h4>
+                </div>
+                <div id='arrival'>
+                    <h2>{{flight[5]}}</h2>
+                    <h3>{{flight[6]}}</h3>
+                    <h4>{{flight[7]}}</h4>
+                </div>
 
-            <div id='flight_status'>
-                <h3>{{flight[8]}}</h3>
-            </div>
+                <div id='flight_status'>
+                    <h3>{{flight[8]}}</h3>
+                </div>
 
-            <div id='buy_ticket'>
-            <form action=None>
-                <button type="submit" value="Purchase">Purchase</button>
+                {% if flight[8] != 'Canceled' %}
+                <div id='buy_ticket'>
+                    <button type="submit" name="flight_num" value="{{flight[9]}}">Purchase</button>
+                </div>
+                {% endif %}
+                
             </form>
-            </div>
-
             {% endfor %}
         {% else %}
 

@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 {% block page_content %}
 
-<div id='manage_customers'>
+<div class='manage'>
 
     <div id="add_customer">
-        <form method="post" action="{{ url_for('admin_blueprint.add_customer_form') }}"  style="display: inline-block;">
+        <form method="post" action="{{ url_for('routes.add_customer_form') }}"  style="display: inline-block;">
             <button type="submit">Add Customer +</button>
         </form>
     </div>
@@ -21,43 +21,56 @@
 
     <div id='customers'>
         {% if customers %}
-        <table>
-            <tr>
-                <th>CustomerID</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Address</th>
-                <th>Phone Number</th>
-                <th>UserID</th>
-                <th>Username</th>
-                <th>Email</th>
-                <th>Manage Customer</th>
-            </tr>
+            {% if status_change %}
+            <p style="color: green;">Customer {{status_change[0]}} Sucsessfuly, CustomerID: {{status_change[1]}}</p>
+            {% endif %}
+            <table>
+                <tr>
+                    <th>CustomerID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Address</th>
+                    <th>Phone Number</th>
+                    <th>UserID</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Status</th>
+                    <th>Manage Customer</th>
+                </tr>
 
-            {% for customer in customers%}
-            <tr>
-            <div id='customer'>
-                <td>{{customer[0]}}</td>
-                <td>{{customer[1]}}</td>
-                <td>{{customer[2]}}</td>
-                <td>{{customer[3]}}</td>
-                <td>{{customer[4]}}</td>
-                <td>{{customer[5]}}</td>
-                <td>{{customer[6]}}</td>
-                <td>{{customer[7]}}</td>
-            </div>
-            
-            <div id='manage_customer'>
-                <td>        
-                    <form method="post" action="{{ url_for('admin_blueprint.customer_managment') }}"  style="display: inline-block;">
-                        <button type="submit">Manage Customer</button>
-                    </form>
-                </td>
-            </div>
-            </tr>
-            {% endfor %}
+                {% for customer in customers%}
+                <tr>
+                {% if customer[8] == "Active" %} 
+                <form method="post" action="/disactivate_customer"  style="display: inline-block;">
+                {% else %}
+                <form method="post" action="/reactivate_customer"  style="display: inline-block;">
+                {% endif %}
+                    <div id='customer'>
+                        <td id="customer_id" name="customer_id">{{customer[0]}}</td>
+                        <td id="fname" name="fname">{{customer[1]}}</td>
+                        <td id='lname' name='lname'>{{customer[2]}}</td>
+                        <td id='address' name='address'>{{customer[3]}}</td>
+                        <td id='phone' name='phone'>{{customer[4]}}</td>
+                        <td id="user_id" name="user_id">{{customer[5]}}</td>
+                        <td id='username' name='username'>{{customer[6]}}</td>
+                        <td id='email' name='email'>{{customer[7]}}</td>
+                        <td id='status' name='status'>{{customer[8]}}</td>
+                    </div>
+                    
+                    <div id='manage_customer'>
+                        <td>
+                            {% if customer[8] == "Active" %}       
+                            <button type="submit" name="cust_id" value="{{ customer[0] }}">Disactivate Customer</button>
+                            {% else %}
+                            <button type="submit" name="cust_id" value="{{ customer[0] }}">Re-activate Customer</button>
+                            {% endif %}
+                        </td>
+                    </div>
+                </form>
+                </tr>
+                {% endfor %}
 
-        </table>
+            </table>
         {% else %}
 
         <h2>No Customers Matching Search Found</h2>

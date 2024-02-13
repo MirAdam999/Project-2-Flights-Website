@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block page_content %}
+
+<div id='add_flight'>
+
+    <form action="/add_flight" method="post">
+
+        <div id='origin'>
+            <label for="origin">Origin:</label>
+            <select id="origin" name="origin" required>
+                {% set selected_country_code = request.form.get('origin', '') %}
+                {% for country in countries %}
+                    <option value="{{ country[0] }}" {% if country[0] == selected_country_code %}selected{% endif %}>
+                        {{ country[1] }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div id='destination'>
+            <label for="destination">Destination:</label>
+            <select id="destination" name="destination" required>
+                {% set selected_country_code = request.form.get('destination', '') %}
+                {% for country in countries %}
+                    <option value="{{ country[0] }}" {% if country[0] == selected_country_code %}selected{% endif %}>
+                        {{ country[1] }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div id='departure'>
+            <label for="departure">Departure:</label><br>
+            <input type="datetime-local" id="departure" name="departure" 
+                value="{{ request.form['departure'] | default('') }}" required><br>
+        </div> 
+
+        <div id='arrival'>
+            <label for="arrival">Arrival:</label><br>
+            <input type="datetime-local" id="arrival" name="arrival" 
+                value="{{ request.form['arrival'] | default('') }}" required><br>
+        </div> 
+
+        <div id='tickets'>
+            <label for="arrticketsival">Amount of Tickets:</label><br>
+            <input type="number" id="tickets" name="tickets" min="0" 
+                value="{{ request.form['tickets'] | default('') }}" required><br>
+        </div> 
+
+        <button type="submit" value="Add Flight">Add Flight</button>
+           
+        {% if error_message %}
+            <p style="color: red;">{{ error_message }}</p>
+        {% endif %}
+
+        {% if adding_sucsess==True %}
+            <p style="color: green;">Flight Added Sucsessfuly, FlightID: {{new_flight_data}}</p>
+        {% elif adding_sucsess==False %}
+            <p style="color: red;">Error: was not able to add flight. Try again later.</p>
+        {% endif %}
+
+    </form>  
+
+</div>
+
+{% endblock %}

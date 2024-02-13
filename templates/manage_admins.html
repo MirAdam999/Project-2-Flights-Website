@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% block page_content %}
+
+<div class='manage'>
+
+    <div id="add_admin">
+        <form method="post" action="{{ url_for('routes.add_admin_form') }}"  style="display: inline-block;">
+            <button type="submit">Add Administrator +</button>
+        </form>
+    </div>
+
+    <div id='search_for_admine_by_id'>
+        <form action="/search_for_admin_by_id" method="post">
+            <div>
+                <label for="admin_id">Search by Admin ID:</label>
+                <input type="text" id="admin_id" name="admin_id" >
+            </div>
+            <input type="submit" value="Search">
+        </form> 
+    </div>
+
+    <div id='admins'>
+        {% if admins %}
+            {% if status_change %}
+            <p style="color: green;">Admin {{status_change[0]}} Sucsessfuly, AdminID: {{status_change[1]}}</p>
+            {% endif %}
+            <table>
+                <tr>
+                    <th>AdminID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>UserID</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Status</th>
+                    <th>Manage Admin</th>
+                </tr>
+
+                {% for admin in admins%}
+                <tr>
+                {% if admin[6] == "Active" %} 
+                <form method="post" action="/disactivate_admin"  style="display: inline-block;">
+                {% else %}
+                <form method="post" action="/reactivate_admin"  style="display: inline-block;">
+                {% endif %}
+                    <div id='admin'>
+                        <td id="admin_id" name="admin_id">{{admin[0]}}</td>
+                        <td id="fname" name="fname">{{admin[1]}}</td>
+                        <td id='lname' name='lname'>{{admin[2]}}</td>
+                        <td id="user_id" name="user_id">{{admin[3]}}</td>
+                        <td id='username' name='username'>{{admin[4]}}</td>
+                        <td id='email' name='email'>{{admin[5]}}</td>
+                        <td id='status' name='status'>{{admin[6]}}</td>
+                    </div>
+                    
+                    <div id='manage_admin'>
+                        <td>
+                            {% if admin[6] == "Active" %}       
+                            <button type="submit" name="admin_id" value="{{ admin[0] }}" {% if admin[3] == own_id %} disabled {% endif %}>Disactivate Admin</button>
+                            {% else %}
+                            <button type="submit" name="admin_id" value="{{ admin[0] }}">Re-activate Admin</button>
+                            {% endif %}
+                        </td>
+                    </div>
+                </form>
+                </tr>
+                {% endfor %}
+
+            </table>
+        {% else %}
+
+        <h2>No Administrators Matching Search Found</h2>
+
+        {% endif %}
+    </div>
+
+</div>
+
+{% endblock %}

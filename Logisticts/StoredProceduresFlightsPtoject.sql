@@ -160,6 +160,13 @@ AS
 	where c.UserID = @userID
 
 GO
+CREATE PROCEDURE get_admin_by_userID
+@userID bigint
+AS
+	select * from Administrators a
+	where a.UserID = @userID
+
+GO
 ALTER PROCEDURE check_if_flight_exists
 @origin_country_id int,
 @destination_country_id int,
@@ -204,3 +211,14 @@ CREATE PROCEDURE get_tickets_by_flightID
 AS
 	select * from Tickets t
 	where t.FlightID = @flightID
+
+GO
+CREATE PROCEDURE check_if_airline_or_admin_exists
+@username varchar (50),
+@email varchar (50),
+AS
+	SELECT * FROM Users u
+	WHERE u.Username = @username
+	or u.Email = @email
+
+

@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block page_content %}
 
-<div id='all_flights'>
+<div id='my_flights'>
 
     <div id='search_for_flight_by_id'>
         <form action="/searchforflightbyid" method="post">
@@ -16,9 +16,9 @@
     <div id='flights'>
         {% if flights %}
             {% for flight in flights%}
-            <form {% if role=='Customer' %} method="post" action="/buy_ticket"
-                {% elif role=='AirlineCompany' and name==flight[1] %} method="post" action="/update_flight_form"
-                {% else %}action="/redirect_to_login"{% endif %} style="display: inline-block;">
+            {% if role=='AirlineCompany' and name==flight[1] %} 
+            <form method="post" action="/update_flight_form"  style="display: inline-block;">
+            {% endif %}
 
             <div id='airline_company_logo'>
                 <label for="airline_company_logo">{{flight[1]}}</label>
@@ -49,18 +49,10 @@
                 <h3>{{flight[9]}}</h3>
             </div>
 
-            {% if flight[9] != 'Canceled' and role!='AirlineCompany' and role!='Administrator'%}
-            <div id='buy_ticket'>
-                <button type="submit" name="flight_num" value="{{flight[10]}}">Purchase</button>
-            </div>
-            </form>
-            {% endif %}
-
-            {% if role=='AirlineCompany' and name==flight[1] %} 
             <div id='update_flight'>
                 <button type="submit" name="flight_num" value="{{flight[10]}}">Update Flight</button>
             </div>
-            {% endif %}
+            </form>
 
             {% endfor %}
 
