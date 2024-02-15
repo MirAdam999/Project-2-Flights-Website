@@ -1,19 +1,37 @@
 {% extends 'base.html' %}
 {% block page_content %}
 
-<div id='admin_managment'>
+{% if error_message or update_sucsess%}
+    <div class='update-self-messages'>
+        {% if error_message %}
+        <p style="color: red;">{{ error_message }}</p>
+        {% endif %}
+
+        {% if update_sucsess==True %}
+        <p style="color: green;">Info Updated Sucsessfuly</p>
+        {% elif update_sucsess==False %}
+        <p style="color: red;">Error: was not able to update admin. Try again later.</p>
+        {% endif %}
+    </div> 
+{% endif %}
+    
+<div class='update-self' id='admin_managment'>
+
+    <p id="update-header">Update My Information</p>
 
     <form action="/update_admin" method="post">
 
-        <label for="adminid">Your Administrator ID:</label>
-        <input type="text" id="adminid" name="adminid" maxlength="50" 
-                value="{{ request.form['adminid']  or admin[0] }}" readonly >
+        <div id='admin_id'>
+            <label for="adminid">Your Administrator ID:</label><br>
+            <input type="text" id="adminid" name="adminid" maxlength="50" 
+                    value="{{ request.form['adminid']  or admin[0] }}" readonly ><br>
+        </div>
 
         <div id='name'>
-            <label for="fname">First Name:</label>
-            <label for="lname">Last Name:</label><br>
+            <label for="fname">First Name:</label><br>
             <input type="text" id="fname" name="fname" maxlength="50" 
-                value="{{ request.form['fname']  or admin[1] }}" required>
+                value="{{ request.form['fname']  or admin[1] }}" required><br>
+            <label for="lname">Last Name:</label><br>
             <input type="text" id="lname" name="lname" maxlength="50" 
                 value="{{ request.form['lname']  or admin[2] }}" required><br>
         </div>
@@ -29,8 +47,9 @@
             <label for="username">Username:</label><br>
             <input type="text" id="username" name="username" pattern="[a-zA-Z0-9]{6,50}" minlength="6" 
                 maxlength="50" value="{{ request.form['username']  or admin[3] }}" required><br>
-            <span class="sub-label">Can include letters and numbers only, At least 6 characters.</span><br>
         </div>
+
+        <span class="sub-label">Can include letters and numbers only, At least 6 characters.</span><br>
 
         <div id='password'>
             <label for="password">To save changes, enter Password:</label><br>
@@ -39,23 +58,15 @@
 
         </div>
 
-        <button type="submit" value="Update Customer">Update Info</button><br><br>
-                    
-        {% if error_message %}
-            <p style="color: red;">{{ error_message }}</p>
-        {% endif %}
-
-        {% if update_sucsess==True %}
-            <p style="color: green;">Info Updated Sucsessfuly</p>
-        {% elif update_sucsess==False %}
-            <p style="color: red;">Error: was not able to update admin. Try again later.</p>
-        {% endif %}
+        <div id='update-self-submit-wrap'>
+            <button type="submit" value="Update Admin" class='update-self-submit'>Update Info</button><br>
+        </div>
 
     </form>  
     
     <div id='redirect_to_change_password_form'>
         <form action="/change_password_form" method="post">
-            <button type="submit" value="Go To Change Password">Go To Change Password</button>
+            <button type="submit" value="Go To Change Password" id="redirect-to-change-password">Go To Change Password</button>
         </form> 
     </div>
 

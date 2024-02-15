@@ -6,115 +6,136 @@
     <div id='search_for_closest_flights_by_country'>
         <form action="/search_for_closest_flights_by_country" method="post">
             <div>
-                <h2>Arriving and Departing in next 12 Hours</h2>
-                <label for="country">Choose Country:</label>
+                <label for="country">Arriving and Departing in next 12 Hours, Choose Country:</label>
                 <select id="country" name="country"  required>
                     {% for country in countries %}
                         <option value="{{country[0]}}">{{country[1]}}</option>
                     {% endfor %}
                 </select>
+            <input type="submit" value="Search" id='search_for_closest_flights_by_country_button'>
             </div>
-            <input type="submit" value="Search">
         </form> 
     </div>
 
     {% if searched %}
-    <div id='flights'>
-    <table>
-        <tr>
-            <th>Arrivals <img src='https://static.thenounproject.com/png/410143-200.png'/> </th>
-            <th>Departures <img src='https://w7.pngwing.com/pngs/186/550/png-transparent-departures-icon-transport-planes-thumbnail.png'/> </th>
-        </tr>
-        <tr>
-            <td>
-                <div id='arrivals'>
-                    {% if arrivals %}
-                        {% for flight in arrivals%}
-
-                        <div id='airline_company_logo'>
-                            <label for="airline_company_logo">{{flight[1]}}</label>
-                            <img src="{{flight[0]}}" alt="airline_company_logo" class="airline-logo-image" name="airline_company_logo"/>
-                        </div>
-            
-                        <div id='flight_num'>
-                            <h2> Flight Number: {{flight[10]}}</h2>
-                        </div>
-            
-                        <div id='departure'>
-                            <h2>{{flight[2]}}</h2>
-                            <h3>{{flight[3]}}</h3>
-                            <h4>{{flight[4]}}</h4>
-                        </div>
-                        <div id='arrival'>
-                            <h2>{{flight[5]}}</h2>
-                            <h3>{{flight[6]}}</h3>
-                            <h4>{{flight[7]}}</h4>
-                        </div>
-            
-                        
-                        <div id='tickets'>
-                            <h3>Remaning Tickets: {{flight[8]}}</h3>
-                        </div>
-            
-                        <div id='flight_status'>
-                            <h3>{{flight[9]}}</h3>
-                        </div>
-            
-                        {% endfor %}
-
-                    {% else %}
-
-                    <h2>No Flights Matching Search Found</h2>
-
-                    {% endif %}
-                </div>
-            </td>
-            <td>
-                <div id='departures'>
-                    {% if departures %}
-                        {% for flight in departures%}
-
-                        <div id='airline_company_logo'>
-                            <label for="airline_company_logo">{{flight[1]}}</label>
-                            <img src="{{flight[0]}}" alt="airline_company_logo" class="airline-logo-image" name="airline_company_logo"/>
-                        </div>
-            
-                        <div id='flight_num'>
-                            <h2> Flight Number: {{flight[10]}}</h2>
-                        </div>
-            
-                        <div id='departure'>
-                            <h2>{{flight[2]}}</h2>
-                            <h3>{{flight[3]}}</h3>
-                            <h4>{{flight[4]}}</h4>
-                        </div>
-                        <div id='arrival'>
-                            <h2>{{flight[5]}}</h2>
-                            <h3>{{flight[6]}}</h3>
-                            <h4>{{flight[7]}}</h4>
-                        </div>
-            
-                        
-                        <div id='tickets'>
-                            <h3>Remaning Tickets: {{flight[8]}}</h3>
-                        </div>
-            
-                        <div id='flight_status'>
-                            <h3>{{flight[9]}}</h3>
-                        </div>
-            
-                        {% endfor %}
-
-                    {% else %}
-
-                    <h2>No Flights Matching Search Found</h2>
-
-                    {% endif %}
-                </div>
-            </td>
-        </tr>
-    </table>
+    <div id='arrivals-departures-headers'>
+        <div id='arrivals-header'>
+            <p>Arrivals <i class="fa-solid fa-plane-arrival"></i> </p>
+        </div>
+        <div id='departures-header'>
+            <p>Departures <i class="fa-solid fa-plane-departure"></i> </p>
+        </div>
     </div>
+        <div id='arrivals-departures'>
+            <div id='arrivals-departures_wrap'>
+                {% if arrivals %}
+                    {% for flight in arrivals%}
+                        <div id='arrivals'>
+
+                            <div id='flight-left'>
+                                <div id='airline_company_logo'>
+                                    <img src="{{flight[0]}}" alt="airline_company_logo" class="airline-logo-image" name="airline_company_logo"/><br>
+                                    <label for="airline_company_logo">{{flight[1]}}</label>
+                                </div>
+
+                                <div id='flight_num'>
+                                    <p> Flight Number: {{flight[10]}}</p>
+                                </div>
+                            </div>
+
+                            <div id='departure'>
+                                <p id='country'>{{flight[2]}}</p>
+                                <p id='date'>{{flight[3]}}</p>
+                                <p id='time'>{{flight[4]}}</p>
+                            </div>
+
+                            <div id='plane-icon-ad' class="w3-jumbo">
+                                <p>---<i class="w3-jumbo fa-solid fa-plane"></i>--</p>
+                            </div>
+
+                            <div id='arrival'>
+                                <p id='country'>{{flight[5]}}</p>
+                                <p id='date'>{{flight[6]}}</p>
+                                <p id='time'>{{flight[7]}}</p>
+                            </div>
+
+                            <div id='flight-right'>
+                                <div id='tickets'>
+                                    <p>Remaning Tickets: {{flight[8]}}</p>
+                                </div>
+
+                                <div id='flight_status'>
+                                    <p {% if flight[9] == 'Canceled'%} style="color: red;"
+                                    {% elif flight[9] == 'Delayed' %} style="color: yellow;"
+                                    {% else %}style="color: green;"{% endif %}>{{flight[9]}}</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    {% endfor %}
+
+                {% else %}
+                    <div id='arrival_none_found'>
+                        <p id='none-found'>No Flights Matching Search Found</p>
+                    </div>
+                {% endif %}
+            </div>
+
+            <div id='arrivals-departures_wrap'>
+                {% if departures %}
+                    {% for flight in departures%}
+
+                    <div id='departures'>
+
+                        <div id='flight-left'>
+                            <div id='airline_company_logo'>
+                                <img src="{{flight[0]}}" alt="airline_company_logo" class="airline-logo-image" name="airline_company_logo"/><br>
+                                <label for="airline_company_logo">{{flight[1]}}</label>
+                            </div>
+
+                            <div id='flight_num'>
+                                <p> Flight Number: {{flight[10]}}</p>
+                            </div>
+                        </div>
+
+                        <div id='departure'>
+                            <p id='country'>{{flight[2]}}</p>
+                            <p id='date'>{{flight[3]}}</p>
+                            <p id='time'>{{flight[4]}}</p>
+                        </div>
+
+                        <div id='plane-icon-ad' class="w3-jumbo">
+                            <p>---<i class="w3-jumbo fa-solid fa-plane"></i>--</p>
+                        </div>
+
+                        <div id='arrival'>
+                            <p id='country'>{{flight[5]}}</p>
+                            <p id='date'>{{flight[6]}}</p>
+                            <p id='time'>{{flight[7]}}</p>
+                        </div>
+
+                        <div id='flight-right'>
+                            <div id='tickets'>
+                                <p>Remaning Tickets: {{flight[8]}}</p>
+                            </div>
+
+                            <div id='flight_status'>
+                                <p {% if flight[9] == 'Canceled'%} style="color: red;"
+                                {% elif flight[9] == 'Delayed' %} style="color: yellow;"
+                                {% else %}style="color: green;"{% endif %}>{{flight[9]}}</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    {% endfor %}
+
+                {% else %}
+                    <div id='departure_none_found'>
+                        <p id='none-found'>No Flights Matching Search Found</p>
+                    </div>
+                {% endif %}
+            </div>   
+
     {% endif %}
 
 </div>

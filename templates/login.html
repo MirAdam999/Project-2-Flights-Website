@@ -3,24 +3,27 @@
 
 <div id='login'> 
 
-    <div>
-        <h4>New to Pegasus?</h4>
+    <div id='redirect_to_signup'>
+        <p>New to Pegasus?</p>
         <form action="/redirect_to_signup">
             <button type="submit" value="Sign Up!">Sign Up!</button>
         </form>
     </div>
-    <div>
-        <h4>Log In</h4>
+
+    <div id='login-form'>
+        <p>Log In</p>
         <form action="/login" method="post">
             <div> 
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" placeholder= 'Username' required>
+                <label for="login-username">Username</label>
+                <input type="text" id="login-username" name="username" placeholder= 'Username' required><br>
+            </div>
             <div>
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" name="password" placeholder= 'Password' required><br>
             </div>
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder= 'Password' required>
+            <div>
+                <button type="submit" value="Log In" >Log In</button>
             </div>
-            <button type="submit" value="Log In">Log In</button>
         </form>
     </div>
 

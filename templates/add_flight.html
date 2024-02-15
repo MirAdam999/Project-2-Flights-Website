@@ -1,54 +1,8 @@
 {% extends 'base.html' %}
 {% block page_content %}
 
-<div id='add_flight'>
-
-    <form action="/add_flight" method="post">
-
-        <div id='origin'>
-            <label for="origin">Origin:</label>
-            <select id="origin" name="origin" required>
-                {% set selected_country_code = request.form.get('origin', '') %}
-                {% for country in countries %}
-                    <option value="{{ country[0] }}" {% if country[0] == selected_country_code %}selected{% endif %}>
-                        {{ country[1] }}
-                    </option>
-                {% endfor %}
-            </select>
-        </div>
-
-        <div id='destination'>
-            <label for="destination">Destination:</label>
-            <select id="destination" name="destination" required>
-                {% set selected_country_code = request.form.get('destination', '') %}
-                {% for country in countries %}
-                    <option value="{{ country[0] }}" {% if country[0] == selected_country_code %}selected{% endif %}>
-                        {{ country[1] }}
-                    </option>
-                {% endfor %}
-            </select>
-        </div>
-
-        <div id='departure'>
-            <label for="departure">Departure:</label><br>
-            <input type="datetime-local" id="departure" name="departure" 
-                value="{{ request.form['departure'] | default('') }}" required><br>
-        </div> 
-
-        <div id='arrival'>
-            <label for="arrival">Arrival:</label><br>
-            <input type="datetime-local" id="arrival" name="arrival" 
-                value="{{ request.form['arrival'] | default('') }}" required><br>
-        </div> 
-
-        <div id='tickets'>
-            <label for="arrticketsival">Amount of Tickets:</label><br>
-            <input type="number" id="tickets" name="tickets" min="0" 
-                value="{{ request.form['tickets'] | default('') }}" required><br>
-        </div> 
-
-        <button type="submit" value="Add Flight">Add Flight</button>
-           
+{% if error_message or adding_sucsess%}
+    <div class='update-self-messages'>
         {% if error_message %}
             <p style="color: red;">{{ error_message }}</p>
         {% endif %}
@@ -58,6 +12,58 @@
         {% elif adding_sucsess==False %}
             <p style="color: red;">Error: was not able to add flight. Try again later.</p>
         {% endif %}
+    </div> 
+{% endif %}
+
+<div class='update-self' id='add_flight'>
+
+    <p id="update-header">Create New Flight</p>
+
+    <form action="/add_flight" method="post">
+
+        <div class='country-select' id='origin'>
+            <label for="origin">Origin:</label><br>
+            <select id="origin" name="origin" required>
+                {% set selected_country_code = request.form.get('origin', '') %}
+                {% for country in countries %}
+                    <option value="{{ country[0] }}" {% if country[0] == selected_country_code %}selected{% endif %}>
+                        {{ country[1] }}
+                    </option>
+                {% endfor %}
+            </select><br>
+        </div>
+
+        <div class='country-select' id='destination'>
+            <label for="destination">Destination:</label><br>
+            <select id="destination" name="destination" required>
+                {% set selected_country_code = request.form.get('destination', '') %}
+                {% for country in countries %}
+                    <option value="{{ country[0] }}" {% if country[0] == selected_country_code %}selected{% endif %}>
+                        {{ country[1] }}
+                    </option>
+                {% endfor %}
+            </select><br>
+        </div>
+
+        <div class='datetime-select' id='add_flight_departure-div'>
+            <label for="add_flight_departure">Departure:</label><br>
+            <input type="datetime-local" id="add_flight_departure" name="departure" 
+                value="{{ request.form['add_flight_departure'] | default('') }}" required><br>
+        </div> 
+
+        <div class='datetime-select' id='add_flight_arrival-div'>
+            <label for="add_flight_arrival">Arrival:</label><br>
+            <input type="datetime-local" id="add_flight_arrival" name="arrival" 
+                value="{{ request.form['add_flight_arrival'] | default('') }}" required><br>
+        </div> 
+
+        <div id='tickets'>
+            <label for="arrticketsival">Amount of Tickets:</label><br>
+            <input type="number" id="tickets" name="tickets" min="0" 
+                value="{{ request.form['tickets'] | default('') }}" required><br>
+        </div> 
+
+        <button type="submit" value="Add Flight" class='update-self-submit'>Add Flight</button>
 
     </form>  
 

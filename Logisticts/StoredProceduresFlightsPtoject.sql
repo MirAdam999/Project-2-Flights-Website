@@ -62,14 +62,14 @@ AS
 
 --get_departure_flights_12hours(_country_id int)
 GO
-CREATE PROCEDURE get_departure_flights_12hours
+ALTER PROCEDURE get_departure_flights_12hours
 @countryID int
 AS
 	DECLARE @current_time DATETIME = GETDATE()
-	select * from Flights f 
-	where f.DepartureTime >= @current_time
+	SELECT * FROM Flights f 
+	WHERE f.DepartureTime >= @current_time
       AND f.DepartureTime <= DATEADD(HOUR, 12, @current_time)
-	  AND f.DestinationCountryID = @countryID
+	  AND f.OriginCountryID = @countryID
 
 --get_tickets_by_customer(_customer_id int)
 GO

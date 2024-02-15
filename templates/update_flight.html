@@ -1,52 +1,8 @@
 {% extends 'base.html' %}
 {% block page_content %}
 
-<div id='update_flight'>
-
-    <form action="/update_flight" method="post">
-
-        <label for="flightid">Flight ID:</label>
-        <input type="text" id="flightid" name="flightid" maxlength="50" 
-                value="{{ request.form['flightid'] or flight[0] }}" readonly >
-
-        <label for="origin">Origin:</label>
-        <input type="text" id="origin" name="origin" maxlength="50" 
-                value="{{ request.form['origin'] or flight[1] }}" readonly >
-
-        <label for="destination">Destination:</label>
-        <input type="text" id="destination" name="destination" maxlength="50" 
-                value="{{ request.form['destination'] or flight[2] }}" readonly >
-
-        <div id='departure'>
-            <label for="departure">Departure:</label><br>
-            <input type="datetime-local" id="departure" name="departure" 
-                value="{{ request.form['departure'] or flight[3] }}" required><br>
-        </div>
-
-        <div id='arrival'>
-            <label for="arrival">Arrival:</label><br>
-             <input type="datetime-local" id="arrival" name="arrival" 
-                value="{{ request.form['arrival'] or flight[4] }}"  required ><br>
-        </div>
-
-        <div id='tickets'>
-            <label for="tickets">Remaning Tickets:</label><br>
-            <input type="number" id="tickets" name="tickets" min='0'
-            value="{{ request.form['tickets'] or flight[5] }}" required><br>
-        </div>
-
-        <div id='status'>
-            <label for="status">Select an option:</label>
-            <select id="status" name="status" required>
-                <option value="{{"On Time" or flight[6] }}">On Time</option>
-                <option value="{{ "Delayed" or flight[6] }}">Delayed</option>
-                <option value="{{ 'Canceled' or flight[6] }}">Canceled</option>
-            </select>
-        </div> 
-
-        <button type="submit" value="Update Flight">Update Flight Info</button>
-
-                    
+{% if error_message or update_sucsess%}
+    <div class='update-self-messages'>
         {% if error_message %}
             <p style="color: red;">{{ error_message }}</p>
         {% endif %}
@@ -56,6 +12,59 @@
         {% elif update_sucsess==False %}
             <p style="color: red;">Error: was not able to update flight. Try again later.</p>
         {% endif %}
+    </div> 
+{% endif %}
+
+<div class='update-self' id='update_flight'>
+
+    <p id="update-header">Update Flight</p>
+
+    <form action="/update_flight" method="post">
+        <div id='update_flightid'>
+            <label for="update_flightid">Flight ID:</label>
+            <input type="text" id="update_flightid" name="flightid" maxlength="50" 
+                    value="{{ request.form['update_flightid'] or flight[0] }}" readonly >
+        </div>
+        <div id='update_origin'>
+            <label for="update_origin">Origin:</label>
+            <input type="text" id="update_origin" name="origin" maxlength="50" 
+                value="{{ request.form['update_origin'] or flight[1] }}" readonly >
+        </div>
+        <div id='update_destination'>
+            <label for="update_destination">Destination:</label>
+            <input type="text" id="update_destination" name="destination" maxlength="50" 
+                    value="{{ request.form['update_destination'] or flight[2] }}" readonly >
+            </div>
+        <div id='update_departure'>
+            <label for="update_departure">Departure:</label><br>
+            <input type="datetime-local" id="update_departure" name="departure" 
+                value="{{ request.form['update_departure'] or flight[3] }}" required><br>
+        </div>
+
+        <div id='update_arrival'>
+            <label for="update_arrival">Arrival:</label><br>
+             <input type="datetime-local" id="update_arrival" name="arrival" 
+                value="{{ request.form['update_arrival'] or flight[4] }}"  required ><br>
+        </div>
+
+        <div id='tickets'>
+            <label for="tickets">Remaning Tickets:</label><br>
+            <input type="number" id="tickets" name="tickets" min='0'
+            value="{{ request.form['tickets'] or flight[5] }}" required><br>
+        </div>
+
+        <div id='update_status'>
+            <label for="update_status">Select an option:</label><br>
+            <select id="update_status" name="status" required>
+                <option style="color: green;" value="{{"On Time" or flight[6] }}">On Time</option>
+                <option style="color: yellow;" value="{{ "Delayed" or flight[6] }}">Delayed</option>
+                <option style="color: red;" value="{{ 'Canceled' or flight[6] }}">Canceled</option>
+            </select>
+        </div> <br>
+
+        <div >
+            <button type="submit" value="Update Flight" class='update-self-submit'>Update Flight Info</button><br>
+        </div>
 
     </form>  
 

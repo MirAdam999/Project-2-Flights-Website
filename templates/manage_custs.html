@@ -3,27 +3,29 @@
 
 <div class='manage'>
 
-    <div id="add_customer">
-        <form method="post" action="{{ url_for('routes.add_customer_form') }}"  style="display: inline-block;">
-            <button type="submit">Add Customer +</button>
-        </form>
-    </div>
-
-    <div id='search_for_customer_by_id'>
-        <form action="/search_for_customer_by_id" method="post">
-            <div>
+    <div class='manage-top'>
+        <div id="add">
+            <form method="post" action="{{ url_for('routes.add_customer_form') }}"  style="display: inline-block;">
+                <button type="submit">Add Customer +</button>
+            </form>
+        </div>
+        <div id="manage-header">
+            <p>Manage Customers</p>
+            {% if status_change %}
+            <p id='activation_message'>Customer {{status_change[0]}} Sucsessfuly, CustomerID: {{status_change[1]}}</p>
+            {% endif %}
+        </div>
+        <div id='search_by_id'>
+            <form action="/search_for_customer_by_id" method="post">
                 <label for="customer_id">Search by Customer ID:</label>
-                <input type="text" id="customer_id" name="customer_id" >
-            </div>
-            <input type="submit" value="Search">
-        </form> 
+                <input type="number" id="customer_id" name="customer_id" required>
+                <input type="submit" value="Search" id='search_by_id_button'>
+            </form> 
+        </div>
     </div>
 
     <div id='customers'>
         {% if customers %}
-            {% if status_change %}
-            <p style="color: green;">Customer {{status_change[0]}} Sucsessfuly, CustomerID: {{status_change[1]}}</p>
-            {% endif %}
             <table>
                 <tr>
                     <th>CustomerID</th>
@@ -60,9 +62,9 @@
                     <div id='manage_customer'>
                         <td>
                             {% if customer[8] == "Active" %}       
-                            <button type="submit" name="cust_id" value="{{ customer[0] }}">Disactivate Customer</button>
+                            <button type="submit" id='disactivate' name="cust_id" value="{{ customer[0] }}">Disactivate Customer</button>
                             {% else %}
-                            <button type="submit" name="cust_id" value="{{ customer[0] }}">Re-activate Customer</button>
+                            <button type="submit" id='reactivate' name="cust_id" value="{{ customer[0] }}">Re-activate Customer</button>
                             {% endif %}
                         </td>
                     </div>
@@ -73,7 +75,7 @@
             </table>
         {% else %}
 
-        <h2>No Customers Matching Search Found</h2>
+        <p id='none-found'>No Customers Matching Search Found</p>
 
         {% endif %}
     </div>

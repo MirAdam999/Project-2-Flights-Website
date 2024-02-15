@@ -3,27 +3,29 @@
 
 <div class='manage'>
 
-    <div id="add_admin">
-        <form method="post" action="{{ url_for('routes.add_admin_form') }}"  style="display: inline-block;">
-            <button type="submit">Add Administrator +</button>
-        </form>
-    </div>
-
-    <div id='search_for_admine_by_id'>
-        <form action="/search_for_admin_by_id" method="post">
-            <div>
+    <div class='manage-top'>
+        <div id="add">
+            <form method="post" action="{{ url_for('routes.add_admin_form') }}"  style="display: inline-block;">
+                <button type="submit">Add Administrator +</button>
+            </form>
+        </div>
+        <div id="manage-header">
+            <p>Manage Administrators</p>
+            {% if status_change %}
+            <p id='activation_message'>Admin {{status_change[0]}} Sucsessfuly, AdminID: {{status_change[1]}}</p>
+            {% endif %}
+        </div>
+        <div id='search_by_id'>
+            <form action="/search_for_admin_by_id" method="post">
                 <label for="admin_id">Search by Admin ID:</label>
-                <input type="text" id="admin_id" name="admin_id" >
-            </div>
-            <input type="submit" value="Search">
-        </form> 
+                <input type="number" id="admin_id" name="admin_id" required >
+                <input type="submit" value="Search" id='search_by_id_button'>
+            </form> 
+        </div>
     </div>
 
     <div id='admins'>
         {% if admins %}
-            {% if status_change %}
-            <p style="color: green;">Admin {{status_change[0]}} Sucsessfuly, AdminID: {{status_change[1]}}</p>
-            {% endif %}
             <table>
                 <tr>
                     <th>AdminID</th>
@@ -56,9 +58,9 @@
                     <div id='manage_admin'>
                         <td>
                             {% if admin[6] == "Active" %}       
-                            <button type="submit" name="admin_id" value="{{ admin[0] }}" {% if admin[3] == own_id %} disabled {% endif %}>Disactivate Admin</button>
+                            <button type="submit" id='disactivate' name="admin_id" value="{{ admin[0] }}" {% if admin[3] == own_id %} disabled {% endif %}>Disactivate Admin</button>
                             {% else %}
-                            <button type="submit" name="admin_id" value="{{ admin[0] }}">Re-activate Admin</button>
+                            <button type="submit" id='reactivate' name="admin_id" value="{{ admin[0] }}">Re-activate Admin</button>
                             {% endif %}
                         </td>
                     </div>
@@ -69,7 +71,7 @@
             </table>
         {% else %}
 
-        <h2>No Administrators Matching Search Found</h2>
+        <p id='none-found'>No Administrators Matching Search Found</p>
 
         {% endif %}
     </div>

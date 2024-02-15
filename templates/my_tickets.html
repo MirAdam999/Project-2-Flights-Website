@@ -1,55 +1,74 @@
 {% extends 'base.html' %}
 {% block page_content %}
 
-<div id='my_tickets'>
-    {% if canceled_ticket %}
-    <h2 style="color: green;">Ticked Canceled Sucsessfuly, TicketID: {{canceled_ticket}}</h2>
-    {% endif %}
-    <div id='tickets'>
-        {% if tickets %}
-            {% for ticket in tickets%}
-            <form method="post" action="/cancel_ticket"  style="display: inline-block;">
-            <div id='airline_company_logo'>
-                <label for="airline_company_logo">{{ticket[2]}}</label>
-                <img src="{{ticket[1]}}" alt="airline_company_logo" class="airline-logo-image" name="airline_company_logo"/>
-            </div>
+<div class='all_flights'>
 
-            <div id='flight_num'>
-                <h2> Flight Number: {{ticket[10]}}</h2>
-            </div>
+    <div class='flights_wrap' id='my_tickets'>
 
-            <div id='ticket_id'>
-                <h2> Ticket ID: {{ticket[0]}}</h2>
-            </div>
-
-            <div id='departure'>
-                <h2>{{ticket[3]}}</h2>
-                <h3>{{ticket[4]}}</h3>
-                <h4>{{ticket[5]}}</h4>
-            </div>
-            <div id='arrival'>
-                <h2>{{ticket[6]}}</h2>
-                <h3>{{ticket[7]}}</h3>
-                <h4>{{ticket[8]}}</h4>
-            </div>
-
-            <div id='flight_status'>
-                <h3>{{ticket[9]}}</h3>
-            </div>
-            <div id='cancel_ticket'>
-                <button type="submit" name="ticket_id" value="{{ticket[0]}}">Cancel Ticket</button>
-            </div>
-            </form>
-
-            {% endfor %}
-
-        {% else %}
-
-        <h2>No Tickets Found</h2>
-
+        {% if canceled_ticket %}
+        <div id='ticket-canceled'>
+            <p>Ticket Canceled Sucsessfuly, TicketID: {{canceled_ticket}}</p>
+        </div>
         {% endif %}
+
+            {% if tickets %}
+                {% for ticket in tickets%}
+                <div id='flight'>
+                    <form method="post" action="/cancel_ticket"  >
+                        
+                        <div id='flight-left'>
+                            <div id='airline_company_logo'>
+                                <img src="{{ticket[1]}}" alt="airline_company_logo" class="airline-logo-image" name="airline_company_logo"/><br>
+                                <label for="airline_company_logo">{{ticket[2]}}</label>
+                            </div>
+
+                            <div id='flight_num'>
+                                <p> Flight Number: {{ticket[10]}}</p>
+                            </div>
+                        </div>
+
+                        <div id='departure'>
+                            <p id='country'>{{ticket[3]}}</p>
+                            <p id='date'>{{ticket[4]}}</p>
+                            <p id='time'>{{ticket[5]}}</p>
+                        </div>
+                        
+                        <div id='plane-icon' class="w3-jumbo">
+                            <p>---<i class="w3-jumbo fa-solid fa-plane"></i>--</p>
+                        </div>
+                        
+                        <div id='arrival'>
+                            <p id='country'>{{ticket[6]}}</p>
+                            <p id='date'>{{ticket[7]}}</p>
+                            <p id='time'>{{ticket[8]}}</p>
+                        </div>
+
+                        <div id='flight-right'>
+                            <div id='tickets'>
+                                <p> Ticket ID: {{ticket[0]}}</p>
+                            </div>
+
+                            <div id='flight_status'>
+                                <p {% if ticket[9] == 'Canceled'%} style="color: red;"
+                                {% elif ticket[9] == 'Delayed' %} style="color: yellow;"
+                                {% else %}style="color: green;"{% endif %}>{{ticket[9]}}</p>
+                            </div>
+
+                            <div id='cancel_ticket'>
+                                <button type="submit" name="ticket_id" value="{{ticket[0]}}">Cancel Ticket</button>
+                            </div>
+
+                        </div>
+                    </form>  
+                </div>
+                {% endfor %}
+
+            {% else %}
+        <div id='flight_none_found'>
+            <p id='none-found'>No Tickets Found</p>
+        </div>
+            {% endif %}
+
     </div>
-
 </div>
-
 {% endblock %}

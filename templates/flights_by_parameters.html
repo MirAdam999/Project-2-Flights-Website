@@ -1,83 +1,96 @@
 {% extends 'base.html' %}
 {% block page_content %}
 
-<div id='show_flights_by_parameters'>
+<div class='all_flights'>
 
-    <div id='search_form'>
+    <div id='search_flight_by_id'>
 
-        <form action="/searchforflight" method="post">
-            <div>
-                <label for="origin">From</label>
-                <input list="origin" name="origin" placeholder='From where?' required>
-                    <datalist id="origin">
-                        {% for country in countries %}
-                            <option data-value="{{country[0]}}">{{country[1]}}</option>
-                        {% endfor %}
-                    </datalist>
+        <form action="/searchforflight" method="post" id='search_form'>
+            <div class='country_selector'>
+                <label for="origin">From:</label>
+                <select id="origin" name="origin" placeholder='From where?' required>
+                    {% for country in countries %}
+                        <option value="{{country[0]}}">{{country[1]}}</option>
+                    {% endfor %}
+                </select>
             </div>
-            <div> 
-                <label for="destination">To</label>
-                <input list="destination" name="destination" placeholder='Where are we going?' required>
-                    <datalist id="destination">
-                        {% for country in countries %}
-                            <option data-value="{{country[0]}}">{{country[1]}}</option>
-                        {% endfor %}
-                </datalist>
-            <div>
+            <div class='country_selector'> 
+                <label for="destination">To:</label>
+                <select id="destination" name="destination" placeholder='Where are we going?' required>
+                    {% for country in countries %}
+                        <option value="{{country[0]}}">{{country[1]}}</option>
+                    {% endfor %}
+                </select>
             </div>
-                <label for="date">Date</label>
-                <input type="date" id="date" name="date" placeholder= 'When?' required>
+            <div class='date_selector'>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" value= 'When?' required>
             </div>
-    
-            <input type="submit" value="Search">
-        </form>      
+
+            <input type="submit" value="Search Flight" id='search_button'>
+        </form>       
     
     </div>
 
-    <div id='flights'>
+    <div class='flights_wrap' id='flights_wrap_by_parameters'>
         {% if flights %}
             {% for flight in flights%}
-            {% if role=='Customer' %} 
-            <form method="post" action="/buy_ticket"  style="display: inline-block;">
-            {% else %}
-            <form action="/redirect_to_login"  style="display: inline-block;">
-            {% endif %}
-                <div id='airline_company_logo'>
-                    <label for="airline_company_logo">{{flight[1]}}</label>
-                    <img src="{{flight[0]}}" alt="airline_company_logo" class="airline-logo-image" name="airline_company_logo"/>
-                </div>
-
-                <div id='flight_num'>
-                    <h2> Flight Number: {{flight[9]}}</h2>
-                </div>
-
-                <div id='departure'>
-                    <h2>{{flight[2]}}</h2>
-                    <h3>{{flight[3]}}</h3>
-                    <h4>{{flight[4]}}</h4>
-                </div>
-                <div id='arrival'>
-                    <h2>{{flight[5]}}</h2>
-                    <h3>{{flight[6]}}</h3>
-                    <h4>{{flight[7]}}</h4>
-                </div>
-
-                <div id='flight_status'>
-                    <h3>{{flight[8]}}</h3>
-                </div>
-
-                {% if flight[8] != 'Canceled' %}
-                <div id='buy_ticket'>
-                    <button type="submit" name="flight_num" value="{{flight[9]}}">Purchase</button>
-                </div>
+            <div id='flight'>
+                {% if role=='Customer' %} 
+                <form method="post" action="/buy_ticket"  class='flights'>
+                {% else %}
+                <form action="/redirect_to_login"   class='flights'>
                 {% endif %}
-                
-            </form>
-            {% endfor %}
-        {% else %}
 
-        <h2>No Flights Matching Search Found</h2>
+                <div id='flight-left'>
+                        <div id='airline_company_logo'>
+                            <img src="{{flight[0]}}" alt="airline_company_logo" class="airline-logo-image" name="airline_company_logo"/><br>
+                            <label for="airline_company_logo">{{flight[1]}}</label>
+                        </div>
 
+                        <div id='flight_num'>
+                            <p> Flight Number: {{flight[9]}}</p>
+                        </div>
+                </div>
+
+                    <div id='departure'>
+                        <p id='country'>{{flight[2]}}</p>
+                        <p id='date'>{{flight[3]}}</p>
+                        <p id='time'>{{flight[4]}}</p>
+                    </div>
+
+                    <div id='plane-icon' class="w3-jumbo">
+                        <p>---<i class="w3-jumbo fa-solid fa-plane"></i>--</p>
+                    </div>
+
+                    <div id='arrival'>
+                        <p id='country'>{{flight[5]}}</p>
+                        <p id='date'>{{flight[6]}}</p>
+                        <p id='time'>{{flight[7]}}</p>
+                    </div>
+
+                    <div id='flight-right'>
+
+                        <div id='flight_status'>
+                            <p {% if flight[8] == 'Canceled'%} style="color: red;"
+                            {% elif flight[8] == 'Delayed' %} style="color: yellow;"
+                            {% else %}style="color: green;"{% endif %}>{{flight[8]}}</p>
+                        </div>
+
+                        {% if flight[8] != 'Canceled' %}
+                        <div id='flight-button-div'>
+                            <button type="submit" name="flight_num" value="{{flight[9]}}" id="flight-button">Purchase</button>
+                        </div>
+                        {% endif %}
+                    </div>
+                </form>
+                {% endfor %}
+            </div>
+
+            {% else %}
+        <div id='flight_none_found'>
+            <p id='none-found'>No Flights Matching Search Found</p>
+        </div>
         {% endif %}
     </div>
 

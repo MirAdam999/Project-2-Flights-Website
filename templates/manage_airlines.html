@@ -3,27 +3,29 @@
 
 <div class='manage'>
     
-    <div id="add_airline">
-        <form method="post" action="{{ url_for('routes.add_airline_form') }}"  style="display: inline-block;">
-            <button type="submit">Add Airline +</button>
-        </form>
-    </div>
-
-    <div id='search_for_airline_by_id'>
-        <form action="/search_for_airline_by_id" method="post">
-            <div>
+    <div class='manage-top'>
+        <div id="add">
+            <form method="post" action="{{ url_for('routes.add_airline_form') }}"  style="display: inline-block;">
+                <button type="submit">Add Airline +</button>
+            </form>
+        </div>
+        <div id="manage-header">
+            <p>Manage Airline Companies</p>
+            {% if status_change %}
+            <p id='activation_message'>Airline {{status_change[0]}} Sucsessfuly, AirlineID: {{status_change[1]}}</p>
+            {% endif %}
+        </div>
+        <div id='search_by_id'>
+            <form action="/search_for_airline_by_id" method="post">
                 <label for="airline_id">Search by Airline ID:</label>
-                <input type="text" id="airline_id" name="airline_id" >
-            </div>
-            <input type="submit" value="Search">
-        </form> 
+                <input type="number" id="airline_id" name="airline_id" required>
+                <input type="submit" value="Search" id='search_by_id_button'>
+            </form> 
+        </div>
     </div>
 
     <div id='airlines'>
         {% if airlines %}
-            {% if status_change %}
-            <p style="color: green;">Airline {{status_change[0]}} Sucsessfuly, AirlineID: {{status_change[1]}}</p>
-            {% endif %}
             <table>
                 <tr>
                     <th>AirlineID</th>
@@ -49,8 +51,8 @@
                         <td id="airline_id" name="airline_id">{{airline[0]}}</td>
                         <td id="name" name="name">{{airline[1]}}</td>
                         <td id='country_id' name='country_id'>{{airline[2]}}</td>
-                        <td id='country' name='country'>{{airline[8]}}</td>
-                        <td id='logo' name='logo'><img src="{{airline[3]}}" alt='company_logo' /></td>
+                        <td  name='country'>{{airline[8]}}</td>
+                        <td id='airline_company_logo' name='logo'><img src="{{airline[3]}}" alt='company_logo' /></td>
                         <td id="user_id" name="user_id">{{airline[4]}}</td>
                         <td id='username' name='username'>{{airline[5]}}</td>
                         <td id='email' name='email'>{{airline[6]}}</td>
@@ -60,9 +62,9 @@
                     <div id='manage_airline'>
                         <td>
                             {% if airline[7] == "Active" %}       
-                            <button type="submit" name="airline_id" value="{{ airline[0] }}">Disactivate Airline</button>
+                            <button type="submit" id='disactivate' name="airline_id" value="{{ airline[0] }}">Disactivate Airline</button>
                             {% else %}
-                            <button type="submit" name="airline_id" value="{{ airline[0] }}">Re-activate Airline</button>
+                            <button type="submit" id='reactivate' name="airline_id" value="{{ airline[0] }}">Re-activate Airline</button>
                             {% endif %}
                         </td>
                     </div>
@@ -73,7 +75,7 @@
             </table>
         {% else %}
 
-        <h2>No Airlines Matching Search Found</h2>
+        <p id='none-found'>No Airlines Matching Search Found</p>
 
         {% endif %}
     </div>

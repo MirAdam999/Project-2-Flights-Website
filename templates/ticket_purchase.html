@@ -2,17 +2,23 @@
 {% block page_content %}
 
 {% if new_ticket %}
-<h2 style="color: green;">Ticked Purchased Sucsessfully, TicketID: {{new_ticket}}</h2>
-<h3 >Ticket and Flight Information can now be viewed under "My Tickets"</h3>
-<h2 >Bon Voyage!</h2>
+<div id="signup_sucsess"  style='border: 1px solid green;'>
+    <h2  style="color: green;">Ticked Purchased Sucsessfully, TicketID: {{new_ticket}}</h2>
+    <h3 >Ticket and Flight Information can now be viewed under "My Tickets"</h3>
+    <h2 >Bon Voyage!</h2>
+</div>
 {% endif %}
 
 {% if error== 'No Tickets'%}
-<h2 style="color: red;">Oh No! No tickets are left for this flight.</h2>
+<div id="signup_failed"  style='border: 1px solid red;'>
+    <h2  style="color: red;">Oh No! No tickets are left for this flight.</h2>
+</div>
 {% elif error== 'Owns Ticket'%}
-<h2 style="color: red;">You Already Own a Ticket to this Flight.</h2>
-<h3 >Per company policy, we do not allow purchasing multiple tickets to the same flight for a single customer.</h3>
-<h3 >Your Tickets' Information can be viewed under "My Tickets"</h3>
+<div id="signup_failed"  style='border: 1px solid red;'>
+    <h2  style="color: red;">You Already Own a Ticket to this Flight.</h2>
+    <h3 >Per company policy, we do not allow purchasing multiple tickets to the same flight for a single customer.</h3>
+    <h3 >Your Tickets' Information can be viewed under "My Tickets"</h3>
+</div>
 {% endif %}
 
 {% endblock %}

@@ -327,49 +327,55 @@ class Routes(Blueprint):
         arrivals_to_display=[]
         if arrivals:
             for flight in arrivals:
-                airline= self.facade_base.get_airline_by_airline_ID(flight[1])   
+                airline= self.facade_base.get_airline_by_airline_ID(flight.AirlineID)   
                 airline_logo=airline.CompanyLogo
                 airline_name=airline.Name
                 
-                org_country_details= self.facade_base.get_country_by_ID(flight[2])
+                org_country_details= self.facade_base.get_country_by_ID(flight.OriginCountryID)
                 org_country_dispaly= f'{org_country_details.CountryName}, {org_country_details.Alpha3Code}'
-                depart_date, depart_time= self.facade_base.split_date_time(flight[4])
+                depart_date, depart_time= self.facade_base.split_date_time(flight.DepartureTime)
                 
-                dest_country_details= self.facade_base.get_country_by_ID(country)
+                dest_country_details= self.facade_base.get_country_by_ID(flight.DestinationCountryID)
                 dest_country_dispaly= f'{dest_country_details.CountryName}, {dest_country_details.Alpha3Code}'
-                land_date, land_time= self.facade_base.split_date_time(flight[5])
+                land_date, land_time= self.facade_base.split_date_time(flight.LandingTime)
                 
-                flight_status= flight[7]
+                flight_num=flight.FlightID
+                remaning_tickets = flight.RemainingTickets
+                flight_status= flight.FlightStatus
                 
                 arrivals_to_display.append((airline_logo,airline_name,
                                         org_country_dispaly,
                                         depart_date,depart_time,
                                         dest_country_dispaly,
-                                            land_date, land_time,flight_status))
+                                        land_date, land_time,
+                                        remaning_tickets,flight_status,flight_num))
         
         departures= self.facade_base.get_departure_flights_12hours(country)
         departures_to_display=[]
         if departures:
             for flight in departures:
-                airline= self.facade_base.get_airline_by_airline_ID(flight[1])   
+                airline= self.facade_base.get_airline_by_airline_ID(flight.AirlineID)   
                 airline_logo=airline.CompanyLogo
                 airline_name=airline.Name
                 
-                org_country_details= self.facade_base.get_country_by_ID(country)
+                org_country_details= self.facade_base.get_country_by_ID(flight.OriginCountryID)
                 org_country_dispaly= f'{org_country_details.CountryName}, {org_country_details.Alpha3Code}'
-                depart_date, depart_time= self.facade_base.split_date_time(flight[3])
+                depart_date, depart_time= self.facade_base.split_date_time(flight.DepartureTime)
                 
-                dest_country_details= self.facade_base.get_country_by_ID(country)
+                dest_country_details= self.facade_base.get_country_by_ID(flight.DestinationCountryID)
                 dest_country_dispaly= f'{dest_country_details.CountryName}, {dest_country_details.Alpha3Code}'
-                land_date, land_time= self.facade_base.split_date_time(flight[5])
+                land_date, land_time= self.facade_base.split_date_time(flight.LandingTime)
                 
-                flight_status= flight[7]
+                flight_num=flight.FlightID
+                remaning_tickets = flight.RemainingTickets
+                flight_status= flight.FlightStatus
                 
                 departures_to_display.append((airline_logo,airline_name,
                                         org_country_dispaly,
                                         depart_date,depart_time,
                                         dest_country_dispaly,
-                                            land_date, land_time,flight_status))
+                                        land_date, land_time,
+                                        remaning_tickets,flight_status,flight_num))
                 
         return render_template ("closest_flights.html", searched= True, 
                     arrivals=arrivals_to_display, departures=departures_to_display,
@@ -516,30 +522,31 @@ class Routes(Blueprint):
     
     
     def search_for_customer_by_id(self):
-        customer_id=int(request.form['customer_id'])
-        if self.user_role == "Administrator":
-            customer = self.facade.get_customer_by_ID(customer_id)
-            if customer:
-                custID= customer.CustomerID
-                fnmae=customer.FirstName
-                lname=customer.LastName
-                address=customer.Address 
-                phone=customer.PhoneNum
-                userID=customer.UserID 
-                user=self.facade_base.get_user_by_ID(userID)
-                username=user.Username
-                email=user.Email
-                active=user.IsActive
-                
-                status = "Active" if active == True else "Inactive"
-                customers_to_display=[(custID,fnmae,lname,address,
-                                        phone,userID,username,email,status)]
-                
-                return render_template ("manage_custs.html", customers=customers_to_display, 
-                                        role=self.user_role, name= self.users_name)
+        customer_id=request.form['customer_id']
+        if customer_id:
+            if self.user_role == "Administrator":
+                customer = self.facade.get_customer_by_ID(customer_id)
+                if customer:
+                    custID= customer.CustomerID
+                    fnmae=customer.FirstName
+                    lname=customer.LastName
+                    address=customer.Address 
+                    phone=customer.PhoneNum
+                    userID=customer.UserID
+                    user=self.facade_base.get_user_by_ID(userID)
+                    username=user.Username
+                    email=user.Email
+                    active=user.IsActive
+                    
+                    status = "Active" if active == True else "Inactive"
+                    customers_to_display=[(custID,fnmae,lname,address,
+                                            phone,userID,username,email,status)]
+                    
+                    return render_template ("manage_custs.html", customers=customers_to_display, 
+                                            role=self.user_role, name= self.users_name)
         
-            else:
-                return render_template ("manage_custs.html", customers=None, 
+                else:
+                    return render_template ("manage_custs.html", customers=None, 
                                         role=self.user_role, name= self.users_name)
             
             
@@ -664,31 +671,32 @@ class Routes(Blueprint):
     
     
     def search_for_airline_by_id(self):
-        airline_id=int(request.form['airline_id'])
-        if self.user_role == "Administrator":
-            airline = self.facade.get_airline_by_airline_ID(airline_id)
-            if airline:
-                airlineID= airline.AirlineID
-                name=airline.Name
-                countryID=airline.Country_ID
-                logo=airline.CompanyLogo
-                userID=airline.UserID 
-                user=self.facade_base.get_user_by_ID(userID)
-                username=user.Username
-                email=user.Email
-                active=user.IsActive
-                country=self.facade_base.get_country_by_ID(countryID)
-                country_name=f'{country.CountryName}, {country.Alpha3Code}'
+        airline_id=request.form['airline_id']
+        if airline_id:
+            if self.user_role == "Administrator":
+                airline = self.facade.get_airline_by_airline_ID(airline_id)
+                if airline:
+                    airlineID= airline.AirlineID
+                    name=airline.Name
+                    countryID=airline.Country_ID
+                    logo=airline.CompanyLogo
+                    userID=airline.UserID 
+                    user=self.facade_base.get_user_by_ID(userID)
+                    username=user.Username
+                    email=user.Email
+                    active=user.IsActive
+                    country=self.facade_base.get_country_by_ID(countryID)
+                    country_name=f'{country.CountryName}, {country.Alpha3Code}'
+                        
+                    status = "Active" if active == True else "Inactive"
+                    airlines_to_display=[(airlineID,name,countryID,logo
+                                                ,userID,username,email, status,country_name)]
                     
-                status = "Active" if active == True else "Inactive"
-                airlines_to_display=[(airlineID,name,countryID,logo
-                                            ,userID,username,email, status,country_name)]
-                
-                return render_template ("manage_airlines.html", airlines=airlines_to_display, 
-                                        role=self.user_role, name= self.users_name)
-        
-            else:
-                return render_template ("manage_airlines.html", airlines=None, 
+                    return render_template ("manage_airlines.html", airlines=airlines_to_display, 
+                                            role=self.user_role, name= self.users_name)
+            
+                else:
+                    return render_template ("manage_airlines.html", airlines=None, 
                                         role=self.user_role, name= self.users_name)
             
             
@@ -798,29 +806,30 @@ class Routes(Blueprint):
     
     
     def search_for_admin_by_id(self):
-        admin_id=int(request.form['admin_id'])
-        if self.user_role == "Administrator":
-            admin = self.facade.get_admin_by_adminID(admin_id)
-            if admin:
-                adminID= admin.AdminID
-                fname=admin.FirstName
-                lname=admin.LastName
-                userID=admin.UserID 
-                user=self.facade_base.get_user_by_ID(userID)
-                username=user.Username
-                email=user.Email
-                active=user.IsActive
+        admin_id=request.form['admin_id']
+        if admin_id:
+            if self.user_role == "Administrator":
+                admin = self.facade.get_admin_by_adminID(admin_id)
+                if admin:
+                    adminID= admin.AdminID
+                    fname=admin.FirstName
+                    lname=admin.LastName
+                    userID=admin.UserID 
+                    user=self.facade_base.get_user_by_ID(userID)
+                    username=user.Username
+                    email=user.Email
+                    active=user.IsActive
+                        
+                    status = "Active" if active == True else "Inactive"
+                    admins_to_display=[(adminID,fname,lname
+                                        ,userID,username,email, status)]
                     
-                status = "Active" if active == True else "Inactive"
-                admins_to_display=[(adminID,fname,lname
-                                    ,userID,username,email, status)]
-                
-                return render_template ("manage_admins.html", admins=admins_to_display, 
-                                        own_id=self.user_ID,
-                                        role=self.user_role, name= self.users_name)
-        
-            else:
-                return render_template ("manage_admins.html",admins=None, 
+                    return render_template ("manage_admins.html", admins=admins_to_display, 
+                                            own_id=self.user_ID,
+                                            role=self.user_role, name= self.users_name)
+            
+                else:
+                    return render_template ("manage_admins.html",admins=None, 
                                         role=self.user_role, name= self.users_name)
             
             
@@ -1017,11 +1026,11 @@ class Routes(Blueprint):
                                             land_date, land_time,
                                             remaning_tickets,flight_status,flight_num))
                 
-                return render_template ("my_flights.html", flights=flights_to_display, role=self.user_role, 
+                return render_template ("all_flights.html", flights=flights_to_display, role=self.user_role, 
                                         name= self.users_name)
             
             else:
-                return render_template ("my_flights.html", flights=None, role=self.user_role, name= self.users_name)
+                return render_template ("all_flights.html", flights=None, role=self.user_role, name= self.users_name)
             
             
     def update_flight_form(self):

@@ -53,7 +53,7 @@
     justify-content: space-between;
     align-items: center;
     top: 0;
-    height: 4rem;
+    height: 100%;
     flex-shrink: 5;
 }
 
@@ -69,10 +69,11 @@
     color: white;
     top: 0;
     padding-bottom: 1rem;
-    padding-top: 1rem;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-top: 1.5rem;
+    padding-right: 0.8rem;
+    padding-left: 0.8rem;
     margin: 0;
+    height: 100%;
 }
 
 #head_button:hover {
@@ -249,9 +250,1211 @@ body {
     flex-direction: column;
     justify-content: top;
     align-items: center;
-    height: 70vh;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 2rem;
     border-radius: 8px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+.manage-top {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+#search_by_id {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font: 1.5rem "Trebuchet MS", sans-serif;
+    font-weight: bolder;
+    letter-spacing: 0.2px;
+    color: rgb(87, 138, 153);
+    margin: 0;
+}
+
+#search_by_id input[type="number"] {
+    align-items: center;
+    width: 10rem;
+    height: 2rem;
+    border: 1px solid rgb(87, 138, 153);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font: 1.2rem "Trebuchet MS", sans-serif;
+    letter-spacing: 0.2px;
+    color: rgb(45, 53, 56);
+}
+
+#search_by_id_button {
+    margin: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    font: 1.2rem "Trebuchet MS", sans-serif;
+    letter-spacing: 0.2px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(87, 138, 153, 0.733);
+    border: 1px solid rgb(87, 138, 153);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#search_by_id_button:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+#manage-header {
+    color: white;
+    font: 2.5rem "Trebuchet MS", sans-serif;
+    letter-spacing: 0.2px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-shadow: -1px -1px rgb(87, 138, 153), 1px -1px 0 rgb(87, 138, 153), -1px 1px 0 rgb(87, 138, 153), 1px 1px 0 rgb(87, 138, 153);
+}
+
+#manage-header p {
+    margin: 0;
+    padding: 2;
+}
+
+#activation_message {
+    color: rgb(38, 134, 29);
+    font: 1.5rem "Trebuchet MS", sans-serif;
+    letter-spacing: 0.2px;
+    font-weight: bold;
+    padding: 1rem;
+    text-shadow: none;
+}
+
+
+#add button {
+    margin: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    font: 1.2rem "Trebuchet MS", sans-serif;
+    letter-spacing: 0.2px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(38, 134, 29);
+    border: 1px solid rgb(38, 134, 29);
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#add button:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+#customers,
+#airlines,
+#admins {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+}
+
+.manage table {
+    width: 100%;
+    text-align: center;
+    vertical-align: center;
+    font: 1rem "Fira Sans", sans-serif;
+    letter-spacing: 0.2px;
+    margin-right: 2rem;
+    margin-left: 0rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid rgb(87, 138, 153);
+    border-collapse: collapse;
+}
+
+.manage th {
+    font: 1.2rem "Trebuchet MS", sans-serif;
+    letter-spacing: 0.2px;
+    color: white;
+    font-weight: bold;
+    border: 1px solid rgb(87, 138, 153);
+    height: 2rem;
+    background-color: rgba(87, 138, 153, 0.733);
+}
+
+.manage tr {
+    height: 1.2rem;
+    border: 1px solid rgb(87, 138, 153);
+}
+
+.manage tr:hover {
+    background-color: rgba(121, 179, 197, 0.363);
+}
+
+.manage td {
+    border: 1px solid rgb(87, 138, 153);
+}
+
+.manage #disactivate {
+    margin: 0.2rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    font: 1rem "Trebuchet MS", sans-serif;
+    letter-spacing: 0.2px;
+    font-weight: bold;
+    color: rgb(194, 46, 46);
+    background-color: rgba(192, 88, 88, 0.13);
+    border: 1px solid rgb(194, 46, 46);
+    border-radius: 8px;
+
+}
+
+.manage #disactivate:hover {
+    color: white;
+    background-color: rgb(194, 46, 46);
+    border: 1px solid rgb(194, 46, 46);
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.manage #disactivate:disabled {
+    cursor: not-allowed;
+    color: rgb(31, 28, 28);
+    background-color: rgba(128, 125, 125, 0.514);
+    border: 1px solid rgb(31, 28, 28);
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+.manage #reactivate {
+    margin: 0.2rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    font: 1rem "Trebuchet MS", sans-serif;
+    letter-spacing: 0.2px;
+    font-weight: bold;
+    color: rgb(38, 134, 29);
+    background-color: rgba(38, 134, 29, 0.13);
+    border: 1px solid rgb(38, 134, 29);
+    border-radius: 8px;
+}
+
+.manage #reactivate:hover {
+    color: white;
+    background-color: rgb(38, 134, 29);
+    border: 1px solid rgb(38, 134, 29);
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+#none-found {
+    font: 1.5rem "Trebuchet MS", sans-serif;
+    font-weight: bolder;
+    letter-spacing: 0.2px;
+    color: rgb(87, 138, 153);
+}
+
+/*all-flights*/
+.all_flights {
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#flight_none_found p {
+    margin-bottom: 0rem;
+    margin-right: 3rem;
+    margin-left: 0rem;
+    padding: 1rem;
+    width: 81.5%;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    justify-content: space-around;
+    font: 1.5rem "Trebuchet MS", sans-serif;
+    font-weight: bolder;
+    letter-spacing: 0.2px;
+    color: rgb(87, 138, 153);
+}
+
+#search_for_flight_by_id {
+    margin-bottom: 0rem;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    padding: 1rem;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    justify-content: space-around;
+    font: 1.5rem "Trebuchet MS", sans-serif;
+    font-weight: bolder;
+    letter-spacing: 0.2px;
+    color: rgb(87, 138, 153);
+}
+
+#search_for_flight_by_id input[type="number"] {
+    margin-bottom: 0rem;
+    margin-top: 0rem;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    align-items: center;
+    width: 20rem;
+    height: 2rem;
+    border: 1px solid rgb(87, 138, 153);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font: 1.2rem "Trebuchet MS", sans-serif;
+    letter-spacing: 0.2px;
+    color: rgb(45, 53, 56);
+}
+
+#search_for_flight_by_id_button {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    font: 1.2rem "Trebuchet MS", sans-serif;
+    letter-spacing: 0.2px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(87, 138, 153, 0.733);
+    border: 1px solid rgb(87, 138, 153);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#search_for_flight_by_id_button:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+#flights_wrap {
+    box-sizing: border-box;
+    width: 98%;
+    margin-left: 19.6rem;
+}
+
+#flight form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    padding: 2rem;
+    width: 80%;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    border: 1px solid rgb(87, 138, 153);
+}
+
+#flight-left {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+#airline_company_logo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+}
+
+#airline_company_logo label {
+    font: 1.2rem "Trebuchet MS", sans-serif;
+    margin-bottom: 0.5rem;
+    margin-top: 0rem;
+    margin-right: 0rem;
+    margin-left: 0rem;
+    color: rgb(87, 138, 153);
+}
+
+#flight_num {
+    font: 1.5rem "Trebuchet MS", sans-serif;
+    font-weight: bolder;
+    margin-bottom: 0.1rem;
+    margin-top: 0.1rem;
+    margin-right: 0rem;
+    margin-left: 0rem;
+}
+
+#departure {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+#plane-icon {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    font-size: 4rem;
+    color: rgb(87, 138, 153);
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    margin-right: 0rem;
+    margin-left: 0rem;
+}
+
+#plane-icon p {
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    margin-right: 0rem;
+    margin-left: 0rem;
+}
+
+#arrival {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+#flight-right {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin: 0rem;
+}
+
+#tickets p {
+    font: 1.2rem "Trebuchet MS", sans-serif;
+    margin-bottom: 0.5rem;
+    margin-top: 0rem;
+    margin-right: 0rem;
+    margin-left: 0rem;
+}
+
+#flight_status p {
+    font: 2rem "Trebuchet MS", sans-serif;
+    font-weight: bolder;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+    margin-right: 0rem;
+    margin-left: 0rem;
+}
+
+#flight-button {
+    margin: 0.2rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    font: 1.5rem "Trebuchet MS", sans-serif;
+    letter-spacing: 0.2px;
+    font-weight: bold;
+    color: rgb(38, 134, 29);
+    background-color: rgba(38, 134, 29, 0.13);
+    border: 1px solid rgb(38, 134, 29);
+    border-radius: 8px;
+}
+
+#flight-button:hover {
+    color: white;
+    background-color: rgb(38, 134, 29);
+    border: 1px solid rgb(38, 134, 29);
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+#country {
+    font: 2rem "Trebuchet MS", sans-serif;
+    font-weight: bolder;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    margin-right: 0rem;
+    margin-left: 0rem;
+}
+
+#date {
+    font: 1.2rem "Trebuchet MS", sans-serif;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    margin-right: 0rem;
+    margin-left: 0rem;
+}
+
+#time {
+    font: 1.2rem "Trebuchet MS", sans-serif;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    margin-right: 0rem;
+    margin-left: 0rem;
+}
+
+/*flights-by-parameters*/
+#search_flight_by_id {
+    margin-bottom: 0rem;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    justify-content: space-around;
+    font: 1.5rem "Trebuchet MS", sans-serif;
+    font-weight: bolder;
+    letter-spacing: 0.2px;
+    color: rgb(87, 138, 153);
+}
+
+#search_flight_by_id form {
+    padding: 0;
+}
+
+#flights_wrap_by_parameters {
+    box-sizing: border-box;
+    width: 96%;
+    margin-left: 19rem;
+}
+
+/*my-tickets*/
+#cancel_ticket button {
+    margin: 0.5rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    font: 1.2rem "Trebuchet MS", sans-serif;
+    letter-spacing: 0.2px;
+    font-weight: bold;
+    color: rgb(194, 46, 46);
+    background-color: rgba(192, 88, 88, 0.13);
+    border: 1px solid rgb(194, 46, 46);
+    border-radius: 8px;
+}
+
+#cancel_ticket button:hover {
+    color: white;
+    background-color: rgb(194, 46, 46);
+    border: 1px solid rgb(194, 46, 46);
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+#my_tickets {
+    width: 85%;
+    margin-left: 19rem;
+}
+
+#ticket-canceled {
+    margin-bottom: 0rem;
+    margin-right: 3rem;
+    margin-left: 0rem;
+    padding: 1rem;
+    width: 81.5%;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    border: 1px solid rgb(38, 134, 29);
+    justify-content: space-around;
+    font: 1.5rem "Trebuchet MS", sans-serif;
+    font-weight: bolder;
+    letter-spacing: 0.2px;
+    color: rgb(38, 134, 29);
+}
+
+/*update-customer*/
+.update-self {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    margin-right: 3rem;
+    margin-left: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    border-radius: 15px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    width: 45%;
+}
+
+#update-header {
+    color: white;
+    font: 2.5rem "Trebuchet MS", sans-serif;
+    letter-spacing: 0.2px;
+    font-weight: bold;
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-shadow: -1px -1px rgb(87, 138, 153), 1px -1px 0 rgb(87, 138, 153), -1px 1px 0 rgb(87, 138, 153), 1px 1px 0 rgb(87, 138, 153);
+}
+
+.update-self form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.update-self form input {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    width: 30rem;
+    height: 2rem;
+    border: 1px solid rgb(87, 138, 153);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font: 1.2rem "Trebuchet MS", sans-serif;
+    letter-spacing: 0.2px;
+    color: rgb(45, 53, 56);
+    padding: 1rem;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.update-self form input:read-only {
+    color: rgb(31, 28, 28);
+    background-color: rgba(128, 125, 125, 0.514);
+    border: 1px solid rgb(31, 28, 28);
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+.update-self form label {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding: 1rem;
+    font: 1.2rem "Trebuchet MS", sans-serif;
+    letter-spacing: 0.2px;
+    font-weight: bold;
+    color: rgb(87, 138, 153);
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.update-self form span {
+    font: 1rem "Trebuchet MS", sans-serif;
+    letter-spacing: 0.2px;
+    color: rgb(87, 138, 153);
+    display: block;
+    text-align: center;
+    padding: 0.2rem;
+}
+
+#password label {
+    font: 1.4rem "Trebuchet MS", sans-serif;
+    letter-spacing: 0.2px;
+    font-weight: bold;
+}
+
+.update-self-submit {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    font: 1.6rem "Trebuchet MS", sans-serif;
+    letter-spacing: 0.2px;
+    font-weight: bold;
+    color: rgb(38, 134, 29);
+    background-color: rgba(38, 134, 29, 0.13);
+    border: 1px solid rgb(38, 134, 29);
+    border-radius: 8px;
+}
+
+.update-self-submit:hover {
+    color: white;
+    background-color: rgb(38, 134, 29);
+    border: 1px solid rgb(38, 134, 29);
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+#update-self-submit-wrap {
+    border-bottom: 2px solid rgb(87, 138, 153);
+}
+
+#redirect-to-change-password {
+    margin-top: 2rem;
+    margin-bottom: 10rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    font: 1.6rem "Trebuchet MS", sans-serif;
+    letter-spacing: 0.2px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(87, 138, 153, 0.733);
+    border: 1px solid rgb(87, 138, 153);
+    border-radius: 8px;
+}
+
+#redirect-to-change-password:hover {
+    color: white;
+    background-color: rgb(87, 138, 153);
+    border: 1px solid rgba(87, 138, 153, 0.733);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.update-self-messages {
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    border: 1px solid rgb(38, 134, 29);
+    justify-content: center;
+    font: 1.5rem "Trebuchet MS", sans-serif;
+    font-weight: bolder;
+    letter-spacing: 0.2px;
+    color: rgb(38, 134, 29);
+    text-align: center;
+    margin-top: 6rem;
+    margin-bottom: 0rem;
+    margin-right: 3rem;
+    margin-left: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    width: 45%;
+}
+
+#airline-country-div select {
+    width: 30rem;
+    height: 2rem;
+    border: 1px solid rgb(87, 138, 153);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font: 1.2rem "Trebuchet MS", sans-serif;
+    letter-spacing: 0.2px;
+    color: rgb(45, 53, 56);
+    padding: 0.2rem;
+}
+
+#logo-div input {
+    padding: 1rem;
+    font: 1.1rem "Trebuchet MS", sans-serif;
+    letter-spacing: 0.2px;
+}
+
+/*update-flight*/
+#update_arrival input,
+#update_departure input {
+    font: 1.2rem "Trebuchet MS", sans-serif;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    margin-right: 0rem;
+    margin-left: 0rem;
+    height: 2rem;
+    align-items: center;
+}
+
+#update_status select {
+    width: 30rem;
+    height: 2rem;
+    border: 1px solid rgb(87, 138, 153);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font: 1.2rem "Trebuchet MS", sans-serif;
+    letter-spacing: 0.2px;
+    color: rgb(45, 53, 56);
+    padding: 0.2rem;
+}
+
+#update_flight form {
+    display: flex;
+}
+
+#update_flightid label,
+#update_origin label,
+#update_destination label {
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding: 0rem;
+    font: 1.2rem "Trebuchet MS", sans-serif;
+    letter-spacing: 0.2px;
+    font-weight: bold;
+    color: rgb(87, 138, 153);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+/*add*/
+.country-select select,
+#airline_country-div select {
+    width: 30rem;
+    height: 2rem;
+    border: 1px solid rgb(87, 138, 153);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font: 1.2rem "Trebuchet MS", sans-serif;
+    letter-spacing: 0.2px;
+    color: rgb(45, 53, 56);
+    padding: 0.2rem;
+    margin: 0.6rem;
+}
+
+.update-self #phone_country_code {
+    width: 14.5rem;
+}
+
+.update-self #credit_card_exp_date,
+#credit_card_cvv {
+    width: 14.5rem;
+}
+
+.update-self #credit_card_exp_date {
+    font: 1.2rem "Trebuchet MS", sans-serif;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    margin-right: 0rem;
+    margin-left: 0.8rem;
+    height: 2rem;
+    align-items: center;
+}
+
+#add_customer_by_manager label[for="credit_card_cvv"] {
+    margin-left: 6rem;
+}
+
+#add_customer_by_manager form {
+    margin-bottom: 6rem;
+}
+
+#add_flight #add_flight_departure,
+#add_flight #add_flight_arrival {
+    font: 1.2rem "Trebuchet MS", sans-serif;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    margin-right: 0rem;
+    margin-left: 0rem;
+    height: 2rem;
+    align-items: center;
+}
+
+/*login*/
+
+#login {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    margin-top: 13rem;
+    margin-right: 10rem;
+    margin-left: 28rem;
+    border-radius: 25px;
+    width: 50%;
+}
+
+#redirect_to_signup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding: 3rem;
+}
+
+#redirect_to_signup p {
+    color: rgb(87, 138, 153);
+    font: 2.5rem "Trebuchet MS", sans-serif;
+    letter-spacing: 0.2px;
+    font-weight: bold;
+    margin: 0.5rem;
+}
+
+#redirect_to_signup button {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.4rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    font: 2rem "Trebuchet MS", sans-serif;
+    letter-spacing: 0.2px;
+    font-weight: bold;
+    color: rgb(38, 134, 29);
+    background-color: rgba(38, 134, 29, 0.13);
+    border: 1px solid rgb(38, 134, 29);
+    border-radius: 8px;
+}
+
+#redirect_to_signup button:hover {
+    color: white;
+    background-color: rgb(38, 134, 29);
+    border: 1px solid rgb(38, 134, 29);
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    border-left: 2px solid rgb(87, 138, 153);
+}
+
+#login-form p {
+    color: rgb(87, 138, 153);
+    font: 2rem "Trebuchet MS", sans-serif;
+    letter-spacing: 0.2px;
+    font-weight: bold;
+    margin: 0.5rem;
+}
+
+#login-form button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+    margin-left: 10rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    font: 1.6rem "Trebuchet MS", sans-serif;
+    letter-spacing: 0.2px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(87, 138, 153, 0.733);
+    border: 1px solid rgb(87, 138, 153);
+    border-radius: 8px;
+}
+
+#login-form button:hover {
+    color: white;
+    background-color: rgb(87, 138, 153);
+    border: 1px solid rgba(87, 138, 153, 0.733);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+#login-username,
+#login-password {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    width: 15rem;
+    height: 2rem;
+    border: 1px solid rgb(87, 138, 153);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font: 1.2rem "Trebuchet MS", sans-serif;
+    letter-spacing: 0.2px;
+    color: rgb(45, 53, 56);
+    padding: 1rem;
+    justify-content: center;
+}
+
+#login-password {
+    margin-left: 1rem;
+}
+
+#login-form label[for="login-username"],
+#login-form label[for="login-password"] {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 0rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font: 1.3rem "Trebuchet MS", sans-serif;
+    letter-spacing: 0.2px;
+    font-weight: bold;
+    color: rgb(87, 138, 153);
+    justify-content: center;
+}
+
+/*signup_result*/
+#signup_sucsess,
+#signup_failed {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    margin-top: 13rem;
+    margin-right: 10rem;
+    margin-left: 28rem;
+    padding: 2rem;
+    border-radius: 25px;
+    width: 50%;
+}
+
+#signup_sucsess h2,
+#signup_failed h2 {
+    color: rgb(87, 138, 153);
+    font: 2rem "Trebuchet MS", sans-serif;
+    letter-spacing: 0.2px;
+    font-weight: bold;
+    margin: 0.5rem;
+}
+
+#signup_sucsess h3,
+#signup_failed h3 {
+    color: rgb(87, 138, 153);
+    font: 1.5rem "Trebuchet MS", sans-serif;
+    letter-spacing: 0.2px;
+    font-weight: bold;
+    margin: 0.5rem;
+    text-align: center;
+}
+
+#signup_sucsess button {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.4rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    font: 2rem "Trebuchet MS", sans-serif;
+    letter-spacing: 0.2px;
+    font-weight: bold;
+    color: rgb(38, 134, 29);
+    background-color: rgba(38, 134, 29, 0.13);
+    border: 1px solid rgb(38, 134, 29);
+    border-radius: 8px;
+}
+
+#signup_sucsess button:hover {
+    color: white;
+    background-color: rgb(38, 134, 29);
+    border: 1px solid rgb(38, 134, 29);
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+/*closest_flights*/
+
+#search_for_closest_flights_by_country {
+    font: 1.5rem "Trebuchet MS", sans-serif;
+    font-weight: bolder;
+    letter-spacing: 0.2px;
+    color: black;
+    margin-top: 6rem;
+    margin-bottom: 0rem;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+}
+
+#search_for_closest_flights_by_country form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#search_for_closest_flights_by_country select {
+    align-items: center;
+    width: 20rem;
+    height: 2rem;
+    border: 1px solid rgb(87, 138, 153);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font: 1.2rem "Trebuchet MS", sans-serif;
+    letter-spacing: 0.2px;
+    color: rgb(45, 53, 56);
+}
+
+#search_for_closest_flights_by_country_button {
+    margin: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    font: 1.2rem "Trebuchet MS", sans-serif;
+    letter-spacing: 0.2px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(87, 138, 153, 0.733);
+    border: 1px solid rgb(87, 138, 153);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#search_for_closest_flights_by_country_button :hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+#arrivals-departures {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+#arrivals-departures-headers {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+#arrivals-header,
+#departures-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-bottom: 0rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    width: 50%;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    font: 1.8rem "Trebuchet MS", sans-serif;
+    font-weight: bold;
+    color: rgb(87, 138, 153);
+    text-align: center;
+    letter-spacing: 0.2px;
+    border: 1px solid rgb(87, 138, 153);
+
+}
+
+#arrivals-header p,
+#departures-header p {
+    margin: 0;
+}
+
+#plane-icon-ad {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    font-size: 1.5rem;
+    color: rgb(87, 138, 153);
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    margin-right: 0rem;
+    margin-left: 0rem;
+}
+
+#arrivals-departures_wrap {
+    box-sizing: border-box;
+    width: 41.5%;
+    margin: 0rem;
+}
+
+#arrivals,
+#arrival_none_found {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-left: 3rem;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    padding: 2rem;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    border: 1px solid rgb(87, 138, 153);
+}
+
+#departures,
+#departure_none_found {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-left: 13.2rem;
+    margin-right: 0rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    padding: 2rem;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    border: 1px solid rgb(87, 138, 153);
 }

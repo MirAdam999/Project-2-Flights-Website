@@ -1,19 +1,35 @@
 {% extends 'base.html' %}
 {% block page_content %}
 
-<div id='add_airline'>
+{% if error_message or adding_sucsess%}
+    <div class='update-self-messages'>
+        {% if error_message %}
+            <p style="color: red;">{{ error_message }}</p>
+        {% endif %}
+
+        {% if adding_sucsess==True %}
+            <p style="color: green;">Airline Added Sucsessfuly, UserID: {{new_airline_data[0]}}, AirlineID: {{new_airline_data[1]}}</p>
+        {% elif adding_sucsess==False %}
+            <p style="color: red;">Error: was not able to add airline. Try again later.</p>
+        {% endif %}
+    </div> 
+{% endif %}
+
+<div class='update-self' id='add_airline'>
+
+    <p id="update-header">Create New Airline Company</p>
 
     <form action="/add_airline" method="post">
         <div id='name'>
-            <label for="name">Company Name:</label>
+            <label for="name">Company Name:</label><br>
             <input type="text" id="name" name="name" maxlength="50" 
                 value="{{ request.form['name'] | default('') }}" required>
         </div>
 
-        <div id='country'>
-            <label for="country">Country:</label>
-            <select id="country" name="country" required>
-                {% set selected_country_code = request.form.get('country', '') %}
+        <div class='country-select' id='airline_country-div'>
+            <label for="airline_country">Country:</label><br>
+            <select id="airline_country" name="country" required>
+                {% set selected_country_code = request.form.get('airline_country', '') %}
                 {% for country in countries %}
                     <option value="{{ country[0] }}" {% if country[0] == selected_country_code %}selected{% endif %}>
                         {{ country[1] }}
@@ -22,10 +38,10 @@
             </select>
         </div>
 
-        <div id='logo'>
-            <label for="logo">Company Logo:</label><br>
-            <input type="text" id="logo" name="logo" placeholder="image link"
-                value="{{ request.form['logo'] | default('') }}" >
+        <div id='airline_company_logo'>
+            <label for="airline_company_logo">Company Logo:</label><br>
+            <input type="text" id="airline_company_logo" name="logo" placeholder="image link"
+                value="{{ request.form['airline_company_logo'] | default('') }}" >
         </div>
 
         <div id='email'>
@@ -46,25 +62,15 @@
             <label for="password">Password:</label><br>
             <input type="password" id="password" name="password" pattern="[a-zA-Z0-9]+{6,50}" 
                 minlength="6" maxlength="50" required><br>
-            <span class="sub-label">Must include a Capital and a lowercase letters, as well a number. At least 6 characters.</span><br><br>
+                <span class="sub-label">Must include a Capital and a lowercase letters, as well a number.</span>
+                <span class="sub-label">At least 6 characters.</span><br><br> 
             <label for="password_reinput">Input Password Again:</label><br>
             <input type="password" id="password_reinput" name="password_reinput" pattern="[a-zA-Z0-9]+{6,50}" 
                 minlength="6" maxlength="50" placeholder='Repeat Password' required><br>
 
         </div>
 
-        <button type="submit" value="Log In">Add Airline</button>
-
-                    
-        {% if error_message %}
-            <p style="color: red;">{{ error_message }}</p>
-        {% endif %}
-
-        {% if adding_sucsess==True %}
-            <p style="color: green;">Airline Added Sucsessfuly, UserID: {{new_airline_data[0]}}, AirlineID: {{new_airline_data[1]}}</p>
-        {% elif adding_sucsess==False %}
-            <p style="color: red;">Error: was not able to add airline. Try again later.</p>
-        {% endif %}
+        <button type="submit" value="Add Airline" class='update-self-submit'>Add Airline</button>
 
     </form>  
 

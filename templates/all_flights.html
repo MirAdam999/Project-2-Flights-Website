@@ -1,73 +1,83 @@
 {% extends 'base.html' %}
 {% block page_content %}
 
-<div id='all_flights'>
+<div class='all_flights'>
 
     <div id='search_for_flight_by_id'>
         <form action="/searchforflightbyid" method="post">
-            <div>
-                <label for="flight_id">Search by Flight ID:</label>
-                <input type="text" id="flight_id" name="flight_id" >
-            </div>
-            <input type="submit" value="Search">
+            <label for="flight_id">Search by Flight Number:</label>
+            <input type="number" id="flight_id" name="flight_id" required>
+            <input type="submit" value="Search" id='search_for_flight_by_id_button'>
         </form> 
     </div>
 
-    <div id='flights'>
+    <div id='flights_wrap'>
         {% if flights %}
             {% for flight in flights%}
-            <form {% if role=='Customer' %} method="post" action="/buy_ticket"
-                {% elif role=='AirlineCompany' and name==flight[1] %} method="post" action="/update_flight_form"
-                {% else %}action="/redirect_to_login"{% endif %} style="display: inline-block;">
+            <div id='flight'>
+                <form {% if role=='Customer' %} method="post" action="/buy_ticket"
+                    {% elif role=='AirlineCompany' and name==flight[1] %} method="post" action="/update_flight_form"
+                    {% else %}action="/redirect_to_login"{% endif %}> 
 
-            <div id='airline_company_logo'>
-                <label for="airline_company_logo">{{flight[1]}}</label>
-                <img src="{{flight[0]}}" alt="airline_company_logo" class="airline-logo-image" name="airline_company_logo"/>
-            </div>
+                    <div id='flight-left'>
+                        <div id='airline_company_logo'>
+                            <img src="{{flight[0]}}" alt="airline_company_logo" class="airline-logo-image" name="airline_company_logo"/><br>
+                            <label for="airline_company_logo">{{flight[1]}}</label>
+                        </div>
 
-            <div id='flight_num'>
-                <h2> Flight Number: {{flight[10]}}</h2>
-            </div>
+                        <div id='flight_num'>
+                            <p> Flight Number: {{flight[10]}}</p>
+                        </div>
+                    </div>
 
-            <div id='departure'>
-                <h2>{{flight[2]}}</h2>
-                <h3>{{flight[3]}}</h3>
-                <h4>{{flight[4]}}</h4>
-            </div>
-            <div id='arrival'>
-                <h2>{{flight[5]}}</h2>
-                <h3>{{flight[6]}}</h3>
-                <h4>{{flight[7]}}</h4>
-            </div>
+                    <div id='departure'>
+                        <p id='country'>{{flight[2]}}</p>
+                        <p id='date'>{{flight[3]}}</p>
+                        <p id='time'>{{flight[4]}}</p>
+                    </div>
 
-            
-            <div id='tickets'>
-                <h3>Remaning Tickets: {{flight[8]}}</h3>
-            </div>
+                    <div id='plane-icon' class="w3-jumbo">
+                        <p>---<i class="w3-jumbo fa-solid fa-plane"></i>--</p>
+                    </div>
 
-            <div id='flight_status'>
-                <h3>{{flight[9]}}</h3>
-            </div>
+                    <div id='arrival'>
+                        <p id='country'>{{flight[5]}}</p>
+                        <p id='date'>{{flight[6]}}</p>
+                        <p id='time'>{{flight[7]}}</p>
+                    </div>
 
-            {% if flight[9] != 'Canceled' and role!='AirlineCompany' and role!='Administrator'%}
-            <div id='buy_ticket'>
-                <button type="submit" name="flight_num" value="{{flight[10]}}">Purchase</button>
-            </div>
-            </form>
-            {% endif %}
+                    <div id='flight-right'>
+                        <div id='tickets'>
+                            <p>Remaning Tickets: {{flight[8]}}</p>
+                        </div>
 
-            {% if role=='AirlineCompany' and name==flight[1] %} 
-            <div id='update_flight'>
-                <button type="submit" name="flight_num" value="{{flight[10]}}">Update Flight</button>
-            </div>
-            {% endif %}
+                        <div id='flight_status'>
+                            <p {% if flight[9] == 'Canceled'%} style="color: red;"
+                            {% elif flight[9] == 'Delayed' %} style="color: yellow;"
+                            {% else %}style="color: green;"{% endif %}>{{flight[9]}}</p>
+                        </div>
 
+                        {% if flight[9] != 'Canceled' and role!='AirlineCompany' and role!='Administrator'%}
+                        <div id='flight-button-div'>
+                            <button type="submit" name="flight_num" value="{{flight[10]}}" id="flight-button">Purchase</button>
+                        </div>
+                        {% endif %}
+
+                        {% if role=='AirlineCompany' and name==flight[1] %} 
+                        <div id='flight-button-div'>
+                            <button type="submit" name="flight_num" value="{{flight[10]}}" id="flight-button">Update Flight</button>
+                        </div>
+                        {% endif %}
+                    </div>
+
+                </form>
+            </div>   
             {% endfor %}
 
         {% else %}
-
-        <h2>No Flights Matching Search Found</h2>
-
+        <div id='flight_none_found'>
+            <p id='none-found'>No Flights Matching Search Found</p>
+        </div>
         {% endif %}
     </div>
 
