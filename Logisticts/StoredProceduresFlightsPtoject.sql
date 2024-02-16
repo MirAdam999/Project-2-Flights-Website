@@ -14,6 +14,9 @@ AS
 -- get_customer_by_username(_username text)
 GO
 ALTER PROCEDURE get_customer_by_username
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
 @username varchar(50)
 AS
 	select * from Customers c

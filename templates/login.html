@@ -25,13 +25,17 @@
                 <button type="submit" value="Log In" >Log In</button>
             </div>
         </form>
-    </div>
 
-    {% if error== 'Wrong Username/Password'%}
-    <p style="color: red;">Wrong Username/Password.</p>
-    {% elif error== 'Disactivated'%}
-    <p style="color: red;">You User has been disactivated. Please contact customer support for more information.</p>
-    {% endif %}
+        <div id='login-err'>
+            {% if error== 'Wrong Username/Password'%}
+            <h3>Wrong Username/Password</h3>
+            {% elif error== 'Disactivated'%}
+            <h3>You User has been disactivated.</h3>
+            <h4>Please contact customer support for more information.</h4>
+            {% endif %}
+        </div>
+
+    </div>
 
 </div>
 

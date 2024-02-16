@@ -1169,6 +1169,24 @@ body {
     margin: 0.5rem;
 }
 
+#login-err h3 {
+    font: 1.5rem "Trebuchet MS", sans-serif;
+    letter-spacing: 0.2px;
+    font-weight: bold;
+    text-align: center;
+    color: red;
+    margin: 0.5rem;
+}
+
+#login-err h4 {
+    font: 1rem "Trebuchet MS", sans-serif;
+    letter-spacing: 0.2px;
+    font-weight: bold;
+    text-align: center;
+    color: red;
+    margin: 0.5rem;
+}
+
 #login-form button {
     display: flex;
     flex-direction: column;

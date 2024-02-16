@@ -1061,6 +1061,7 @@ class Routes(Blueprint):
             error = None
             
             flightID=int(request.form['flightid'])
+            print(flightID)
             form_departure=request.form['departure']
             strip_departure=datetime.strptime(form_departure, "%Y-%m-%dT%H:%M")
             departure=strip_departure.strftime("%Y-%m-%d %H:%M:%S.000")
@@ -1092,8 +1093,12 @@ class Routes(Blueprint):
                                     role=self.user_role, name= self.users_name,
                                     error_message=error)
 
-            
-            
+        else:
+            return render_template ("update_flight.html",
+                            role=self.user_role, name= self.users_name
+                            ,update_sucsess=False)
+    
+    
     # Customer Functionality
     
     def customer_info(self):

@@ -88,7 +88,10 @@ class AnonymousFacade(FacadeBase):
                         
                     else:   # inactive user
                             return (None, 'Disactivated')
-                
+                        
+                else:   #wrong pass
+                    return (None, 'Wrong Username/Password')
+            
             else:   #username not found
                 return (None, 'Wrong Username/Password')
         

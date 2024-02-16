@@ -26,7 +26,7 @@
             <div id='airline_country-div'>
                 <label for="airline_country">Country:</label><br>
                 <select id="airline_country" name="country" required>
-                    {% set selected_country = request.form.get('airline_country', '') %}
+                    {% set selected_country = request.form.get('country', '') %}
                     {% for country in countries %}
                         <option value="{{ country[1] }}" {% if country[1] == selected_country %}selected{% endif %}>
                             {{ country[1] }}
