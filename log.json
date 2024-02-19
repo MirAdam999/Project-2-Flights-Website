@@ -6366,5 +6366,261 @@
     "func_name": "get_by_id",
     "func_input": "7",
     "func_output": "<Countries 7>"
+  },
+  {
+    "id": 797,
+    "datetime": "2024-02-16 12:49:44.885822",
+    "class-name": "<class 'modules.countries.Countries'>",
+    "func_name": "get_all",
+    "func_input": "None",
+    "func_output": "[<Countries 3>, <Countries 4>, <Countries 5>, <Countries 6>, <Countries 7>, <Countries 8>, <Countries 9>, <Countries 10>, <Countries 11>, <Countries 12>, <Countries 13>, <Countries 14>, <Countries 15>, <Countries 16>, <Countries 17>, <Countries 18>, <Countries 19>, <Countries 20>, <Countries 21>, <Countries 22>, <Countries 23>, <Countries 24>, <Countries 25>, <Countries 26>, <Countries 27>, <Countries 28>, <Countries 29>, <Countries 30>, <Countries 31>, <Countries 32>, <Countries 33>, <Countries 34>, <Countries 35>, <Countries 36>, <Countries 37>, <Countries 38>, <Countries 39>, <Countries 40>, <Countries 41>, <Countries 42>, <Countries 43>, <Countries 44>, <Countries 45>, <Countries 46>, <Countries 47>, <Countries 48>, <Countries 49>, <Countries 50>, <Countries 51>, <Countries 52>, <Countries 53>, <Countries 54>, <Countries 55>, <Countries 56>, <Countries 57>, <Countries 58>, <Countries 59>, <Countries 60>, <Countries 61>, <Countries 62>, <Countries 63>, <Countries 64>, <Countries 65>, <Countries 66>, <Countries 67>, <Countries 68>, <Countries 69>, <Countries 70>, <Countries 71>, <Countries 72>, <Countries 73>, <Countries 74>, <Countries 75>, <Countries 76>, <Countries 77>, <Countries 78>, <Countries 79>, <Countries 80>, <Countries 81>, <Countries 82>, <Countries 83>, <Countries 84>, <Countries 85>, <Countries 86>, <Countries 87>, <Countries 88>, <Countries 89>, <Countries 90>, <Countries 91>, <Countries 92>, <Countries 93>, <Countries 94>, <Countries 95>, <Countries 96>, <Countries 97>, <Countries 98>, <Countries 99>, <Countries 100>, <Countries 101>, <Countries 102>, <Countries 103>, <Countries 104>, <Countries 105>, <Countries 106>, <Countries 107>, <Countries 108>, <Countries 109>, <Countries 110>, <Countries 111>, <Countries 112>, <Countries 113>, <Countries 114>, <Countries 115>, <Countries 116>, <Countries 117>, <Countries 118>, <Countries 119>, <Countries 120>, <Countries 121>, <Countries 122>, <Countries 123>, <Countries 124>, <Countries 125>, <Countries 126>, <Countries 127>, <Countries 128>, <Countries 129>, <Countries 130>, <Countries 131>, <Countries 132>, <Countries 133>, <Countries 134>, <Countries 135>, <Countries 136>, <Countries 137>, <Countries 138>, <Countries 139>, <Countries 140>, <Countries 141>, <Countries 142>, <Countries 143>, <Countries 144>, <Countries 145>, <Countries 146>, <Countries 147>, <Countries 148>, <Countries 149>, <Countries 150>, <Countries 151>, <Countries 152>, <Countries 153>, <Countries 154>, <Countries 155>, <Countries 156>, <Countries 157>, <Countries 158>, <Countries 159>, <Countries 160>, <Countries 161>, <Countries 162>, <Countries 163>, <Countries 164>, <Countries 165>, <Countries 166>, <Countries 167>, <Countries 168>, <Countries 169>, <Countries 170>, <Countries 171>, <Countries 172>, <Countries 173>, <Countries 174>, <Countries 175>, <Countries 176>, <Countries 177>, <Countries 178>, <Countries 179>, <Countries 180>, <Countries 181>, <Countries 182>, <Countries 183>, <Countries 184>, <Countries 185>, <Countries 186>, <Countries 187>, <Countries 188>, <Countries 189>, <Countries 190>, <Countries 191>, <Countries 192>, <Countries 193>, <Countries 194>, <Countries 195>, <Countries 196>, <Countries 197>, <Countries 198>, <Countries 199>, <Countries 200>, <Countries 201>, <Countries 202>, <Countries 203>, <Countries 204>, <Countries 205>, <Countries 206>, <Countries 207>, <Countries 208>, <Countries 209>, <Countries 210>, <Countries 211>, <Countries 212>, <Countries 213>, <Countries 214>, <Countries 215>, <Countries 216>, <Countries 217>, <Countries 218>, <Countries 219>, <Countries 220>, <Countries 221>, <Countries 222>, <Countries 223>, <Countries 224>, <Countries 225>, <Countries 226>, <Countries 227>, <Countries 228>, <Countries 229>, <Countries 230>, <Countries 231>, <Countries 232>, <Countries 233>, <Countries 234>, <Countries 235>, <Countries 236>, <Countries 237>, <Countries 238>, <Countries 239>, <Countries 240>, <Countries 241>, <Countries 242>, <Countries 243>, <Countries 244>, <Countries 245>]"
+  },
+  {
+    "id": 798,
+    "datetime": "2024-02-16 12:52:22.017735",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'Admin111'}",
+    "func_output": "[(1, 'Admin111', 'VerySecurePassword111', 'admin1@journey.com', 1, True)]"
+  },
+  {
+    "id": 799,
+    "datetime": "2024-02-16 12:52:22.096738",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_username",
+    "func_input": "{'username': 'Admin111'}",
+    "func_output": "[(1, 'Admin', 'Adminy', 1, 1, 'Admin111', 'VerySecurePassword111', 'admin1@journey.com', 1, True)]"
+  },
+  {
+    "id": 800,
+    "datetime": "2024-02-16 12:52:22.181746",
+    "class-name": "<class 'modules.administrators.Administrators'>",
+    "func_name": "get_admin_by_userID",
+    "func_input": "{'userID': 1}",
+    "func_output": "[(1, 'Admin', 'Adminy', 1)]"
+  },
+  {
+    "id": 801,
+    "datetime": "2024-02-16 12:52:22.278738",
+    "class-name": "<class 'modules.countries.Countries'>",
+    "func_name": "get_all",
+    "func_input": "None",
+    "func_output": "[<Countries 3>, <Countries 4>, <Countries 5>, <Countries 6>, <Countries 7>, <Countries 8>, <Countries 9>, <Countries 10>, <Countries 11>, <Countries 12>, <Countries 13>, <Countries 14>, <Countries 15>, <Countries 16>, <Countries 17>, <Countries 18>, <Countries 19>, <Countries 20>, <Countries 21>, <Countries 22>, <Countries 23>, <Countries 24>, <Countries 25>, <Countries 26>, <Countries 27>, <Countries 28>, <Countries 29>, <Countries 30>, <Countries 31>, <Countries 32>, <Countries 33>, <Countries 34>, <Countries 35>, <Countries 36>, <Countries 37>, <Countries 38>, <Countries 39>, <Countries 40>, <Countries 41>, <Countries 42>, <Countries 43>, <Countries 44>, <Countries 45>, <Countries 46>, <Countries 47>, <Countries 48>, <Countries 49>, <Countries 50>, <Countries 51>, <Countries 52>, <Countries 53>, <Countries 54>, <Countries 55>, <Countries 56>, <Countries 57>, <Countries 58>, <Countries 59>, <Countries 60>, <Countries 61>, <Countries 62>, <Countries 63>, <Countries 64>, <Countries 65>, <Countries 66>, <Countries 67>, <Countries 68>, <Countries 69>, <Countries 70>, <Countries 71>, <Countries 72>, <Countries 73>, <Countries 74>, <Countries 75>, <Countries 76>, <Countries 77>, <Countries 78>, <Countries 79>, <Countries 80>, <Countries 81>, <Countries 82>, <Countries 83>, <Countries 84>, <Countries 85>, <Countries 86>, <Countries 87>, <Countries 88>, <Countries 89>, <Countries 90>, <Countries 91>, <Countries 92>, <Countries 93>, <Countries 94>, <Countries 95>, <Countries 96>, <Countries 97>, <Countries 98>, <Countries 99>, <Countries 100>, <Countries 101>, <Countries 102>, <Countries 103>, <Countries 104>, <Countries 105>, <Countries 106>, <Countries 107>, <Countries 108>, <Countries 109>, <Countries 110>, <Countries 111>, <Countries 112>, <Countries 113>, <Countries 114>, <Countries 115>, <Countries 116>, <Countries 117>, <Countries 118>, <Countries 119>, <Countries 120>, <Countries 121>, <Countries 122>, <Countries 123>, <Countries 124>, <Countries 125>, <Countries 126>, <Countries 127>, <Countries 128>, <Countries 129>, <Countries 130>, <Countries 131>, <Countries 132>, <Countries 133>, <Countries 134>, <Countries 135>, <Countries 136>, <Countries 137>, <Countries 138>, <Countries 139>, <Countries 140>, <Countries 141>, <Countries 142>, <Countries 143>, <Countries 144>, <Countries 145>, <Countries 146>, <Countries 147>, <Countries 148>, <Countries 149>, <Countries 150>, <Countries 151>, <Countries 152>, <Countries 153>, <Countries 154>, <Countries 155>, <Countries 156>, <Countries 157>, <Countries 158>, <Countries 159>, <Countries 160>, <Countries 161>, <Countries 162>, <Countries 163>, <Countries 164>, <Countries 165>, <Countries 166>, <Countries 167>, <Countries 168>, <Countries 169>, <Countries 170>, <Countries 171>, <Countries 172>, <Countries 173>, <Countries 174>, <Countries 175>, <Countries 176>, <Countries 177>, <Countries 178>, <Countries 179>, <Countries 180>, <Countries 181>, <Countries 182>, <Countries 183>, <Countries 184>, <Countries 185>, <Countries 186>, <Countries 187>, <Countries 188>, <Countries 189>, <Countries 190>, <Countries 191>, <Countries 192>, <Countries 193>, <Countries 194>, <Countries 195>, <Countries 196>, <Countries 197>, <Countries 198>, <Countries 199>, <Countries 200>, <Countries 201>, <Countries 202>, <Countries 203>, <Countries 204>, <Countries 205>, <Countries 206>, <Countries 207>, <Countries 208>, <Countries 209>, <Countries 210>, <Countries 211>, <Countries 212>, <Countries 213>, <Countries 214>, <Countries 215>, <Countries 216>, <Countries 217>, <Countries 218>, <Countries 219>, <Countries 220>, <Countries 221>, <Countries 222>, <Countries 223>, <Countries 224>, <Countries 225>, <Countries 226>, <Countries 227>, <Countries 228>, <Countries 229>, <Countries 230>, <Countries 231>, <Countries 232>, <Countries 233>, <Countries 234>, <Countries 235>, <Countries 236>, <Countries 237>, <Countries 238>, <Countries 239>, <Countries 240>, <Countries 241>, <Countries 242>, <Countries 243>, <Countries 244>, <Countries 245>]"
+  },
+  {
+    "id": 802,
+    "datetime": "2024-02-16 12:52:49.955375",
+    "class-name": "<class 'modules.countries.Countries'>",
+    "func_name": "get_all",
+    "func_input": "None",
+    "func_output": "[<Countries 3>, <Countries 4>, <Countries 5>, <Countries 6>, <Countries 7>, <Countries 8>, <Countries 9>, <Countries 10>, <Countries 11>, <Countries 12>, <Countries 13>, <Countries 14>, <Countries 15>, <Countries 16>, <Countries 17>, <Countries 18>, <Countries 19>, <Countries 20>, <Countries 21>, <Countries 22>, <Countries 23>, <Countries 24>, <Countries 25>, <Countries 26>, <Countries 27>, <Countries 28>, <Countries 29>, <Countries 30>, <Countries 31>, <Countries 32>, <Countries 33>, <Countries 34>, <Countries 35>, <Countries 36>, <Countries 37>, <Countries 38>, <Countries 39>, <Countries 40>, <Countries 41>, <Countries 42>, <Countries 43>, <Countries 44>, <Countries 45>, <Countries 46>, <Countries 47>, <Countries 48>, <Countries 49>, <Countries 50>, <Countries 51>, <Countries 52>, <Countries 53>, <Countries 54>, <Countries 55>, <Countries 56>, <Countries 57>, <Countries 58>, <Countries 59>, <Countries 60>, <Countries 61>, <Countries 62>, <Countries 63>, <Countries 64>, <Countries 65>, <Countries 66>, <Countries 67>, <Countries 68>, <Countries 69>, <Countries 70>, <Countries 71>, <Countries 72>, <Countries 73>, <Countries 74>, <Countries 75>, <Countries 76>, <Countries 77>, <Countries 78>, <Countries 79>, <Countries 80>, <Countries 81>, <Countries 82>, <Countries 83>, <Countries 84>, <Countries 85>, <Countries 86>, <Countries 87>, <Countries 88>, <Countries 89>, <Countries 90>, <Countries 91>, <Countries 92>, <Countries 93>, <Countries 94>, <Countries 95>, <Countries 96>, <Countries 97>, <Countries 98>, <Countries 99>, <Countries 100>, <Countries 101>, <Countries 102>, <Countries 103>, <Countries 104>, <Countries 105>, <Countries 106>, <Countries 107>, <Countries 108>, <Countries 109>, <Countries 110>, <Countries 111>, <Countries 112>, <Countries 113>, <Countries 114>, <Countries 115>, <Countries 116>, <Countries 117>, <Countries 118>, <Countries 119>, <Countries 120>, <Countries 121>, <Countries 122>, <Countries 123>, <Countries 124>, <Countries 125>, <Countries 126>, <Countries 127>, <Countries 128>, <Countries 129>, <Countries 130>, <Countries 131>, <Countries 132>, <Countries 133>, <Countries 134>, <Countries 135>, <Countries 136>, <Countries 137>, <Countries 138>, <Countries 139>, <Countries 140>, <Countries 141>, <Countries 142>, <Countries 143>, <Countries 144>, <Countries 145>, <Countries 146>, <Countries 147>, <Countries 148>, <Countries 149>, <Countries 150>, <Countries 151>, <Countries 152>, <Countries 153>, <Countries 154>, <Countries 155>, <Countries 156>, <Countries 157>, <Countries 158>, <Countries 159>, <Countries 160>, <Countries 161>, <Countries 162>, <Countries 163>, <Countries 164>, <Countries 165>, <Countries 166>, <Countries 167>, <Countries 168>, <Countries 169>, <Countries 170>, <Countries 171>, <Countries 172>, <Countries 173>, <Countries 174>, <Countries 175>, <Countries 176>, <Countries 177>, <Countries 178>, <Countries 179>, <Countries 180>, <Countries 181>, <Countries 182>, <Countries 183>, <Countries 184>, <Countries 185>, <Countries 186>, <Countries 187>, <Countries 188>, <Countries 189>, <Countries 190>, <Countries 191>, <Countries 192>, <Countries 193>, <Countries 194>, <Countries 195>, <Countries 196>, <Countries 197>, <Countries 198>, <Countries 199>, <Countries 200>, <Countries 201>, <Countries 202>, <Countries 203>, <Countries 204>, <Countries 205>, <Countries 206>, <Countries 207>, <Countries 208>, <Countries 209>, <Countries 210>, <Countries 211>, <Countries 212>, <Countries 213>, <Countries 214>, <Countries 215>, <Countries 216>, <Countries 217>, <Countries 218>, <Countries 219>, <Countries 220>, <Countries 221>, <Countries 222>, <Countries 223>, <Countries 224>, <Countries 225>, <Countries 226>, <Countries 227>, <Countries 228>, <Countries 229>, <Countries 230>, <Countries 231>, <Countries 232>, <Countries 233>, <Countries 234>, <Countries 235>, <Countries 236>, <Countries 237>, <Countries 238>, <Countries 239>, <Countries 240>, <Countries 241>, <Countries 242>, <Countries 243>, <Countries 244>, <Countries 245>]"
+  },
+  {
+    "id": 803,
+    "datetime": "2024-02-16 12:53:13.221181",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'ArtyGen123'}",
+    "func_output": "[(8, 'ArtyGen123', 'MooseyMoose1992', 'artygen@gmail.com', 3, False)]"
+  },
+  {
+    "id": 804,
+    "datetime": "2024-02-16 12:53:29.187632",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'SiriousBlack'}",
+    "func_output": "[(9, 'SiriousBlack', 'iamabutman', 'siriousblack@gmail.com', 3, True)]"
+  },
+  {
+    "id": 805,
+    "datetime": "2024-02-16 12:53:29.267642",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_username",
+    "func_input": "{'username': 'SiriousBlack'}",
+    "func_output": "[(4, 'Sirious', 'Black', '444 Main St, Jerusalem, Israel', '+15551234563', '1234-5678-9012-3333', 9, 9, 'SiriousBlack', 'iamabutman', 'siriousblack@gmail.com', 3, True)]"
+  },
+  {
+    "id": 806,
+    "datetime": "2024-02-16 12:53:29.352638",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_customer_by_userID",
+    "func_input": "{'userID': 9}",
+    "func_output": "[(4, 'Sirious', 'Black', '444 Main St, Jerusalem, Israel', '+15551234563', '1234-5678-9012-3333', 9)]"
+  },
+  {
+    "id": 807,
+    "datetime": "2024-02-16 12:53:29.439637",
+    "class-name": "<class 'modules.countries.Countries'>",
+    "func_name": "get_all",
+    "func_input": "None",
+    "func_output": "[<Countries 3>, <Countries 4>, <Countries 5>, <Countries 6>, <Countries 7>, <Countries 8>, <Countries 9>, <Countries 10>, <Countries 11>, <Countries 12>, <Countries 13>, <Countries 14>, <Countries 15>, <Countries 16>, <Countries 17>, <Countries 18>, <Countries 19>, <Countries 20>, <Countries 21>, <Countries 22>, <Countries 23>, <Countries 24>, <Countries 25>, <Countries 26>, <Countries 27>, <Countries 28>, <Countries 29>, <Countries 30>, <Countries 31>, <Countries 32>, <Countries 33>, <Countries 34>, <Countries 35>, <Countries 36>, <Countries 37>, <Countries 38>, <Countries 39>, <Countries 40>, <Countries 41>, <Countries 42>, <Countries 43>, <Countries 44>, <Countries 45>, <Countries 46>, <Countries 47>, <Countries 48>, <Countries 49>, <Countries 50>, <Countries 51>, <Countries 52>, <Countries 53>, <Countries 54>, <Countries 55>, <Countries 56>, <Countries 57>, <Countries 58>, <Countries 59>, <Countries 60>, <Countries 61>, <Countries 62>, <Countries 63>, <Countries 64>, <Countries 65>, <Countries 66>, <Countries 67>, <Countries 68>, <Countries 69>, <Countries 70>, <Countries 71>, <Countries 72>, <Countries 73>, <Countries 74>, <Countries 75>, <Countries 76>, <Countries 77>, <Countries 78>, <Countries 79>, <Countries 80>, <Countries 81>, <Countries 82>, <Countries 83>, <Countries 84>, <Countries 85>, <Countries 86>, <Countries 87>, <Countries 88>, <Countries 89>, <Countries 90>, <Countries 91>, <Countries 92>, <Countries 93>, <Countries 94>, <Countries 95>, <Countries 96>, <Countries 97>, <Countries 98>, <Countries 99>, <Countries 100>, <Countries 101>, <Countries 102>, <Countries 103>, <Countries 104>, <Countries 105>, <Countries 106>, <Countries 107>, <Countries 108>, <Countries 109>, <Countries 110>, <Countries 111>, <Countries 112>, <Countries 113>, <Countries 114>, <Countries 115>, <Countries 116>, <Countries 117>, <Countries 118>, <Countries 119>, <Countries 120>, <Countries 121>, <Countries 122>, <Countries 123>, <Countries 124>, <Countries 125>, <Countries 126>, <Countries 127>, <Countries 128>, <Countries 129>, <Countries 130>, <Countries 131>, <Countries 132>, <Countries 133>, <Countries 134>, <Countries 135>, <Countries 136>, <Countries 137>, <Countries 138>, <Countries 139>, <Countries 140>, <Countries 141>, <Countries 142>, <Countries 143>, <Countries 144>, <Countries 145>, <Countries 146>, <Countries 147>, <Countries 148>, <Countries 149>, <Countries 150>, <Countries 151>, <Countries 152>, <Countries 153>, <Countries 154>, <Countries 155>, <Countries 156>, <Countries 157>, <Countries 158>, <Countries 159>, <Countries 160>, <Countries 161>, <Countries 162>, <Countries 163>, <Countries 164>, <Countries 165>, <Countries 166>, <Countries 167>, <Countries 168>, <Countries 169>, <Countries 170>, <Countries 171>, <Countries 172>, <Countries 173>, <Countries 174>, <Countries 175>, <Countries 176>, <Countries 177>, <Countries 178>, <Countries 179>, <Countries 180>, <Countries 181>, <Countries 182>, <Countries 183>, <Countries 184>, <Countries 185>, <Countries 186>, <Countries 187>, <Countries 188>, <Countries 189>, <Countries 190>, <Countries 191>, <Countries 192>, <Countries 193>, <Countries 194>, <Countries 195>, <Countries 196>, <Countries 197>, <Countries 198>, <Countries 199>, <Countries 200>, <Countries 201>, <Countries 202>, <Countries 203>, <Countries 204>, <Countries 205>, <Countries 206>, <Countries 207>, <Countries 208>, <Countries 209>, <Countries 210>, <Countries 211>, <Countries 212>, <Countries 213>, <Countries 214>, <Countries 215>, <Countries 216>, <Countries 217>, <Countries 218>, <Countries 219>, <Countries 220>, <Countries 221>, <Countries 222>, <Countries 223>, <Countries 224>, <Countries 225>, <Countries 226>, <Countries 227>, <Countries 228>, <Countries 229>, <Countries 230>, <Countries 231>, <Countries 232>, <Countries 233>, <Countries 234>, <Countries 235>, <Countries 236>, <Countries 237>, <Countries 238>, <Countries 239>, <Countries 240>, <Countries 241>, <Countries 242>, <Countries 243>, <Countries 244>, <Countries 245>]"
+  },
+  {
+    "id": 808,
+    "datetime": "2024-02-16 12:53:37.334235",
+    "class-name": "<class 'modules.tickets.Tickets'>",
+    "func_name": "get_tickets_by_customer",
+    "func_input": "{'customerID': 4}",
+    "func_output": "[(25, 1, 4), (21, 10, 4), (24, 25, 4)]"
+  },
+  {
+    "id": 809,
+    "datetime": "2024-02-16 12:53:37.436234",
+    "class-name": "<class 'modules.flights.Flights'>",
+    "func_name": "get_by_id",
+    "func_input": "1",
+    "func_output": "<Flights 1>"
+  },
+  {
+    "id": 810,
+    "datetime": "2024-02-16 12:53:37.521230",
+    "class-name": "<class 'modules.countries.Countries'>",
+    "func_name": "get_by_id",
+    "func_input": "14",
+    "func_output": "<Countries 14>"
+  },
+  {
+    "id": 811,
+    "datetime": "2024-02-16 12:53:37.613230",
+    "class-name": "<class 'modules.countries.Countries'>",
+    "func_name": "get_by_id",
+    "func_input": "219",
+    "func_output": "<Countries 219>"
+  },
+  {
+    "id": 812,
+    "datetime": "2024-02-16 12:53:37.698229",
+    "class-name": "<class 'modules.flights.Flights'>",
+    "func_name": "get_by_id",
+    "func_input": "10",
+    "func_output": "<Flights 10>"
+  },
+  {
+    "id": 813,
+    "datetime": "2024-02-16 12:53:37.782727",
+    "class-name": "<class 'modules.countries.Countries'>",
+    "func_name": "get_by_id",
+    "func_input": "80",
+    "func_output": "<Countries 80>"
+  },
+  {
+    "id": 814,
+    "datetime": "2024-02-16 12:53:37.870728",
+    "class-name": "<class 'modules.countries.Countries'>",
+    "func_name": "get_by_id",
+    "func_input": "162",
+    "func_output": "<Countries 162>"
+  },
+  {
+    "id": 815,
+    "datetime": "2024-02-16 12:53:37.956730",
+    "class-name": "<class 'modules.flights.Flights'>",
+    "func_name": "get_by_id",
+    "func_input": "25",
+    "func_output": "<Flights 25>"
+  },
+  {
+    "id": 816,
+    "datetime": "2024-02-16 12:53:38.036954",
+    "class-name": "<class 'modules.countries.Countries'>",
+    "func_name": "get_by_id",
+    "func_input": "13",
+    "func_output": "<Countries 13>"
+  },
+  {
+    "id": 817,
+    "datetime": "2024-02-16 12:53:38.126953",
+    "class-name": "<class 'modules.countries.Countries'>",
+    "func_name": "get_by_id",
+    "func_input": "20",
+    "func_output": "<Countries 20>"
+  },
+  {
+    "id": 818,
+    "datetime": "2024-02-16 12:53:38.220498",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_by_id",
+    "func_input": "3",
+    "func_output": "<AirlineCompanies 3>"
+  },
+  {
+    "id": 819,
+    "datetime": "2024-02-16 12:53:38.301505",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_by_id",
+    "func_input": "2",
+    "func_output": "<AirlineCompanies 2>"
+  },
+  {
+    "id": 820,
+    "datetime": "2024-02-16 12:53:38.400508",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_by_id",
+    "func_input": "1",
+    "func_output": "<AirlineCompanies 1>"
+  },
+  {
+    "id": 821,
+    "datetime": "2024-02-16 12:53:41.639047",
+    "class-name": "<class 'modules.customers.Customers'>",
+    "func_name": "get_by_id",
+    "func_input": "4",
+    "func_output": "<Customers 4>"
+  },
+  {
+    "id": 822,
+    "datetime": "2024-02-16 12:53:41.718042",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_by_id",
+    "func_input": "9",
+    "func_output": "<Users 9>"
+  },
+  {
+    "id": 823,
+    "datetime": "2024-02-16 12:54:01.674377",
+    "class-name": "<class 'modules.countries.Countries'>",
+    "func_name": "get_all",
+    "func_input": "None",
+    "func_output": "[<Countries 3>, <Countries 4>, <Countries 5>, <Countries 6>, <Countries 7>, <Countries 8>, <Countries 9>, <Countries 10>, <Countries 11>, <Countries 12>, <Countries 13>, <Countries 14>, <Countries 15>, <Countries 16>, <Countries 17>, <Countries 18>, <Countries 19>, <Countries 20>, <Countries 21>, <Countries 22>, <Countries 23>, <Countries 24>, <Countries 25>, <Countries 26>, <Countries 27>, <Countries 28>, <Countries 29>, <Countries 30>, <Countries 31>, <Countries 32>, <Countries 33>, <Countries 34>, <Countries 35>, <Countries 36>, <Countries 37>, <Countries 38>, <Countries 39>, <Countries 40>, <Countries 41>, <Countries 42>, <Countries 43>, <Countries 44>, <Countries 45>, <Countries 46>, <Countries 47>, <Countries 48>, <Countries 49>, <Countries 50>, <Countries 51>, <Countries 52>, <Countries 53>, <Countries 54>, <Countries 55>, <Countries 56>, <Countries 57>, <Countries 58>, <Countries 59>, <Countries 60>, <Countries 61>, <Countries 62>, <Countries 63>, <Countries 64>, <Countries 65>, <Countries 66>, <Countries 67>, <Countries 68>, <Countries 69>, <Countries 70>, <Countries 71>, <Countries 72>, <Countries 73>, <Countries 74>, <Countries 75>, <Countries 76>, <Countries 77>, <Countries 78>, <Countries 79>, <Countries 80>, <Countries 81>, <Countries 82>, <Countries 83>, <Countries 84>, <Countries 85>, <Countries 86>, <Countries 87>, <Countries 88>, <Countries 89>, <Countries 90>, <Countries 91>, <Countries 92>, <Countries 93>, <Countries 94>, <Countries 95>, <Countries 96>, <Countries 97>, <Countries 98>, <Countries 99>, <Countries 100>, <Countries 101>, <Countries 102>, <Countries 103>, <Countries 104>, <Countries 105>, <Countries 106>, <Countries 107>, <Countries 108>, <Countries 109>, <Countries 110>, <Countries 111>, <Countries 112>, <Countries 113>, <Countries 114>, <Countries 115>, <Countries 116>, <Countries 117>, <Countries 118>, <Countries 119>, <Countries 120>, <Countries 121>, <Countries 122>, <Countries 123>, <Countries 124>, <Countries 125>, <Countries 126>, <Countries 127>, <Countries 128>, <Countries 129>, <Countries 130>, <Countries 131>, <Countries 132>, <Countries 133>, <Countries 134>, <Countries 135>, <Countries 136>, <Countries 137>, <Countries 138>, <Countries 139>, <Countries 140>, <Countries 141>, <Countries 142>, <Countries 143>, <Countries 144>, <Countries 145>, <Countries 146>, <Countries 147>, <Countries 148>, <Countries 149>, <Countries 150>, <Countries 151>, <Countries 152>, <Countries 153>, <Countries 154>, <Countries 155>, <Countries 156>, <Countries 157>, <Countries 158>, <Countries 159>, <Countries 160>, <Countries 161>, <Countries 162>, <Countries 163>, <Countries 164>, <Countries 165>, <Countries 166>, <Countries 167>, <Countries 168>, <Countries 169>, <Countries 170>, <Countries 171>, <Countries 172>, <Countries 173>, <Countries 174>, <Countries 175>, <Countries 176>, <Countries 177>, <Countries 178>, <Countries 179>, <Countries 180>, <Countries 181>, <Countries 182>, <Countries 183>, <Countries 184>, <Countries 185>, <Countries 186>, <Countries 187>, <Countries 188>, <Countries 189>, <Countries 190>, <Countries 191>, <Countries 192>, <Countries 193>, <Countries 194>, <Countries 195>, <Countries 196>, <Countries 197>, <Countries 198>, <Countries 199>, <Countries 200>, <Countries 201>, <Countries 202>, <Countries 203>, <Countries 204>, <Countries 205>, <Countries 206>, <Countries 207>, <Countries 208>, <Countries 209>, <Countries 210>, <Countries 211>, <Countries 212>, <Countries 213>, <Countries 214>, <Countries 215>, <Countries 216>, <Countries 217>, <Countries 218>, <Countries 219>, <Countries 220>, <Countries 221>, <Countries 222>, <Countries 223>, <Countries 224>, <Countries 225>, <Countries 226>, <Countries 227>, <Countries 228>, <Countries 229>, <Countries 230>, <Countries 231>, <Countries 232>, <Countries 233>, <Countries 234>, <Countries 235>, <Countries 236>, <Countries 237>, <Countries 238>, <Countries 239>, <Countries 240>, <Countries 241>, <Countries 242>, <Countries 243>, <Countries 244>, <Countries 245>]"
+  },
+  {
+    "id": 824,
+    "datetime": "2024-02-16 12:54:15.427985",
+    "class-name": "<class 'modules.users.Users'>",
+    "func_name": "get_user_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2, True)]"
+  },
+  {
+    "id": 825,
+    "datetime": "2024-02-16 12:54:15.505982",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_username",
+    "func_input": "{'username': 'UFOAirlines'}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, 'https://i.postimg.cc/Dyt54HJL/Untitled-design.jpg', 3, 'UFOAirlines', 'UfO000', 'ufo@airlines.com', 2, True)]"
+  },
+  {
+    "id": 826,
+    "datetime": "2024-02-16 12:54:15.593986",
+    "class-name": "<class 'modules.airline_companies.AirlineCompanies'>",
+    "func_name": "get_airline_by_userID",
+    "func_input": "{'userID': 3}",
+    "func_output": "[(1, 'UFO Airlines', 33, 3, 'https://i.postimg.cc/Dyt54HJL/Untitled-design.jpg')]"
+  },
+  {
+    "id": 827,
+    "datetime": "2024-02-16 12:54:15.676980",
+    "class-name": "<class 'modules.countries.Countries'>",
+    "func_name": "get_all",
+    "func_input": "None",
+    "func_output": "[<Countries 3>, <Countries 4>, <Countries 5>, <Countries 6>, <Countries 7>, <Countries 8>, <Countries 9>, <Countries 10>, <Countries 11>, <Countries 12>, <Countries 13>, <Countries 14>, <Countries 15>, <Countries 16>, <Countries 17>, <Countries 18>, <Countries 19>, <Countries 20>, <Countries 21>, <Countries 22>, <Countries 23>, <Countries 24>, <Countries 25>, <Countries 26>, <Countries 27>, <Countries 28>, <Countries 29>, <Countries 30>, <Countries 31>, <Countries 32>, <Countries 33>, <Countries 34>, <Countries 35>, <Countries 36>, <Countries 37>, <Countries 38>, <Countries 39>, <Countries 40>, <Countries 41>, <Countries 42>, <Countries 43>, <Countries 44>, <Countries 45>, <Countries 46>, <Countries 47>, <Countries 48>, <Countries 49>, <Countries 50>, <Countries 51>, <Countries 52>, <Countries 53>, <Countries 54>, <Countries 55>, <Countries 56>, <Countries 57>, <Countries 58>, <Countries 59>, <Countries 60>, <Countries 61>, <Countries 62>, <Countries 63>, <Countries 64>, <Countries 65>, <Countries 66>, <Countries 67>, <Countries 68>, <Countries 69>, <Countries 70>, <Countries 71>, <Countries 72>, <Countries 73>, <Countries 74>, <Countries 75>, <Countries 76>, <Countries 77>, <Countries 78>, <Countries 79>, <Countries 80>, <Countries 81>, <Countries 82>, <Countries 83>, <Countries 84>, <Countries 85>, <Countries 86>, <Countries 87>, <Countries 88>, <Countries 89>, <Countries 90>, <Countries 91>, <Countries 92>, <Countries 93>, <Countries 94>, <Countries 95>, <Countries 96>, <Countries 97>, <Countries 98>, <Countries 99>, <Countries 100>, <Countries 101>, <Countries 102>, <Countries 103>, <Countries 104>, <Countries 105>, <Countries 106>, <Countries 107>, <Countries 108>, <Countries 109>, <Countries 110>, <Countries 111>, <Countries 112>, <Countries 113>, <Countries 114>, <Countries 115>, <Countries 116>, <Countries 117>, <Countries 118>, <Countries 119>, <Countries 120>, <Countries 121>, <Countries 122>, <Countries 123>, <Countries 124>, <Countries 125>, <Countries 126>, <Countries 127>, <Countries 128>, <Countries 129>, <Countries 130>, <Countries 131>, <Countries 132>, <Countries 133>, <Countries 134>, <Countries 135>, <Countries 136>, <Countries 137>, <Countries 138>, <Countries 139>, <Countries 140>, <Countries 141>, <Countries 142>, <Countries 143>, <Countries 144>, <Countries 145>, <Countries 146>, <Countries 147>, <Countries 148>, <Countries 149>, <Countries 150>, <Countries 151>, <Countries 152>, <Countries 153>, <Countries 154>, <Countries 155>, <Countries 156>, <Countries 157>, <Countries 158>, <Countries 159>, <Countries 160>, <Countries 161>, <Countries 162>, <Countries 163>, <Countries 164>, <Countries 165>, <Countries 166>, <Countries 167>, <Countries 168>, <Countries 169>, <Countries 170>, <Countries 171>, <Countries 172>, <Countries 173>, <Countries 174>, <Countries 175>, <Countries 176>, <Countries 177>, <Countries 178>, <Countries 179>, <Countries 180>, <Countries 181>, <Countries 182>, <Countries 183>, <Countries 184>, <Countries 185>, <Countries 186>, <Countries 187>, <Countries 188>, <Countries 189>, <Countries 190>, <Countries 191>, <Countries 192>, <Countries 193>, <Countries 194>, <Countries 195>, <Countries 196>, <Countries 197>, <Countries 198>, <Countries 199>, <Countries 200>, <Countries 201>, <Countries 202>, <Countries 203>, <Countries 204>, <Countries 205>, <Countries 206>, <Countries 207>, <Countries 208>, <Countries 209>, <Countries 210>, <Countries 211>, <Countries 212>, <Countries 213>, <Countries 214>, <Countries 215>, <Countries 216>, <Countries 217>, <Countries 218>, <Countries 219>, <Countries 220>, <Countries 221>, <Countries 222>, <Countries 223>, <Countries 224>, <Countries 225>, <Countries 226>, <Countries 227>, <Countries 228>, <Countries 229>, <Countries 230>, <Countries 231>, <Countries 232>, <Countries 233>, <Countries 234>, <Countries 235>, <Countries 236>, <Countries 237>, <Countries 238>, <Countries 239>, <Countries 240>, <Countries 241>, <Countries 242>, <Countries 243>, <Countries 244>, <Countries 245>]"
+  },
+  {
+    "id": 828,
+    "datetime": "2024-02-16 12:54:21.810820",
+    "class-name": "<class 'modules.countries.Countries'>",
+    "func_name": "get_all",
+    "func_input": "None",
+    "func_output": "[<Countries 3>, <Countries 4>, <Countries 5>, <Countries 6>, <Countries 7>, <Countries 8>, <Countries 9>, <Countries 10>, <Countries 11>, <Countries 12>, <Countries 13>, <Countries 14>, <Countries 15>, <Countries 16>, <Countries 17>, <Countries 18>, <Countries 19>, <Countries 20>, <Countries 21>, <Countries 22>, <Countries 23>, <Countries 24>, <Countries 25>, <Countries 26>, <Countries 27>, <Countries 28>, <Countries 29>, <Countries 30>, <Countries 31>, <Countries 32>, <Countries 33>, <Countries 34>, <Countries 35>, <Countries 36>, <Countries 37>, <Countries 38>, <Countries 39>, <Countries 40>, <Countries 41>, <Countries 42>, <Countries 43>, <Countries 44>, <Countries 45>, <Countries 46>, <Countries 47>, <Countries 48>, <Countries 49>, <Countries 50>, <Countries 51>, <Countries 52>, <Countries 53>, <Countries 54>, <Countries 55>, <Countries 56>, <Countries 57>, <Countries 58>, <Countries 59>, <Countries 60>, <Countries 61>, <Countries 62>, <Countries 63>, <Countries 64>, <Countries 65>, <Countries 66>, <Countries 67>, <Countries 68>, <Countries 69>, <Countries 70>, <Countries 71>, <Countries 72>, <Countries 73>, <Countries 74>, <Countries 75>, <Countries 76>, <Countries 77>, <Countries 78>, <Countries 79>, <Countries 80>, <Countries 81>, <Countries 82>, <Countries 83>, <Countries 84>, <Countries 85>, <Countries 86>, <Countries 87>, <Countries 88>, <Countries 89>, <Countries 90>, <Countries 91>, <Countries 92>, <Countries 93>, <Countries 94>, <Countries 95>, <Countries 96>, <Countries 97>, <Countries 98>, <Countries 99>, <Countries 100>, <Countries 101>, <Countries 102>, <Countries 103>, <Countries 104>, <Countries 105>, <Countries 106>, <Countries 107>, <Countries 108>, <Countries 109>, <Countries 110>, <Countries 111>, <Countries 112>, <Countries 113>, <Countries 114>, <Countries 115>, <Countries 116>, <Countries 117>, <Countries 118>, <Countries 119>, <Countries 120>, <Countries 121>, <Countries 122>, <Countries 123>, <Countries 124>, <Countries 125>, <Countries 126>, <Countries 127>, <Countries 128>, <Countries 129>, <Countries 130>, <Countries 131>, <Countries 132>, <Countries 133>, <Countries 134>, <Countries 135>, <Countries 136>, <Countries 137>, <Countries 138>, <Countries 139>, <Countries 140>, <Countries 141>, <Countries 142>, <Countries 143>, <Countries 144>, <Countries 145>, <Countries 146>, <Countries 147>, <Countries 148>, <Countries 149>, <Countries 150>, <Countries 151>, <Countries 152>, <Countries 153>, <Countries 154>, <Countries 155>, <Countries 156>, <Countries 157>, <Countries 158>, <Countries 159>, <Countries 160>, <Countries 161>, <Countries 162>, <Countries 163>, <Countries 164>, <Countries 165>, <Countries 166>, <Countries 167>, <Countries 168>, <Countries 169>, <Countries 170>, <Countries 171>, <Countries 172>, <Countries 173>, <Countries 174>, <Countries 175>, <Countries 176>, <Countries 177>, <Countries 178>, <Countries 179>, <Countries 180>, <Countries 181>, <Countries 182>, <Countries 183>, <Countries 184>, <Countries 185>, <Countries 186>, <Countries 187>, <Countries 188>, <Countries 189>, <Countries 190>, <Countries 191>, <Countries 192>, <Countries 193>, <Countries 194>, <Countries 195>, <Countries 196>, <Countries 197>, <Countries 198>, <Countries 199>, <Countries 200>, <Countries 201>, <Countries 202>, <Countries 203>, <Countries 204>, <Countries 205>, <Countries 206>, <Countries 207>, <Countries 208>, <Countries 209>, <Countries 210>, <Countries 211>, <Countries 212>, <Countries 213>, <Countries 214>, <Countries 215>, <Countries 216>, <Countries 217>, <Countries 218>, <Countries 219>, <Countries 220>, <Countries 221>, <Countries 222>, <Countries 223>, <Countries 224>, <Countries 225>, <Countries 226>, <Countries 227>, <Countries 228>, <Countries 229>, <Countries 230>, <Countries 231>, <Countries 232>, <Countries 233>, <Countries 234>, <Countries 235>, <Countries 236>, <Countries 237>, <Countries 238>, <Countries 239>, <Countries 240>, <Countries 241>, <Countries 242>, <Countries 243>, <Countries 244>, <Countries 245>]"
   }
 ]
