@@ -15,8 +15,8 @@ The system is designed for use by airlines, travel agencies or private travelers
 
 Tech Stack
 
-* Database: SQL Server for robust data management.
-* Backend: Flask Rest Framework for a powerful API layer.
-* Frontend:  Flask user interface.
+* Database: SQL Server is employed for its robust data management capabilities, handling the storage, retrieval, and manipulation of relational data with high performance and reliability.
+* Backend: The Flask Rest Framework is used to create a powerful API layer. It facilitates the development of RESTful APIs, allowing for flexible, efficient, and scalable backend services.
+* Frontend: A Flask-based user interface provides a straightforward and effective way for users to interact with the system. While Flask is traditionally seen as a backend framework, it can also serve HTML templates, enabling the creation of dynamic web pages for managing             and displaying flight information, user accounts, and more.
 
 This project was developed as part of Python Full Stack Development course, at John Bryce College.
