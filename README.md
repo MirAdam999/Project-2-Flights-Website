@@ -1,4 +1,4 @@
-Peagsus- Flight Management System
+Peagsus: Flight Management System
 
 Features
 
