@@ -104,7 +104,7 @@ class Routes(Blueprint):
         form_username=request.form['username']
         form_password=request.form['password']
         facade, err=self.anon_facade.login(username=form_username,_password=form_password)
-        if facade:
+        if facade: #facade = Admin(token)
             self._facade=facade
             self.token=self.facade.token
             self.user_ID= int(self.token[0])

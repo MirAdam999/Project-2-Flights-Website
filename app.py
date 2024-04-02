@@ -25,16 +25,7 @@ app.register_blueprint(routes_blueprint)
 
 if __name__ == "__main__":
     
-    with app.app_context():
-        admins=Administrators()
-        airlines=AirlineCompanies()
-        countries=Countries()
-        customers=Customers()
-        flights=Flights()
-        tickets=Tickets()
-        user_roles=UserRoles()
-        users=Users()
-        
+    with app.app_context():       
         db.create_all()
         
-    app.run(debug=app.config['DEBUG'], use_reloader=False)
+    app.run(debug=app.config['DEBUG'], use_reloader=False, host='0.0.0.0',port=8080)

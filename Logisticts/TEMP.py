@@ -73,36 +73,4 @@ import random
 
 """
 
-class Parent:
-    def __init__(self):
-        pass
-    
-class A(Parent):
-    def __init__(self):
-        super().__init__()
-        self.token, self.additional_data = self.generate_token()
-
-    def generate_token(self):
-        # Your logic to generate the token and additional data goes here
-        token = "generated_token"
-        additional_data = "some_additional_data"
-        return token, additional_data
-
-class B(Parent):
-    def __init__(self, token, additional_data):
-        super().__init__()
-        self.token = token
-        self.additional_data = additional_data
-
-    def f_print(self):
-        print(self.token)
-        print(self.additional_data)
-
-parent_instance = Parent()
-a_instance = A()
-t,d=a_instance.generate_token()
-b_instance = B(t,d)
-b_instance.f_print()
-
-
 
