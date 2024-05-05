@@ -8,8 +8,72 @@
     flex-wrap: nowrap;
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100vw;
 }
+
+.dropbtn {
+    background-color: rgb(121, 179, 197);
+    font: 1.2rem "Trebuchet MS", sans-serif;
+    letter-spacing: 0.2px;
+    font-weight: bold;
+    color: white;
+    top: 0;
+    padding-bottom: 1rem;
+    padding-top: 1.5rem;
+    padding-right: 0.8rem;
+    padding-left: 0.8rem;
+    margin: 0;
+    height: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+    background-color: rgb(87, 138, 153);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content button {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    text-align: left;
+    font: 1rem "Trebuchet MS", sans-serif;
+    letter-spacing: 0.2px;
+    font-weight: bold;
+}
+
+.dropdown-content button:hover {
+    background-color: rgb(87, 138, 153);
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: rgb(87, 138, 153);
+}
+
 
 #logo {
     display: flex;
@@ -110,11 +174,19 @@ body {
     background-color: white;
     color: rgb(121, 195, 197);
     font: 1rem "Fira Sans", sans-serif;
-    padding: 2px;
+    padding: 1px;
     text-align: center;
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+#page_content {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /*index*/
@@ -139,6 +211,7 @@ body {
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     padding: 2rem;
     border-radius: 8px;
+    align-self: center;
 }
 
 #search_form {
@@ -318,10 +391,11 @@ body {
 
 #manage-header {
     color: white;
-    font: 2.5rem "Trebuchet MS", sans-serif;
+    font: 2.2rem "Trebuchet MS", sans-serif;
     letter-spacing: 0.2px;
     font-weight: bold;
-    margin: 0;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -479,14 +553,21 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+}
+
+#flight_none_found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
 }
 
 #flight_none_found p {
     margin-bottom: 0rem;
-    margin-right: 3rem;
     margin-left: 0rem;
+    margin-right: 0;
     padding: 1rem;
-    width: 81.5%;
     display: flex;
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
@@ -500,11 +581,10 @@ body {
 }
 
 #search_for_flight_by_id {
+    width: 80vw;
     margin-bottom: 0rem;
-    margin-right: 3rem;
-    margin-left: 3rem;
-    padding: 1rem;
-    width: 80%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     display: flex;
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
@@ -554,8 +634,8 @@ body {
 
 #flights_wrap {
     box-sizing: border-box;
-    width: 98%;
-    margin-left: 19.6rem;
+    align-self: center;
+    width: 80vw;
 }
 
 #flight form {
@@ -566,7 +646,6 @@ body {
     margin-bottom: 1rem;
     margin-top: 1rem;
     padding: 2rem;
-    width: 80%;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 15px;
@@ -771,16 +850,14 @@ body {
 }
 
 #my_tickets {
-    width: 85%;
-    margin-left: 19rem;
+    width: 85vw;
 }
 
 #ticket-canceled {
     margin-bottom: 0rem;
-    margin-right: 3rem;
     margin-left: 0rem;
     padding: 1rem;
-    width: 81.5%;
+    width: 82vw;
     display: flex;
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
@@ -796,10 +873,9 @@ body {
 
 /*update-customer*/
 .update-self {
-    margin-top: 6rem;
+    align-self: center;
+    margin-top: 2rem;
     margin-bottom: 6rem;
-    margin-right: 3rem;
-    margin-left: 30rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -921,7 +997,7 @@ body {
 
 #redirect-to-change-password {
     margin-top: 2rem;
-    margin-bottom: 10rem;
+    margin-bottom: 2rem;
     margin-right: 2rem;
     margin-left: 2rem;
     padding-top: 0.5rem;
@@ -959,8 +1035,6 @@ body {
     text-align: center;
     margin-top: 6rem;
     margin-bottom: 0rem;
-    margin-right: 3rem;
-    margin-left: 30rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1098,10 +1172,8 @@ body {
     background-color: rgba(255, 255, 255, 0.8);
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     margin-top: 13rem;
-    margin-right: 10rem;
-    margin-left: 28rem;
     border-radius: 25px;
-    width: 50%;
+
 }
 
 #redirect_to_signup {
@@ -1268,11 +1340,9 @@ body {
     background-color: rgba(255, 255, 255, 0.8);
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     margin-top: 13rem;
-    margin-right: 10rem;
-    margin-left: 28rem;
     padding: 2rem;
     border-radius: 25px;
-    width: 50%;
+    width: 60vw;
 }
 
 #signup_sucsess h2,
@@ -1334,6 +1404,7 @@ body {
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 15px;
+    padding: 2rem;
 }
 
 #search_for_closest_flights_by_country form {
@@ -1443,8 +1514,6 @@ body {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    margin-left: 3rem;
-    margin-right: 2rem;
     margin-bottom: 1rem;
     margin-top: 1rem;
     padding: 2rem;
@@ -1463,7 +1532,6 @@ body {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    margin-left: 13.2rem;
     margin-right: 0rem;
     margin-bottom: 1rem;
     margin-top: 1rem;
@@ -1475,4 +1543,29 @@ body {
     text-align: center;
     letter-spacing: 0.2px;
     border: 1px solid rgb(87, 138, 153);
+}
+
+/*demo-users*/
+#demo-users-p {
+    font-size: 2rem !important;
+    color: green !important;
+}
+
+#demo-users {
+    text-align: center;
+    font-family: "Trebuchet MS", sans-serif;
+}
+
+#demo-users th {
+    color: rgb(87, 138, 153);
+    font-size: 1.2rem;
+}
+
+#demo-users table,
+#demo-users td,
+#demo-users th {
+    border: solid 1px rgb(121, 179, 197);
+    border-collapse: collapse;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }

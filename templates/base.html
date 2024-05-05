@@ -21,15 +21,22 @@
       <div class='role_buttons'>
         {% if role == "Administrator" %}
         <div id='admin'>
-          <form method="post" action="{{ url_for('routes.manage_admins') }} "  style="display: inline-block;">
-            <button type="submit" id='head_button'>Manage Admins</button>
-          </form>
-          <form method="post" action="{{ url_for('routes.manage_airlines') }}"  style="display: inline-block;">
-            <button type="submit" id='head_button'>Manage Airline Companies</button>
-          </form>
-          <form method="post" action="{{ url_for('routes.manage_customers') }}"  style="display: inline-block;">
-            <button type="submit" id='head_button'>Manage Customers</button>
-          </form>
+
+          <div class="dropdown" style="display: inline-block;">
+            <button class="dropbtn">Manage</button>
+            <div class="dropdown-content">
+              <form method="post" action="{{ url_for('routes.manage_admins') }}">
+                <button type="submit">Manage Admins</button>
+              </form>
+              <form method="post" action="{{ url_for('routes.manage_airlines') }}">
+                <button type="submit">Manage Airline Companies</button>
+              </form>
+              <form method="post" action="{{ url_for('routes.manage_customers') }}">
+                <button type="submit">Manage Customers</button>
+              </form>
+            </div>
+          </div>
+          
           <form action="{{ url_for('routes.closest_flights') }}"  style="display: inline-block;">
             <button type="submit" id='head_button'>Closest Flights</button>
           </form>
