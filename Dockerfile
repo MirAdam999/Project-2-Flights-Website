@@ -1,25 +1,25 @@
-FROM python:3.10
-RUN apt-get update && apt-get install -y \
-    unixodbc \
-    unixodbc-dev \
-    g++ \
-    gcc \
-    curl \
-    gnupg \
-    iputils-ping 
-
-# Download and install Microsoft ODBC Driver for SQL Server
-# Add Microsoft repository key
+FROM python:3.8.3-buster
+# UPDATE APT-GET
+RUN apt-get update
+# PYODBC DEPENDENCES
+RUN apt-get install -y tdsodbc unixodbc-dev
+RUN apt install unixodbc-bin -y
+RUN apt-get clean -y
+ADD odbcinst.ini /etc/odbcinst.ini
+# UPGRADE pip3
+RUN pip3 install --upgrade pip
+# DEPENDECES FOR DOWNLOAD ODBC DRIVER
+RUN apt-get install apt-transport-https
 RUN curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
-
-# Add Microsoft repository
 RUN curl https://packages.microsoft.com/config/debian/10/prod.list > /etc/apt/sources.list.d/mssql-release.list
-
-# Update apt and install ODBC Driver
-RUN apt-get update && ACCEPT_EULA=Y apt-get install -y msodbcsql17
-
+RUN apt-get update
+# INSTALL ODBC DRIVER
+RUN ACCEPT_EULA=Y apt-get install msodbcsql17 --assume-yes
+# CONFIGURE ENV FOR /bin/bash TO USE MSODBCSQL17
+RUN echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
+RUN echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 COPY . /app
 WORKDIR /app
 RUN pip install -r requirements.txt
-EXPOSE 8080
-CMD ["python", "app.py"]
+EXPOSE 5000
+CMD ["python","app.py"]

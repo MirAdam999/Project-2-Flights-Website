@@ -58,7 +58,7 @@
                     <div id='manage_admin'>
                         <td>
                             {% if admin[6] == "Active" %}       
-                            <button type="submit" id='disactivate' name="admin_id" value="{{ admin[0] }}" {% if admin[3] == own_id %} disabled {% endif %}>Disactivate Admin</button>
+                            <button type="submit" id='disactivate' name="admin_id" value="{{ admin[0] }}" {% if admin[3] == own_id %} disabled {% endif %}>Deactivate Admin</button>
                             {% else %}
                             <button type="submit" id='reactivate' name="admin_id" value="{{ admin[0] }}">Re-activate Admin</button>
                             {% endif %}

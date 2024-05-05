@@ -62,7 +62,7 @@
                     <div id='manage_customer'>
                         <td>
                             {% if customer[8] == "Active" %}       
-                            <button type="submit" id='disactivate' name="cust_id" value="{{ customer[0] }}">Disactivate Customer</button>
+                            <button type="submit" id='disactivate' name="cust_id" value="{{ customer[0] }}">Deactivate Customer</button>
                             {% else %}
                             <button type="submit" id='reactivate' name="cust_id" value="{{ customer[0] }}">Re-activate Customer</button>
                             {% endif %}
