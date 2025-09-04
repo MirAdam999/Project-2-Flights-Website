@@ -1,4 +1,4 @@
-Peagsus: Flight Management System
+<h1>Peagsus: Flight Management System</h1>
 
   <p>Pegasus is a comprehensive flight management system that streamlines flight scheduling, ticketing, and user management. The web app provides tailored interfaces for customers (or travel agents), airlines, and administrators, enabling efficient flight management and seamless ticketing.</p>
   <p>Customers can easily search and book flights, manage their tickets, and update personal profiles. Airlines can add and manage flights while maintaining company information. Administrators have full control over user management, airline accounts, and system-wide flight oversight, ensuring smooth operations across the platform.</p>
