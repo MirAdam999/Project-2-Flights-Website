@@ -37,12 +37,15 @@
 <h2>Screenshots</h2>
 
 <h4>Homepage</h4>
+
 ![Homepage](/screenshots/pegasus1.jpg "Homepage")
 
 <h4>Flights</h4>
+
 ![Flights](/screenshots/pegasus2.jpg "Flights")
 
 <h4>Manage Customers</h4>
+
 ![ManageCustomers](/screenshots/pegasus3.jpg "Manage Customers")
 
 This project was developed as part of the Python Full Stack Development course at John Bryce Academy.
