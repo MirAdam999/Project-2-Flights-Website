@@ -3,7 +3,7 @@
   <p>Pegasus is a comprehensive flight management system that streamlines flight scheduling, ticketing, and user management. The web app provides tailored interfaces for customers (or travel agents), airlines, and administrators, enabling efficient flight management and seamless ticketing.</p>
   <p>Customers can easily search and book flights, manage their tickets, and update personal profiles. Airlines can add and manage flights while maintaining company information. Administrators have full control over user management, airline accounts, and system-wide flight oversight, ensuring smooth operations across the platform.</p>
 
-  <h3>Features</h3>
+  <h2>Features</h2>
   <p>Easily search flights by origin, destination, and travel date. You can also look up a specific flight number or view all arrivals and departures within the next 12 hours in any country.</p>
 
   <h4>Customer Interface:</h4>
@@ -36,13 +36,13 @@
 
 <h2>Screenshots</h2>
 
-Homepage 
+<h4>Homepage</h4>
 ![Homepage](/screenshots/pegasus1.jpg "Homepage")
 
-Flights
+<h4>Flights</h4>
 ![Flights](/screenshots/pegasus2.jpg "Flights")
 
-Manage Customers
+<h4>Manage Customers</h4>
 ![ManageCustomers](/screenshots/pegasus3.jpg "Manage Customers")
 
-This project was developed as part of Python Full Stack Development course, at John Bryce College.
+This project was developed as part of the Python Full Stack Development course at John Bryce Academy.
